@@ -1,7 +1,7 @@
 /*
 Programa diseñado para el depósito de una escuela
  */
-package TPFINAL;
+package Test;
 
 import static java.awt.Color.gray;
 import java.awt.Dimension;
