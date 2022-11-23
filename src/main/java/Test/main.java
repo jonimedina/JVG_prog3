@@ -13,7 +13,7 @@ public class main {
     public static void main(String[] args) {
         
        
-        vistaPrincipal vP = new vistaPrincipal();
+        Vista.vistaPrincipal vP = new Vista.vistaPrincipal();
         //controlador c = new controlador(vP);
         
         vP.setVisible(true);
