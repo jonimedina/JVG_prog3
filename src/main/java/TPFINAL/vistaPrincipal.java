@@ -98,7 +98,7 @@ public class vistaPrincipal extends JFrame {
         ordenes.add(editarOrden);
         ordenes.add(eliminarOrden);
         
-        //SEPARACION ENTRE BOTONES
+        //SEPARACION ENTRE BOTONESi
         
         
         panelMateriales.setPreferredSize(new Dimension (180,140));
