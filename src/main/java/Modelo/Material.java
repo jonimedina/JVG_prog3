@@ -1,8 +1,10 @@
 
 package Modelo;
 
+import java.io.Serializable;
 
-public class Material {
+
+public class Material implements Serializable {
     
     private Integer idMaterial;
     private String materiaPrima;

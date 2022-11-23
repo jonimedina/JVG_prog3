@@ -1,8 +1,10 @@
 
 package Modelo;
 
+import java.io.Serializable;
 
-public class Herramienta {
+
+public class Herramienta implements Serializable {
     
     private Integer idHerramienta;
     private String nombre;
