@@ -9,6 +9,6 @@ package Modelo;
  *
  * @author Usuario
  */
-public class Orden {
+public class RetiroMaterial {
     
 }
