@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Vista;
 
 import javax.swing.JFrame;
@@ -36,19 +32,19 @@ public class vistaPrincipal extends javax.swing.JFrame {
         RetiroHerramienta = new javax.swing.JPanel();
         btnListadoHerramientas = new javax.swing.JButton();
         btnBuscarHerramientas = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        btnAgregarHerramienta = new javax.swing.JButton();
+        btnDevolucionHerramienta = new javax.swing.JButton();
+        jLabel18 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel18 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
         RetiroMaterial = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
@@ -143,26 +139,22 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         btnBuscarHerramientas.setText("Buscar");
 
-        jLabel1.setText("Responsable del Depósito:");
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        btnAgregarHerramienta.setText("Confirmar");
+        btnAgregarHerramienta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                btnAgregarHerramientaActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("ID del Docente");
-
-        jLabel3.setText("ID de Herramienta");
-
-        jTextField3.setName(""); // NOI18N
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        btnDevolucionHerramienta.setText("Devolución de Herramienta");
+        btnDevolucionHerramienta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                btnDevolucionHerramientaActionPerformed(evt);
             }
         });
 
-        jLabel4.setText("Fecha de Retiro");
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel18.setText("CREAR NUEVO RETIRO DE HERRAMIENTA");
 
         jLabel5.setText("ID de Retiro de Herramienta:");
 
@@ -172,22 +164,26 @@ public class vistaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Confirmar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setText("Responsable del Depósito:");
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jTextField1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Devolución de Herramienta");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jLabel4.setText("Fecha de Retiro");
+
+        jTextField3.setName(""); // NOI18N
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jTextField3ActionPerformed(evt);
             }
         });
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel18.setText("CREAR NUEVO RETIRO DE HERRAMIENTA");
+        jLabel2.setText("ID del Docente");
+
+        jLabel3.setText("ID de Herramienta");
 
         javax.swing.GroupLayout RetiroHerramientaLayout = new javax.swing.GroupLayout(RetiroHerramienta);
         RetiroHerramienta.setLayout(RetiroHerramientaLayout);
@@ -197,18 +193,19 @@ public class vistaPrincipal extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(btnBuscarHerramientas)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(btnDevolucionHerramienta)
                 .addGap(18, 18, 18)
                 .addComponent(btnListadoHerramientas)
                 .addGap(23, 23, 23))
             .addGroup(RetiroHerramientaLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroHerramientaLayout.createSequentialGroup()
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1))
-                        .addGroup(RetiroHerramientaLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroHerramientaLayout.createSequentialGroup()
+                        .addGap(0, 313, Short.MAX_VALUE)
+                        .addComponent(btnAgregarHerramienta)
+                        .addGap(289, 289, 289))
+                    .addGroup(RetiroHerramientaLayout.createSequentialGroup()
+                        .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(RetiroHerramientaLayout.createSequentialGroup()
                                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -226,9 +223,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
                                         .addComponent(jTextField3)
                                         .addComponent(jTextField5)
                                         .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(288, Short.MAX_VALUE))
+                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         RetiroHerramientaLayout.setVerticalGroup(
             RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -255,14 +251,14 @@ public class vistaPrincipal extends javax.swing.JFrame {
                 .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(67, 67, 67)
+                .addGap(18, 18, 18)
+                .addComponent(btnAgregarHerramienta)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnListadoHerramientas)
                     .addComponent(btnBuscarHerramientas)
-                    .addComponent(jButton2))
-                .addGap(26, 26, 26))
+                    .addComponent(btnDevolucionHerramienta)
+                    .addComponent(btnListadoHerramientas))
+                .addGap(16, 16, 16))
         );
 
         jTabbedPane1.addTab("Retiro Herramientas", RetiroHerramienta);
@@ -830,13 +826,13 @@ public class vistaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnAgregarHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarHerramientaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnAgregarHerramientaActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnDevolucionHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDevolucionHerramientaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnDevolucionHerramientaActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
@@ -855,7 +851,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField8ActionPerformed
 
     private void btnListadoHerramientas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoHerramientas1ActionPerformed
-        // TODO add your handling code here:
+        JFrame vistaListado = new Vista.vistaListado();
+        vistaListado.setVisible(true);
     }//GEN-LAST:event_btnListadoHerramientas1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -879,7 +876,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void btnListadoHerramientas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoHerramientas2ActionPerformed
-        // TODO add your handling code here:
+        JFrame vistaListado = new Vista.vistaListado();
+        vistaListado.setVisible(true);
     }//GEN-LAST:event_btnListadoHerramientas2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -903,7 +901,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void btnListadoHerramientas3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoHerramientas3ActionPerformed
-        // TODO add your handling code here:
+        JFrame vistaListado = new Vista.vistaListado();
+        vistaListado.setVisible(true);
     }//GEN-LAST:event_btnListadoHerramientas3ActionPerformed
 
     private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField20ActionPerformed
@@ -923,7 +922,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void btnListadoHerramientas4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoHerramientas4ActionPerformed
-        // TODO add your handling code here:
+        JFrame vistaListado = new Vista.vistaListado();
+        vistaListado.setVisible(true);
     }//GEN-LAST:event_btnListadoHerramientas4ActionPerformed
 
     private void btnBuscarHerramientas6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarHerramientas6ActionPerformed
@@ -971,6 +971,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel Materiales;
     private javax.swing.JPanel RetiroHerramienta;
     private javax.swing.JPanel RetiroMaterial;
+    private javax.swing.JButton btnAgregarHerramienta;
     private javax.swing.JButton btnBuscarHerramientas;
     private javax.swing.JButton btnBuscarHerramientas1;
     private javax.swing.JButton btnBuscarHerramientas2;
@@ -978,13 +979,12 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnBuscarHerramientas4;
     private javax.swing.JButton btnBuscarHerramientas5;
     private javax.swing.JButton btnBuscarHerramientas6;
+    private javax.swing.JButton btnDevolucionHerramienta;
     private javax.swing.JButton btnListadoHerramientas;
     private javax.swing.JButton btnListadoHerramientas1;
     private javax.swing.JButton btnListadoHerramientas2;
     private javax.swing.JButton btnListadoHerramientas3;
     private javax.swing.JButton btnListadoHerramientas4;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
