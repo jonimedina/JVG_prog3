@@ -9,16 +9,18 @@ public class Docente implements Serializable {
     private String  apellido;
     private String nombre;
     private String cargo;
+    private String telefono;
     
     public Docente(){
         
     }
     
-    public Docente(Integer idDocente, String apellido, String nombre, String cargo){
+    public Docente(Integer idDocente, String apellido, String nombre, String cargo, String telefono){
         this.idDocente = idDocente;
         this.apellido = apellido;
         this.nombre = nombre;
         this.cargo = cargo;
+        this.telefono = telefono;
     }
 
     public Integer getIdDocente() {
@@ -51,6 +53,14 @@ public class Docente implements Serializable {
 
     public void setCargo(String cargo) {
         this.cargo = cargo;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     @Override
