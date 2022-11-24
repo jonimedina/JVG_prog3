@@ -30,82 +30,82 @@ public class vistaPrincipal extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         RetiroHerramienta = new javax.swing.JPanel();
-        btnListadoHerramientas = new javax.swing.JButton();
-        btnBuscarHerramientas = new javax.swing.JButton();
-        btnAgregarHerramienta = new javax.swing.JButton();
+        btnListadoRetiroHerramientas = new javax.swing.JButton();
+        btnBuscarRetiroHerramientas = new javax.swing.JButton();
+        btnAgregarRetiroHerramienta = new javax.swing.JButton();
         btnDevolucionHerramienta = new javax.swing.JButton();
         jLabel18 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        txtIdRetiroHerramienta = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtResponsable = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        txtFechaRetiroHerramienta = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        txtIdDocenteHerramienta = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txtIdHerramientaRetiro = new javax.swing.JTextField();
         RetiroMaterial = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        btnBuscarHerramientas1 = new javax.swing.JButton();
-        btnListadoHerramientas1 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnAgregarRetiroMaterial = new javax.swing.JButton();
+        btnBuscarRetiroMaterial = new javax.swing.JButton();
+        btnListadoRetiroMaterial = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        txtIdRetiroMaterial = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        txtResponsable2 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        txtFechaRetiroMaterial = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        txtIdDocenteMaterial = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        txtIdHerramientaMaterial = new javax.swing.JTextField();
         Docentes = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        btnBuscarHerramientas2 = new javax.swing.JButton();
-        btnListadoHerramientas2 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jComboBoxCargoDocente = new javax.swing.JComboBox<>();
-        btnBuscarHerramientas3 = new javax.swing.JButton();
+        btnAgregarDocente = new javax.swing.JButton();
+        btnBuscarDocente = new javax.swing.JButton();
+        btnEditarDocente = new javax.swing.JButton();
+        btnEliminarDocente = new javax.swing.JButton();
+        btnListadoDocente = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        txtIdDocente = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        txtApellido = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jComboBoxCargoDocente = new javax.swing.JComboBox<>();
+        jLabel13 = new javax.swing.JLabel();
+        txtTelefono = new javax.swing.JTextField();
         Herramientas = new javax.swing.JPanel();
+        btnAgregarHerramienta = new javax.swing.JButton();
+        btnBuscarHerramienta = new javax.swing.JButton();
+        btnListadoHerramienta = new javax.swing.JButton();
+        btnEliminarHerramienta = new javax.swing.JButton();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
-        jTextField20 = new javax.swing.JTextField();
+        txtIdHerramienta = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
-        jTextField21 = new javax.swing.JTextField();
+        txtNombreHerramienta = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
-        jTextField22 = new javax.swing.JTextField();
+        txtMarcaHerramienta = new javax.swing.JTextField();
         jLabel29 = new javax.swing.JLabel();
-        jTextField23 = new javax.swing.JTextField();
-        jButton7 = new javax.swing.JButton();
-        btnBuscarHerramientas5 = new javax.swing.JButton();
-        btnListadoHerramientas4 = new javax.swing.JButton();
-        btnBuscarHerramientas6 = new javax.swing.JButton();
+        txtStockHerramienta = new javax.swing.JTextField();
         Materiales = new javax.swing.JPanel();
+        btnAgregarMaterial = new javax.swing.JButton();
+        btnBuscarMaterial = new javax.swing.JButton();
+        btnListadoMaterial = new javax.swing.JButton();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
+        txtIdMaterial = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
-        jTextField16 = new javax.swing.JTextField();
+        txtMateriaPrima = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
-        jTextField18 = new javax.swing.JTextField();
-        jLabel24 = new javax.swing.JLabel();
-        jTextField19 = new javax.swing.JTextField();
-        jButton6 = new javax.swing.JButton();
-        btnBuscarHerramientas4 = new javax.swing.JButton();
-        btnListadoHerramientas3 = new javax.swing.JButton();
-        jTextField25 = new javax.swing.JTextField();
+        txtTipoMaterial = new javax.swing.JTextField();
         jLabel31 = new javax.swing.JLabel();
+        txtMedida = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        txtStock = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -130,19 +130,19 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         RetiroHerramienta.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
 
-        btnListadoHerramientas.setText("Ver Listado");
-        btnListadoHerramientas.addActionListener(new java.awt.event.ActionListener() {
+        btnListadoRetiroHerramientas.setText("Ver Listado");
+        btnListadoRetiroHerramientas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnListadoHerramientasActionPerformed(evt);
+                btnListadoRetiroHerramientasActionPerformed(evt);
             }
         });
 
-        btnBuscarHerramientas.setText("Buscar");
+        btnBuscarRetiroHerramientas.setText("Buscar");
 
-        btnAgregarHerramienta.setText("Confirmar");
-        btnAgregarHerramienta.addActionListener(new java.awt.event.ActionListener() {
+        btnAgregarRetiroHerramienta.setText("Confirmar");
+        btnAgregarRetiroHerramienta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarHerramientaActionPerformed(evt);
+                btnAgregarRetiroHerramientaActionPerformed(evt);
             }
         });
 
@@ -158,26 +158,26 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         jLabel5.setText("ID de Retiro de Herramienta:");
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        txtIdRetiroHerramienta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                txtIdRetiroHerramientaActionPerformed(evt);
             }
         });
 
         jLabel1.setText("Responsable del Depósito:");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtResponsable.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtResponsableActionPerformed(evt);
             }
         });
 
         jLabel4.setText("Fecha de Retiro");
 
-        jTextField3.setName(""); // NOI18N
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        txtFechaRetiroHerramienta.setName(""); // NOI18N
+        txtFechaRetiroHerramienta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                txtFechaRetiroHerramientaActionPerformed(evt);
             }
         });
 
@@ -191,18 +191,18 @@ public class vistaPrincipal extends javax.swing.JFrame {
             RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroHerramientaLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnBuscarHerramientas)
+                .addComponent(btnBuscarRetiroHerramientas)
                 .addGap(18, 18, 18)
                 .addComponent(btnDevolucionHerramienta)
                 .addGap(18, 18, 18)
-                .addComponent(btnListadoHerramientas)
+                .addComponent(btnListadoRetiroHerramientas)
                 .addGap(23, 23, 23))
             .addGroup(RetiroHerramientaLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroHerramientaLayout.createSequentialGroup()
                         .addGap(0, 313, Short.MAX_VALUE)
-                        .addComponent(btnAgregarHerramienta)
+                        .addComponent(btnAgregarRetiroHerramienta)
                         .addGap(289, 289, 289))
                     .addGroup(RetiroHerramientaLayout.createSequentialGroup()
                         .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -210,7 +210,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                                 .addGroup(RetiroHerramientaLayout.createSequentialGroup()
                                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(40, 40, 40)
-                                    .addComponent(jTextField1))
+                                    .addComponent(txtResponsable))
                                 .addGroup(RetiroHerramientaLayout.createSequentialGroup()
                                     .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -219,10 +219,10 @@ public class vistaPrincipal extends javax.swing.JFrame {
                                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGap(18, 18, 18)
                                     .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jTextField4)
-                                        .addComponent(jTextField3)
-                                        .addComponent(jTextField5)
-                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(txtIdDocenteHerramienta)
+                                        .addComponent(txtFechaRetiroHerramienta)
+                                        .addComponent(txtIdRetiroHerramienta)
+                                        .addComponent(txtIdHerramientaRetiro, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
@@ -234,57 +234,76 @@ public class vistaPrincipal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIdRetiroHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtResponsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtFechaRetiroHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
                 .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIdDocenteHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIdHerramientaRetiro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(btnAgregarHerramienta)
+                .addComponent(btnAgregarRetiroHerramienta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBuscarHerramientas)
+                    .addComponent(btnBuscarRetiroHerramientas)
                     .addComponent(btnDevolucionHerramienta)
-                    .addComponent(btnListadoHerramientas))
+                    .addComponent(btnListadoRetiroHerramientas))
                 .addGap(16, 16, 16))
         );
 
         jTabbedPane1.addTab("Retiro Herramientas", RetiroHerramienta);
 
+        btnAgregarRetiroMaterial.setText("Confirmar");
+        btnAgregarRetiroMaterial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarRetiroMaterialActionPerformed(evt);
+            }
+        });
+
+        btnBuscarRetiroMaterial.setText("Buscar");
+
+        btnListadoRetiroMaterial.setText("Ver Listado");
+        btnListadoRetiroMaterial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnListadoRetiroMaterialActionPerformed(evt);
+            }
+        });
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel17.setText("CREAR NUEVO RETIRO DE MATERIALES");
+
         jLabel6.setText("ID de Retiro de Material:");
 
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        txtIdRetiroMaterial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                txtIdRetiroMaterialActionPerformed(evt);
             }
         });
 
         jLabel7.setText("Responsable del Depósito:");
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        txtResponsable2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                txtResponsable2ActionPerformed(evt);
             }
         });
 
         jLabel8.setText("Fecha de Retiro");
 
-        jTextField8.setName(""); // NOI18N
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        txtFechaRetiroMaterial.setName(""); // NOI18N
+        txtFechaRetiroMaterial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                txtFechaRetiroMaterialActionPerformed(evt);
             }
         });
 
@@ -292,34 +311,15 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         jLabel10.setText("ID de Herramienta");
 
-        btnBuscarHerramientas1.setText("Buscar");
-
-        btnListadoHerramientas1.setText("Ver Listado");
-        btnListadoHerramientas1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnListadoHerramientas1ActionPerformed(evt);
-            }
-        });
-
-        jButton4.setText("Confirmar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel17.setText("CREAR NUEVO RETIRO DE MATERIALES");
-
         javax.swing.GroupLayout RetiroMaterialLayout = new javax.swing.GroupLayout(RetiroMaterial);
         RetiroMaterial.setLayout(RetiroMaterialLayout);
         RetiroMaterialLayout.setHorizontalGroup(
             RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroMaterialLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnBuscarHerramientas1)
+                .addComponent(btnBuscarRetiroMaterial)
                 .addGap(18, 18, 18)
-                .addComponent(btnListadoHerramientas1)
+                .addComponent(btnListadoRetiroMaterial)
                 .addGap(23, 23, 23))
             .addGroup(RetiroMaterialLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
@@ -327,29 +327,29 @@ public class vistaPrincipal extends javax.swing.JFrame {
                     .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroMaterialLayout.createSequentialGroup()
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton4))
+                            .addComponent(btnAgregarRetiroMaterial))
                         .addGroup(RetiroMaterialLayout.createSequentialGroup()
                             .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(RetiroMaterialLayout.createSequentialGroup()
                                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextField8))
+                                    .addComponent(txtFechaRetiroMaterial))
                                 .addGroup(RetiroMaterialLayout.createSequentialGroup()
                                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtIdRetiroMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(RetiroMaterialLayout.createSequentialGroup()
                                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextField9))
+                                    .addComponent(txtIdDocenteMaterial))
                                 .addGroup(RetiroMaterialLayout.createSequentialGroup()
                                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtResponsable2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(RetiroMaterialLayout.createSequentialGroup()
                                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtIdHerramientaMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(288, Short.MAX_VALUE))
@@ -362,97 +362,97 @@ public class vistaPrincipal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIdRetiroMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtResponsable2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtFechaRetiroMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
                 .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIdDocenteMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIdHerramientaMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4)
+                .addComponent(btnAgregarRetiroMaterial)
                 .addGap(67, 67, 67)
                 .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnListadoHerramientas1)
-                    .addComponent(btnBuscarHerramientas1))
+                    .addComponent(btnListadoRetiroMaterial)
+                    .addComponent(btnBuscarRetiroMaterial))
                 .addGap(26, 26, 26))
         );
 
         jTabbedPane1.addTab("Retiro Materiales", RetiroMaterial);
 
-        jLabel11.setText("ID del Docente");
-
-        jLabel12.setText("Apellido:");
-
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        btnAgregarDocente.setText("Confirmar");
+        btnAgregarDocente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                btnAgregarDocenteActionPerformed(evt);
             }
         });
 
-        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+        btnBuscarDocente.setText("Buscar");
+
+        btnEditarDocente.setText("Editar");
+        btnEditarDocente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField12ActionPerformed(evt);
+                btnEditarDocenteActionPerformed(evt);
             }
         });
 
-        jTextField13.setName(""); // NOI18N
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+        btnEliminarDocente.setText("Eliminar");
+        btnEliminarDocente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
+                btnEliminarDocenteActionPerformed(evt);
             }
         });
 
-        jLabel13.setText("Telefóno");
-
-        jLabel14.setText("Cargo");
-
-        jLabel15.setText("Nombre");
-
-        jButton3.setText("Confirmar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnListadoDocente.setText("Ver Listado");
+        btnListadoDocente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        btnBuscarHerramientas2.setText("Buscar");
-
-        btnListadoHerramientas2.setText("Ver Listado");
-        btnListadoHerramientas2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnListadoHerramientas2ActionPerformed(evt);
-            }
-        });
-
-        jButton5.setText("Eliminar");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-
-        jComboBoxCargoDocente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MEP", "Jefe Sección ", "Jefe Gral de Taller", "Profesor/a/x" }));
-
-        btnBuscarHerramientas3.setText("Editar");
-        btnBuscarHerramientas3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarHerramientas3ActionPerformed(evt);
+                btnListadoDocenteActionPerformed(evt);
             }
         });
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel16.setText("AGREGAR NUEVO DOCENTE");
+
+        jLabel11.setText("ID del Docente");
+
+        txtIdDocente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdDocenteActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setText("Apellido:");
+
+        txtApellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtApellidoActionPerformed(evt);
+            }
+        });
+
+        jLabel15.setText("Nombre");
+
+        txtNombre.setName(""); // NOI18N
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreActionPerformed(evt);
+            }
+        });
+
+        jLabel14.setText("Cargo");
+
+        jComboBoxCargoDocente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MEP", "Jefe Sección ", "Jefe Gral de Taller", "Profesor/a/x" }));
+
+        jLabel13.setText("Telefóno");
 
         javax.swing.GroupLayout DocentesLayout = new javax.swing.GroupLayout(Docentes);
         Docentes.setLayout(DocentesLayout);
@@ -460,19 +460,19 @@ public class vistaPrincipal extends javax.swing.JFrame {
             DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DocentesLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnBuscarHerramientas2)
+                .addComponent(btnBuscarDocente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnBuscarHerramientas3)
+                .addComponent(btnEditarDocente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5)
+                .addComponent(btnEliminarDocente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnListadoHerramientas2)
+                .addComponent(btnListadoDocente)
                 .addGap(23, 23, 23))
             .addGroup(DocentesLayout.createSequentialGroup()
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(DocentesLayout.createSequentialGroup()
                         .addGap(241, 241, 241)
-                        .addComponent(jButton3))
+                        .addComponent(btnAgregarDocente))
                     .addGroup(DocentesLayout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -486,10 +486,10 @@ public class vistaPrincipal extends javax.swing.JFrame {
                                     .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField12)
-                                    .addComponent(jTextField13)
-                                    .addComponent(jTextField11)
-                                    .addComponent(jTextField15, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                                    .addComponent(txtApellido)
+                                    .addComponent(txtNombre)
+                                    .addComponent(txtIdDocente)
+                                    .addComponent(txtTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
                                     .addComponent(jComboBoxCargoDocente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addContainerGap(388, Short.MAX_VALUE))
         );
@@ -501,15 +501,15 @@ public class vistaPrincipal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIdDocente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -517,74 +517,74 @@ public class vistaPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
-                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
-                .addComponent(jButton3)
+                .addComponent(btnAgregarDocente)
                 .addGap(17, 65, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DocentesLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBuscarHerramientas2)
-                    .addComponent(btnBuscarHerramientas3)
-                    .addComponent(jButton5)
-                    .addComponent(btnListadoHerramientas2))
+                    .addComponent(btnBuscarDocente)
+                    .addComponent(btnEditarDocente)
+                    .addComponent(btnEliminarDocente)
+                    .addComponent(btnListadoDocente))
                 .addContainerGap())
         );
 
         jTabbedPane1.addTab("Docentes", Docentes);
+
+        btnAgregarHerramienta.setText("Confirmar");
+        btnAgregarHerramienta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarHerramientaActionPerformed(evt);
+            }
+        });
+
+        btnBuscarHerramienta.setText("Buscar");
+
+        btnListadoHerramienta.setText("Ver Listado");
+        btnListadoHerramienta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnListadoHerramientaActionPerformed(evt);
+            }
+        });
+
+        btnEliminarHerramienta.setText("Eliminar Herramienta");
+        btnEliminarHerramienta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarHerramientaActionPerformed(evt);
+            }
+        });
 
         jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel25.setText("INGRESO NUEVA HERRAMIENTA");
 
         jLabel26.setText("ID de Herramienta");
 
-        jTextField20.addActionListener(new java.awt.event.ActionListener() {
+        txtIdHerramienta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField20ActionPerformed(evt);
+                txtIdHerramientaActionPerformed(evt);
             }
         });
 
         jLabel27.setText("Nombre");
 
-        jTextField21.addActionListener(new java.awt.event.ActionListener() {
+        txtNombreHerramienta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField21ActionPerformed(evt);
+                txtNombreHerramientaActionPerformed(evt);
             }
         });
 
         jLabel28.setText("Marca");
 
-        jTextField22.setName(""); // NOI18N
-        jTextField22.addActionListener(new java.awt.event.ActionListener() {
+        txtMarcaHerramienta.setName(""); // NOI18N
+        txtMarcaHerramienta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField22ActionPerformed(evt);
+                txtMarcaHerramientaActionPerformed(evt);
             }
         });
 
         jLabel29.setText("Stock");
-
-        jButton7.setText("Confirmar");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-
-        btnBuscarHerramientas5.setText("Buscar");
-
-        btnListadoHerramientas4.setText("Ver Listado");
-        btnListadoHerramientas4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnListadoHerramientas4ActionPerformed(evt);
-            }
-        });
-
-        btnBuscarHerramientas6.setText("Eliminar Herramienta");
-        btnBuscarHerramientas6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarHerramientas6ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout HerramientasLayout = new javax.swing.GroupLayout(Herramientas);
         Herramientas.setLayout(HerramientasLayout);
@@ -592,11 +592,11 @@ public class vistaPrincipal extends javax.swing.JFrame {
             HerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HerramientasLayout.createSequentialGroup()
                 .addContainerGap(373, Short.MAX_VALUE)
-                .addComponent(btnBuscarHerramientas5)
+                .addComponent(btnBuscarHerramienta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnBuscarHerramientas6)
+                .addComponent(btnEliminarHerramienta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnListadoHerramientas4)
+                .addComponent(btnListadoHerramienta)
                 .addGap(23, 23, 23))
             .addGroup(HerramientasLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
@@ -610,13 +610,13 @@ public class vistaPrincipal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(HerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(HerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jTextField22)
-                            .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txtIdHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtNombreHerramienta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtMarcaHerramienta)
+                            .addComponent(txtStockHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(HerramientasLayout.createSequentialGroup()
                         .addGap(221, 221, 221)
-                        .addComponent(jButton7))
+                        .addComponent(btnAgregarHerramienta))
                     .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -636,65 +636,65 @@ public class vistaPrincipal extends javax.swing.JFrame {
                         .addGap(12, 12, 12)
                         .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(HerramientasLayout.createSequentialGroup()
-                        .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtIdHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtNombreHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtMarcaHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(9, 9, 9)
-                        .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtStockHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(jButton7)
+                .addComponent(btnAgregarHerramienta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addGroup(HerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnListadoHerramientas4)
-                    .addComponent(btnBuscarHerramientas5)
-                    .addComponent(btnBuscarHerramientas6))
+                    .addComponent(btnListadoHerramienta)
+                    .addComponent(btnBuscarHerramienta)
+                    .addComponent(btnEliminarHerramienta))
                 .addGap(26, 26, 26))
         );
 
         jTabbedPane1.addTab("Herramientas", Herramientas);
+
+        btnAgregarMaterial.setText("Confirmar");
+        btnAgregarMaterial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarMaterialActionPerformed(evt);
+            }
+        });
+
+        btnBuscarMaterial.setText("Buscar");
+
+        btnListadoMaterial.setText("Ver Listado");
+        btnListadoMaterial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnListadoMaterialActionPerformed(evt);
+            }
+        });
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel19.setText("INGRESO NUEVO MATERIAL");
 
         jLabel20.setText("ID del Material:");
 
-        jTextField14.addActionListener(new java.awt.event.ActionListener() {
+        txtIdMaterial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField14ActionPerformed(evt);
+                txtIdMaterialActionPerformed(evt);
             }
         });
 
         jLabel21.setText("Materia Prima");
 
-        jTextField16.addActionListener(new java.awt.event.ActionListener() {
+        txtMateriaPrima.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField16ActionPerformed(evt);
+                txtMateriaPrimaActionPerformed(evt);
             }
         });
 
         jLabel23.setText("Tipo");
 
-        jLabel24.setText("Stock");
-
-        jButton6.setText("Confirmar");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-
-        btnBuscarHerramientas4.setText("Buscar");
-
-        btnListadoHerramientas3.setText("Ver Listado");
-        btnListadoHerramientas3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnListadoHerramientas3ActionPerformed(evt);
-            }
-        });
-
         jLabel31.setText("Medida");
+
+        jLabel24.setText("Stock");
 
         javax.swing.GroupLayout MaterialesLayout = new javax.swing.GroupLayout(Materiales);
         Materiales.setLayout(MaterialesLayout);
@@ -702,9 +702,9 @@ public class vistaPrincipal extends javax.swing.JFrame {
             MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MaterialesLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnBuscarHerramientas4)
+                .addComponent(btnBuscarMaterial)
                 .addGap(18, 18, 18)
-                .addComponent(btnListadoHerramientas3)
+                .addComponent(btnListadoMaterial)
                 .addGap(23, 23, 23))
             .addGroup(MaterialesLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
@@ -721,15 +721,15 @@ public class vistaPrincipal extends javax.swing.JFrame {
                                 .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMedida, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTipoMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txtIdMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtMateriaPrima, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(MaterialesLayout.createSequentialGroup()
                         .addGap(200, 200, 200)
-                        .addComponent(jButton6))
+                        .addComponent(btnAgregarMaterial))
                     .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(393, Short.MAX_VALUE))
         );
@@ -741,29 +741,29 @@ public class vistaPrincipal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIdMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtMateriaPrima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTipoMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtMedida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
                 .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel24)
-                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton6)
+                .addComponent(btnAgregarMaterial)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnListadoHerramientas3)
-                    .addComponent(btnBuscarHerramientas4))
+                    .addComponent(btnListadoMaterial)
+                    .addComponent(btnBuscarMaterial))
                 .addGap(26, 26, 26))
         );
 
@@ -812,123 +812,123 @@ public class vistaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void btnListadoHerramientasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoHerramientasActionPerformed
+    private void btnListadoRetiroHerramientasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoRetiroHerramientasActionPerformed
        
         JFrame vistaListado = new Vista.vistaListado();
         vistaListado.setVisible(true);
-    }//GEN-LAST:event_btnListadoHerramientasActionPerformed
+    }//GEN-LAST:event_btnListadoRetiroHerramientasActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtResponsableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtResponsableActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtResponsableActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void txtIdRetiroHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdRetiroHerramientaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_txtIdRetiroHerramientaActionPerformed
 
-    private void btnAgregarHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarHerramientaActionPerformed
+    private void btnAgregarRetiroHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRetiroHerramientaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAgregarHerramientaActionPerformed
+    }//GEN-LAST:event_btnAgregarRetiroHerramientaActionPerformed
 
     private void btnDevolucionHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDevolucionHerramientaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDevolucionHerramientaActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void txtFechaRetiroHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaRetiroHerramientaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_txtFechaRetiroHerramientaActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void txtIdRetiroMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdRetiroMaterialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_txtIdRetiroMaterialActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void txtResponsable2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtResponsable2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_txtResponsable2ActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void txtFechaRetiroMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaRetiroMaterialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_txtFechaRetiroMaterialActionPerformed
 
-    private void btnListadoHerramientas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoHerramientas1ActionPerformed
+    private void btnListadoRetiroMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoRetiroMaterialActionPerformed
         JFrame vistaListado = new Vista.vistaListado();
         vistaListado.setVisible(true);
-    }//GEN-LAST:event_btnListadoHerramientas1ActionPerformed
+    }//GEN-LAST:event_btnListadoRetiroMaterialActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnAgregarRetiroMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRetiroMaterialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnAgregarRetiroMaterialActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void txtIdDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdDocenteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_txtIdDocenteActionPerformed
 
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+    private void txtApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
+    }//GEN-LAST:event_txtApellidoActionPerformed
 
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
+    }//GEN-LAST:event_txtNombreActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnAgregarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarDocenteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnAgregarDocenteActionPerformed
 
-    private void btnListadoHerramientas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoHerramientas2ActionPerformed
+    private void btnListadoDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoDocenteActionPerformed
         JFrame vistaListado = new Vista.vistaListado();
         vistaListado.setVisible(true);
-    }//GEN-LAST:event_btnListadoHerramientas2ActionPerformed
+    }//GEN-LAST:event_btnListadoDocenteActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btnEliminarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarDocenteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_btnEliminarDocenteActionPerformed
 
-    private void btnBuscarHerramientas3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarHerramientas3ActionPerformed
+    private void btnEditarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarDocenteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnBuscarHerramientas3ActionPerformed
+    }//GEN-LAST:event_btnEditarDocenteActionPerformed
 
-    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+    private void txtIdMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdMaterialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField14ActionPerformed
+    }//GEN-LAST:event_txtIdMaterialActionPerformed
 
-    private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
+    private void txtMateriaPrimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMateriaPrimaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField16ActionPerformed
+    }//GEN-LAST:event_txtMateriaPrimaActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void btnAgregarMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarMaterialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_btnAgregarMaterialActionPerformed
 
-    private void btnListadoHerramientas3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoHerramientas3ActionPerformed
+    private void btnListadoMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoMaterialActionPerformed
         JFrame vistaListado = new Vista.vistaListado();
         vistaListado.setVisible(true);
-    }//GEN-LAST:event_btnListadoHerramientas3ActionPerformed
+    }//GEN-LAST:event_btnListadoMaterialActionPerformed
 
-    private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField20ActionPerformed
+    private void txtIdHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdHerramientaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField20ActionPerformed
+    }//GEN-LAST:event_txtIdHerramientaActionPerformed
 
-    private void jTextField21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField21ActionPerformed
+    private void txtNombreHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreHerramientaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField21ActionPerformed
+    }//GEN-LAST:event_txtNombreHerramientaActionPerformed
 
-    private void jTextField22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField22ActionPerformed
+    private void txtMarcaHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMarcaHerramientaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField22ActionPerformed
+    }//GEN-LAST:event_txtMarcaHerramientaActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void btnAgregarHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarHerramientaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_btnAgregarHerramientaActionPerformed
 
-    private void btnListadoHerramientas4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoHerramientas4ActionPerformed
+    private void btnListadoHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoHerramientaActionPerformed
         JFrame vistaListado = new Vista.vistaListado();
         vistaListado.setVisible(true);
-    }//GEN-LAST:event_btnListadoHerramientas4ActionPerformed
+    }//GEN-LAST:event_btnListadoHerramientaActionPerformed
 
-    private void btnBuscarHerramientas6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarHerramientas6ActionPerformed
+    private void btnEliminarHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarHerramientaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnBuscarHerramientas6ActionPerformed
+    }//GEN-LAST:event_btnEliminarHerramientaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -971,25 +971,25 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel Materiales;
     private javax.swing.JPanel RetiroHerramienta;
     private javax.swing.JPanel RetiroMaterial;
+    private javax.swing.JButton btnAgregarDocente;
     private javax.swing.JButton btnAgregarHerramienta;
-    private javax.swing.JButton btnBuscarHerramientas;
-    private javax.swing.JButton btnBuscarHerramientas1;
-    private javax.swing.JButton btnBuscarHerramientas2;
-    private javax.swing.JButton btnBuscarHerramientas3;
-    private javax.swing.JButton btnBuscarHerramientas4;
-    private javax.swing.JButton btnBuscarHerramientas5;
-    private javax.swing.JButton btnBuscarHerramientas6;
+    private javax.swing.JButton btnAgregarMaterial;
+    private javax.swing.JButton btnAgregarRetiroHerramienta;
+    private javax.swing.JButton btnAgregarRetiroMaterial;
+    private javax.swing.JButton btnBuscarDocente;
+    private javax.swing.JButton btnBuscarHerramienta;
+    private javax.swing.JButton btnBuscarMaterial;
+    private javax.swing.JButton btnBuscarRetiroHerramientas;
+    private javax.swing.JButton btnBuscarRetiroMaterial;
     private javax.swing.JButton btnDevolucionHerramienta;
-    private javax.swing.JButton btnListadoHerramientas;
-    private javax.swing.JButton btnListadoHerramientas1;
-    private javax.swing.JButton btnListadoHerramientas2;
-    private javax.swing.JButton btnListadoHerramientas3;
-    private javax.swing.JButton btnListadoHerramientas4;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton btnEditarDocente;
+    private javax.swing.JButton btnEliminarDocente;
+    private javax.swing.JButton btnEliminarHerramienta;
+    private javax.swing.JButton btnListadoDocente;
+    private javax.swing.JButton btnListadoHerramienta;
+    private javax.swing.JButton btnListadoMaterial;
+    private javax.swing.JButton btnListadoRetiroHerramientas;
+    private javax.swing.JButton btnListadoRetiroMaterial;
     private javax.swing.JComboBox<String> jComboBoxCargoDocente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1029,28 +1029,28 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField txtApellido;
+    private javax.swing.JTextField txtFechaRetiroHerramienta;
+    private javax.swing.JTextField txtFechaRetiroMaterial;
+    private javax.swing.JTextField txtIdDocente;
+    private javax.swing.JTextField txtIdDocenteHerramienta;
+    private javax.swing.JTextField txtIdDocenteMaterial;
+    private javax.swing.JTextField txtIdHerramienta;
+    private javax.swing.JTextField txtIdHerramientaMaterial;
+    private javax.swing.JTextField txtIdHerramientaRetiro;
+    private javax.swing.JTextField txtIdMaterial;
+    private javax.swing.JTextField txtIdRetiroHerramienta;
+    private javax.swing.JTextField txtIdRetiroMaterial;
+    private javax.swing.JTextField txtMarcaHerramienta;
+    private javax.swing.JTextField txtMateriaPrima;
+    private javax.swing.JTextField txtMedida;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtNombreHerramienta;
+    private javax.swing.JTextField txtResponsable;
+    private javax.swing.JTextField txtResponsable2;
+    private javax.swing.JTextField txtStock;
+    private javax.swing.JTextField txtStockHerramienta;
+    private javax.swing.JTextField txtTelefono;
+    private javax.swing.JTextField txtTipoMaterial;
     // End of variables declaration//GEN-END:variables
 }
