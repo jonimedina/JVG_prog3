@@ -2,6 +2,7 @@
 package Modelo;
 
 import java.io.Serializable;
+import java.sql.Time;
 
 
 public class RetiroMaterial implements Serializable {
@@ -10,13 +11,13 @@ public class RetiroMaterial implements Serializable {
     private String responsable;
     private Integer idDocente;
     private Integer idMaterial;
-    private Fecha fechaRetiro;
+    private Time fechaRetiro;
     
     public RetiroMaterial(){
         
     }
     
-    public RetiroMaterial(Integer idRetiroMaterial, String responsable, Integer idDocente, Integer idMaterial, Fecha fechaRetiro){
+    public RetiroMaterial(Integer idRetiroMaterial, String responsable, Integer idDocente, Integer idMaterial, Time fechaRetiro){
         this.idRetiroMaterial = idRetiroMaterial;
         this.responsable = responsable;
         this.idDocente = idDocente;
@@ -56,11 +57,11 @@ public class RetiroMaterial implements Serializable {
         this.idMaterial = idMaterial;
     }
 
-    public Fecha getFechaRetiro() {
+    public Time getFechaRetiro() {
         return fechaRetiro;
     }
 
-    public void setFechaRetiro(Fecha fechaRetiro) {
+    public void setFechaRetiro(Time fechaRetiro) {
         this.fechaRetiro = fechaRetiro;
     }
 

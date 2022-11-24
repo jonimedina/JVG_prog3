@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class catalog="deposito" name="Modelo.RetiroMaterial" optimistic-lock="version" table="retiroMateriales">
+        <id name="idRetiroMaterial" type="java.lang.Integer">
+            <column name="IdRetiroMaterial"/>
+            <generator class="identity"/>
+        </id>
+        
+        <property name="responsable" type="string">
+            <column length="30" name="Responsable" not-null="true"/>
+        </property>
+        
+        <property name="idDocente" type="java.lang.Integer">
+            <column length="10" name="IdDocente" not-null="true"/>
+        </property>
+        
+        <property name="idMaterial" type="java.lang.Integer">
+            <column length="10" name="IdMaterial" not-null="true"/>
+        </property>
+
+        <property name="fechaRetiro" type="java.lang.date">
+            <column length="10" name="Stock" not-null="true"/>
+        </property>
+        
+        </class>
+</hibernate-mapping>

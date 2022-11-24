@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class catalog="deposito" name="Modelo.Herramienta" optimistic-lock="version" table="herramientas">
+        <id name="idHerramienta" type="java.lang.Integer">
+            <column name="IdHerramienta"/>
+            <generator class="identity"/>
+        </id>
+        
+        <property name="nombre" type="string">
+            <column length="30" name="Nombre" not-null="true"/>
+        </property>
+        
+        <property name="marca" type="string">
+            <column length="30" name="Marca" not-null="true"/>
+        </property>
+
+        <property name="stock" type="java.lang.Integer">
+            <column length="3" name="Stock" not-null="true"/>
+        </property>
+        
+        </class>
+</hibernate-mapping>
