@@ -1,21 +1,20 @@
-
 package Controlador;
 
-import Modelo.Docente;
+import Modelo.Material;
 import java.util.List;
 import org.hibernate.Session;
 
-public class DocenteControlador {
+public class MaterialControlador {
     
-    public DocenteControlador(){
+    public MaterialControlador(){
     }
     
-    public List<Docente> listarDocentes() {
+    public List<Material> listarMateriales() {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
 
-            List<Docente> listado = session.createQuery("FROM Docentes", Docente.class).getResultList();
+            List<Material> listado = session.createQuery("FROM Materiales", Material.class).getResultList();
 
             session.getTransaction().commit();
 
@@ -30,12 +29,12 @@ public class DocenteControlador {
         } 
     }
      
-     public Docente buscarDocentePorId(int id) {
+     public Material buscarMaterialPorId(int id) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
 
-            Docente docenteEncontrado = session.createQuery("FROM Docentes WHERE idDocente =:id", Docente.class).setParameter("id", id).getSingleResult();
+            Material docenteEncontrado = session.createQuery("FROM Materiales WHERE idMaterial =:id", Material.class).setParameter("id", id).getSingleResult();
 
             session.getTransaction().commit();
             if (docenteEncontrado != null) {
@@ -50,61 +49,40 @@ public class DocenteControlador {
         } 
     }
 
-    public Docente buscarDocentePorApellido(String ape) {
+    public void actualizarMaterial(Material editarMaterial) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
-
-            Docente docenteEncontrado = session.createQuery("FROM Docentes WHERE Apellido =:ape", Docente.class).setParameter("ape", ape).getSingleResult();
-
-            session.getTransaction().commit();
-            if (docenteEncontrado != null) {
-                return docenteEncontrado;
-            } else {
-                return null;
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        } 
-    }
-
-    public void actualizarDocente(Docente editarDocente) {
-        try ( Session session = HibernateUtil.getCurrentSession()) {
-
-            session.beginTransaction();
-            session.merge(editarDocente);
+            session.merge(editarMaterial);
             session.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
         } 
     }
 
-    public Docente agregarDocente (Docente agregarDoc) {
+    public Material agregarMaterial (Material agregarMat) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
-            session.persist(agregarDoc);
+            session.persist(agregarMat);
             session.getTransaction().commit();
-            return agregarDoc;
+            return agregarMat;
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
     }
 
-    public void borrarDocente(int id) {
+    public void borrarMaterial(int id) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
-            Docente eliminarDocente = session.createQuery("FROM Docentes WHERE idDocente =:id", Docente.class).setParameter("id", id).getSingleResult();
-            session.remove(eliminarDocente);
+            Material eliminarMaterial = session.createQuery("FROM Materiales WHERE idMaterial =:id", Material.class).setParameter("id", id).getSingleResult();
+            session.remove(eliminarMaterial);
             session.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
         } 
     }
-
-        
+    
 }

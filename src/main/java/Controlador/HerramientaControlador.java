@@ -1,21 +1,21 @@
-
 package Controlador;
 
-import Modelo.Docente;
+import Modelo.Herramienta;
 import java.util.List;
 import org.hibernate.Session;
 
-public class DocenteControlador {
+public class HerramientaControlador {
     
-    public DocenteControlador(){
+    public HerramientaControlador(){
+        
     }
     
-    public List<Docente> listarDocentes() {
+    public List<Herramienta> listarHerramientas() {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
 
-            List<Docente> listado = session.createQuery("FROM Docentes", Docente.class).getResultList();
+            List<Herramienta> listado = session.createQuery("FROM Herramientas", Herramienta.class).getResultList();
 
             session.getTransaction().commit();
 
@@ -30,16 +30,16 @@ public class DocenteControlador {
         } 
     }
      
-     public Docente buscarDocentePorId(int id) {
+     public Herramienta buscarHerramientaPorId(int id) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
 
-            Docente docenteEncontrado = session.createQuery("FROM Docentes WHERE idDocente =:id", Docente.class).setParameter("id", id).getSingleResult();
+            Herramienta HerramientaEncontrada = session.createQuery("FROM Herramientas WHERE idHerramienta =:id", Herramienta.class).setParameter("id", id).getSingleResult();
 
             session.getTransaction().commit();
-            if (docenteEncontrado != null) {
-                return docenteEncontrado;
+            if (HerramientaEncontrada != null) {
+                return HerramientaEncontrada;
             } else {
                 return null;
             }
@@ -50,16 +50,16 @@ public class DocenteControlador {
         } 
     }
 
-    public Docente buscarDocentePorApellido(String ape) {
+    public Herramienta buscarHerramientaPorMarca(String mar) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
 
-            Docente docenteEncontrado = session.createQuery("FROM Docentes WHERE Apellido =:ape", Docente.class).setParameter("ape", ape).getSingleResult();
+            Herramienta herramientaEncontrada = session.createQuery("FROM Herramientas WHERE marca =:mar", Herramienta.class).setParameter("mar", mar).getSingleResult();
 
             session.getTransaction().commit();
-            if (docenteEncontrado != null) {
-                return docenteEncontrado;
+            if (herramientaEncontrada != null) {
+                return herramientaEncontrada;
             } else {
                 return null;
             }
@@ -70,41 +70,39 @@ public class DocenteControlador {
         } 
     }
 
-    public void actualizarDocente(Docente editarDocente) {
+    public void actualizarHerramienta (Herramienta editarHerramienta) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
-            session.merge(editarDocente);
+            session.merge(editarHerramienta);
             session.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
         } 
     }
 
-    public Docente agregarDocente (Docente agregarDoc) {
+    public Herramienta agregarHerramienta (Herramienta agregarHer) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
-            session.persist(agregarDoc);
+            session.persist(agregarHer);
             session.getTransaction().commit();
-            return agregarDoc;
+            return agregarHer;
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
     }
 
-    public void borrarDocente(int id) {
+    public void borrarHerramienta(int id) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
-            Docente eliminarDocente = session.createQuery("FROM Docentes WHERE idDocente =:id", Docente.class).setParameter("id", id).getSingleResult();
-            session.remove(eliminarDocente);
+            Herramienta eliminarHerramienta = session.createQuery("FROM Herramientas WHERE idHerramienta =:id", Herramienta.class).setParameter("id", id).getSingleResult();
+            session.remove(eliminarHerramienta);
             session.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
         } 
     }
-
-        
 }
