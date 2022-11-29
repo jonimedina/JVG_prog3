@@ -1,14 +1,33 @@
 
 package Modelo;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import java.io.Serializable;
 
+@Entity
+@Table(name= "Docentes")
 public class Docente implements Serializable {
     
+    @Id
+    @Column(name = "IdDocente")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idDocente;
+    
+    @Column(name = "Apellido", length = 30, nullable = false)
     private String  apellido;
+    
+    @Column(name = "Nombre", length = 30, nullable = false)
     private String nombre;
+    
+    @Column(name = "Cargo", length = 30, nullable = false)
     private String cargo;
+    
+    @Column(name = "Telefono", length = 30, nullable = false)
     private String telefono;
     
     public Docente(){
