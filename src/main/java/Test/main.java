@@ -10,7 +10,6 @@ public class main {
         
        
         Vista.vistaPrincipal vP = new Vista.vistaPrincipal();
-        //controlador c = new controlador(vP);
         
         vP.setVisible(true);
         
