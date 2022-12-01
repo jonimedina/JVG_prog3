@@ -7,12 +7,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import java.io.Serializable;
-import java.sql.Time;
+import java.util.Date;
+
 
 @Entity
 @Table(name= "RetiroMateriales")
-public class RetiroMaterial implements Serializable {
+public class RetiroMaterial {
     
     @Id
     @Column(name = "IdRetiroMaterial")
@@ -29,14 +29,14 @@ public class RetiroMaterial implements Serializable {
     private Integer idMaterial;
     
     @Column(name = "FechaRetiro", length = 30, nullable = false)
-    private Time fechaRetiro;
+    private Date fechaRetiro;
     
     
     public RetiroMaterial(){
         
     }
     
-    public RetiroMaterial(Integer idRetiroMaterial, String responsable, Integer idDocente, Integer idMaterial, Time fechaRetiro){
+    public RetiroMaterial(Integer idRetiroMaterial, String responsable, Integer idDocente, Integer idMaterial, Date fechaRetiro){
         this.idRetiroMaterial = idRetiroMaterial;
         this.responsable = responsable;
         this.idDocente = idDocente;
@@ -76,11 +76,11 @@ public class RetiroMaterial implements Serializable {
         this.idMaterial = idMaterial;
     }
 
-    public Time getFechaRetiro() {
+    public Date getFechaRetiro() {
         return fechaRetiro;
     }
 
-    public void setFechaRetiro(Time fechaRetiro) {
+    public void setFechaRetiro(Date fechaRetiro) {
         this.fechaRetiro = fechaRetiro;
     }
 

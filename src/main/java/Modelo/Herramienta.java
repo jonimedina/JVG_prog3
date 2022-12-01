@@ -8,11 +8,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import java.io.Serializable;
 
 @Entity
 @Table(name= "Herramientas")
-public class Herramienta implements Serializable {
+public class Herramienta {
     
     @Id
     @Column(name = "IdHerramienta")

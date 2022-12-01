@@ -30,7 +30,7 @@ public class vistaListado extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         btnImprimirListado = new javax.swing.JButton();
         btnCerrarListado = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        CBListado = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Listado");
@@ -66,8 +66,13 @@ public class vistaListado extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Docentes", "Herramientas", "Materiales", "Reitro de Herramientas", "Retiro de Materiales" }));
+        CBListado.setForeground(new java.awt.Color(0, 0, 0));
+        CBListado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Docentes", "Herramientas", "Materiales", "Reitro de Herramientas", "Retiro de Materiales" }));
+        CBListado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CBListadoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -83,7 +88,7 @@ public class vistaListado extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnCerrarListado))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CBListado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(10, 10, 10))
         );
@@ -91,7 +96,7 @@ public class vistaListado extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap(15, Short.MAX_VALUE)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CBListado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -138,6 +143,11 @@ public class vistaListado extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnCerrarListadoActionPerformed
 
+    private void CBListadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBListadoActionPerformed
+        
+        CBListado.setSelectedItem("Retiro de Herramientas");
+    }//GEN-LAST:event_CBListadoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -175,9 +185,9 @@ public class vistaListado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JComboBox<String> CBListado;
     private javax.swing.JButton btnCerrarListado;
     private javax.swing.JButton btnImprimirListado;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;

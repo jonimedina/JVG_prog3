@@ -1,12 +1,10 @@
 
 package Vista;
 
-import java.awt.Image;
-import java.awt.Toolkit;
-import java.sql.Time;
+import Controlador.DocenteControlador;
+import Modelo.Docente;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -16,13 +14,11 @@ import javax.swing.JOptionPane;
  */
 public class vistaPrincipal extends javax.swing.JFrame {
 
-    /**
-     * Creates new form vistaPrincipal
-     */
+    
     public vistaPrincipal() {
         initComponents();
        setLocationRelativeTo(null);
-       setIconImage(new ImageIcon(getClass().getResource("src/resourse/logoET17.png")).getImage());
+       //setIconImage(new ImageIcon(getClass().getResource("C:/Users/Usuario/Documents/NetBeansProjects/JVGprog3/src/main/resourses/logoET17.png")).getImage());
     }
 
     /**
@@ -65,7 +61,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         txtIdDocenteMaterial = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        txtIdHerramientaMaterial = new javax.swing.JTextField();
+        txtIdMaterial = new javax.swing.JTextField();
         Docentes = new javax.swing.JPanel();
         btnAgregarDocente = new javax.swing.JButton();
         btnBuscarDocente = new javax.swing.JButton();
@@ -78,7 +74,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        jComboBoxCargoDocente = new javax.swing.JComboBox<>();
+        comboBoxCargoDocente = new javax.swing.JComboBox<>();
         jLabel13 = new javax.swing.JLabel();
         txtTelefono = new javax.swing.JTextField();
         Herramientas = new javax.swing.JPanel();
@@ -178,6 +174,12 @@ public class vistaPrincipal extends javax.swing.JFrame {
         jLabel2.setText("ID del Docente");
 
         jLabel3.setText("ID de Herramienta");
+
+        txtIdHerramientaRetiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdHerramientaRetiroActionPerformed(evt);
+            }
+        });
 
         btnListadoRetiroHerramientas.setText("Ver Listado");
         btnListadoRetiroHerramientas.addActionListener(new java.awt.event.ActionListener() {
@@ -331,12 +333,12 @@ public class vistaPrincipal extends javax.swing.JFrame {
                         .addGroup(RetiroMaterialLayout.createSequentialGroup()
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtIdHerramientaMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(193, Short.MAX_VALUE))
+                            .addComponent(txtIdMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(313, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroMaterialLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnAgregarRetiroMaterial)
-                .addGap(141, 141, 141))
+                .addGap(233, 233, 233))
         );
         RetiroMaterialLayout.setVerticalGroup(
             RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -358,10 +360,10 @@ public class vistaPrincipal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(txtIdHerramientaMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(txtIdMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(btnAgregarRetiroMaterial)
-                .addGap(20, 106, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroMaterialLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -429,7 +431,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         jLabel14.setText("Cargo");
 
-        jComboBoxCargoDocente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MEP", "Jefe Sección ", "Jefe Gral de Taller", "Profesor/a/x" }));
+        comboBoxCargoDocente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MEP", "Jefe Sección ", "Jefe Gral de Taller", "Profesor/a/x" }));
 
         jLabel13.setText("Telefóno");
 
@@ -465,7 +467,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                                             .addComponent(txtApellido)
                                             .addComponent(txtNombre)
                                             .addComponent(txtTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
-                                            .addComponent(jComboBoxCargoDocente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                            .addComponent(comboBoxCargoDocente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                             .addGroup(DocentesLayout.createSequentialGroup()
                                 .addGap(246, 246, 246)
                                 .addComponent(btnAgregarDocente)))
@@ -488,7 +490,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                 .addGap(9, 9, 9)
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBoxCargoDocente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(comboBoxCargoDocente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
@@ -764,9 +766,10 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void btnListadoRetiroHerramientasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoRetiroHerramientasActionPerformed
-       
+        //vistaListado.CBListado.setSelectedIndex(3);
         JFrame vistaListado = new Vista.vistaListado();
         vistaListado.setVisible(true);
+        
     }//GEN-LAST:event_btnListadoRetiroHerramientasActionPerformed
 
     private void txtResponsableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtResponsableActionPerformed
@@ -787,9 +790,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
             } else {
             System.out.println("NO se crea orden de retiro");
         }
-        
-       
-        
+      
     }//GEN-LAST:event_btnAgregarRetiroHerramientaActionPerformed
 
     private void btnDevolucionHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDevolucionHerramientaActionPerformed
@@ -809,20 +810,63 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNombreActionPerformed
 
     private void btnAgregarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarDocenteActionPerformed
-        // TODO add your handling code here:
+        String apellido = txtApellido.getText();
+        String nombre = txtNombre.getText();
+        String cargo = (String) comboBoxCargoDocente.getSelectedItem();
+        String telefono = txtTelefono.getText();
+               
+        int id = 0;
+        int respuesta = JOptionPane.showConfirmDialog(null, "Desea agregar nuevo docente?", "Confirmar nuevo docente", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (respuesta == 0){
+            System.out.println("NUEVO DOCENTE " + apellido +" " + nombre + " " +cargo + " "+ telefono);
+            //        Docente doc = new Modelo.Docente(id, apellido,  nombre,  cargo,  telefono);
+            //        DocenteControlador.agregarDocente(doc);   
+            } else {
+            System.out.println("NO se agrega nuevo docente");
+        }
+        
+
     }//GEN-LAST:event_btnAgregarDocenteActionPerformed
 
     private void btnListadoDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoDocenteActionPerformed
+        //vistaListado.CBListado.setSelectedIndex(0);
         JFrame vistaListado = new Vista.vistaListado();
         vistaListado.setVisible(true);
     }//GEN-LAST:event_btnListadoDocenteActionPerformed
 
     private void btnEliminarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarDocenteActionPerformed
-        // TODO add your handling code here:
+        String opcion = JOptionPane.showInputDialog(null, "Ingrese el Id del docente a eliminar", "Eliminar Docente", JOptionPane.DEFAULT_OPTION);
+        int op = Integer.parseInt(opcion);
+                
+        if(op >= 0) {
+            int respuesta = JOptionPane.showConfirmDialog(null, "Esta seguro que desea eliminar el docente con id " + op, "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            if (respuesta == 0){
+            System.out.println("SE ELIMINA DOCENTE CON ID "+ op);
+            // DocenteControlador.borrarDocente(int);
+            } else {
+            System.out.println("NO se elimina docente");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "EL ID ingresado no es válido");
+        }
+       
     }//GEN-LAST:event_btnEliminarDocenteActionPerformed
 
     private void btnEditarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarDocenteActionPerformed
-        // TODO add your handling code here:
+        String opcion = JOptionPane.showInputDialog(null, "Ingrese el Id del docente a editar", "Editar Docente", JOptionPane.DEFAULT_OPTION);
+        int op = Integer.parseInt(opcion);
+                
+        if(op >= 0) {
+            int respuesta = JOptionPane.showConfirmDialog(null, "Esta seguro que desea editar el docente con id " + op, "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+             if (respuesta == 0){
+            System.out.println("SE EDITA DOCENTE CON ID "+ op);
+            // DocenteControlador.actualizarDocente(int);
+            } else {
+            System.out.println("NO se Edita docente");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "EL ID ingresado no es válido");
+        }
     }//GEN-LAST:event_btnEditarDocenteActionPerformed
 
     private void txtMateriaPrimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMateriaPrimaActionPerformed
@@ -834,6 +878,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarMaterialActionPerformed
 
     private void btnListadoMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoMaterialActionPerformed
+        //vistaListado.CBListado.setSelectedIndex(2);
         JFrame vistaListado = new Vista.vistaListado();
         vistaListado.setVisible(true);
     }//GEN-LAST:event_btnListadoMaterialActionPerformed
@@ -851,6 +896,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarHerramientaActionPerformed
 
     private void btnListadoHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoHerramientaActionPerformed
+        
+        //vistaListado.CBListado.setSelectedIndex(1);
         JFrame vistaListado = new Vista.vistaListado();
         vistaListado.setVisible(true);
     }//GEN-LAST:event_btnListadoHerramientaActionPerformed
@@ -868,12 +915,26 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtResponsable2ActionPerformed
 
     private void btnListadoRetiroMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoRetiroMaterialActionPerformed
+        
+//vistaListado.CBListado.setSelectedIndex(4);
+        
         JFrame vistaListado = new Vista.vistaListado();
         vistaListado.setVisible(true);
     }//GEN-LAST:event_btnListadoRetiroMaterialActionPerformed
 
     private void btnAgregarRetiroMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRetiroMaterialActionPerformed
-        // TODO add your handling code here:
+        String responsable = txtResponsable2.getText();
+        String fecharetiro = txtFechaRetiroMaterial.getText();
+        int iddoc = Integer.parseInt(txtIdDocenteMaterial.getText());
+        int idmat = Integer.parseInt(txtIdMaterial.getText());
+               
+        
+        int respuesta = JOptionPane.showConfirmDialog(null, "Desea crear nueva orden de retiro?", "Confirmar nuevo retiro", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (respuesta == 0){
+            System.out.println("SE CREA ORDEN DE RETIRO " + responsable +" " + iddoc + " " +idmat + " "+ fecharetiro);
+            } else {
+            System.out.println("NO se crea orden de retiro");
+        }
     }//GEN-LAST:event_btnAgregarRetiroMaterialActionPerformed
 
     private void btnBuscarRetiroHerramientasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarRetiroHerramientasActionPerformed
@@ -901,6 +962,10 @@ public class vistaPrincipal extends javax.swing.JFrame {
         JFrame vistaBuscar = new Vista.vistaBuscar();
         vistaBuscar.setVisible(true);
     }//GEN-LAST:event_btnBuscarMaterialActionPerformed
+
+    private void txtIdHerramientaRetiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdHerramientaRetiroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIdHerramientaRetiroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -962,7 +1027,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnListadoMaterial;
     private javax.swing.JButton btnListadoRetiroHerramientas;
     private javax.swing.JButton btnListadoRetiroMaterial;
-    private javax.swing.JComboBox<String> jComboBoxCargoDocente;
+    private javax.swing.JComboBox<String> comboBoxCargoDocente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
@@ -1002,8 +1067,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField txtFechaRetiroMaterial;
     private javax.swing.JTextField txtIdDocenteHerramienta;
     private javax.swing.JTextField txtIdDocenteMaterial;
-    private javax.swing.JTextField txtIdHerramientaMaterial;
     private javax.swing.JTextField txtIdHerramientaRetiro;
+    private javax.swing.JTextField txtIdMaterial;
     private javax.swing.JTextField txtMarcaHerramienta;
     private javax.swing.JTextField txtMateriaPrima;
     private javax.swing.JTextField txtMedida;
