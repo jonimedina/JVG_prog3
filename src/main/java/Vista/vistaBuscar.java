@@ -232,7 +232,7 @@ public class vistaBuscar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> CBBuscar;
+    public static javax.swing.JComboBox<String> CBBuscar;
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnVolver;
     private javax.swing.JComboBox<String> comboBoxBuscar;

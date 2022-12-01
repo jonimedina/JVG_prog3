@@ -145,31 +145,32 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnAgregarRetiroHerramienta" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel18" min="-2" pref="334" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel1" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
-                                      <Component id="jLabel4" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
-                                      <Component id="jLabel2" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
-                                      <Component id="jLabel3" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtResponsable" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtIdDocenteHerramienta" max="32767" attributes="0"/>
-                                      <Component id="txtFechaRetiroHerramienta" max="32767" attributes="0"/>
-                                      <Component id="txtIdHerramientaRetiro" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
-                                  </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel18" min="-2" pref="334" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel1" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
+                                  <Component id="jLabel4" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtResponsable" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtIdDocenteHerramienta" max="32767" attributes="0"/>
+                                  <Component id="txtFechaRetiroHerramienta" max="32767" attributes="0"/>
+                                  <Component id="txtIdHerramientaRetiro" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="185" max="-2" attributes="0"/>
+                              <Component id="btnAgregarRetiroHerramienta" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="151" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="253" max="32767" attributes="0"/>
                       <Component id="btnBuscarRetiroHerramientas" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnDevolucionHerramienta" min="-2" max="-2" attributes="0"/>
@@ -181,7 +182,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -207,10 +208,7 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnAgregarRetiroHerramienta" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="14" pref="103" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace pref="81" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnDevolucionHerramienta" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnBuscarRetiroHerramientas" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -323,45 +321,52 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="btnBuscarRetiroMaterial" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnListadoRetiroMaterial" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jLabel17" alignment="0" min="-2" pref="292" max="-2" attributes="0"/>
-                          <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel8" min="-2" pref="156" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txtFechaRetiroMaterial" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="btnBuscarRetiroMaterial" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="btnListadoRetiroMaterial" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jLabel17" alignment="0" min="-2" pref="292" max="-2" attributes="0"/>
+                                          <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel8" min="-2" pref="156" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtFechaRetiroMaterial" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel9" min="-2" pref="156" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtIdDocenteMaterial" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel7" min="-2" pref="156" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtResponsable2" min="-2" pref="130" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel10" min="-2" pref="156" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtIdMaterial" min="-2" pref="130" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="210" max="-2" attributes="0"/>
+                                      <Component id="btnAgregarRetiroMaterial" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel9" min="-2" pref="156" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txtIdDocenteMaterial" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel7" min="-2" pref="156" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txtResponsable2" min="-2" pref="130" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel10" min="-2" pref="156" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txtIdMaterial" min="-2" pref="130" max="-2" attributes="0"/>
-                              </Group>
+                              <EmptySpace min="0" pref="307" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="313" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="btnAgregarRetiroMaterial" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="233" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -499,7 +504,7 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="146" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="266" max="32767" attributes="0"/>
                               <Component id="btnBuscarDocente" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="btnEditarDocente" min="-2" max="-2" attributes="0"/>
@@ -509,37 +514,34 @@
                               <Component id="btnListadoDocente" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel16" min="-2" pref="215" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel16" min="-2" pref="215" max="-2" attributes="0"/>
-                                          <Group type="102" attributes="0">
-                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="jLabel14" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="jLabel12" alignment="0" pref="94" max="32767" attributes="0"/>
-                                                  <Component id="jLabel13" max="32767" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="txtApellido" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="txtNombre" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="txtTelefono" alignment="0" pref="138" max="32767" attributes="0"/>
-                                                  <Component id="comboBoxCargoDocente" alignment="0" max="32767" attributes="0"/>
-                                              </Group>
-                                          </Group>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="jLabel14" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jLabel15" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jLabel12" alignment="0" pref="94" max="32767" attributes="0"/>
+                                          <Component id="jLabel13" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="txtApellido" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtNombre" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtTelefono" alignment="0" pref="138" max="32767" attributes="0"/>
+                                          <Component id="comboBoxCargoDocente" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="246" max="-2" attributes="0"/>
-                                      <Component id="btnAgregarDocente" min="-2" max="-2" attributes="0"/>
-                                  </Group>
                               </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="355" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="161" max="-2" attributes="0"/>
+                      <Component id="btnAgregarDocente" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -699,29 +701,30 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnAgregarHerramienta" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jLabel29" max="32767" attributes="0"/>
-                                      <Component id="jLabel28" max="32767" attributes="0"/>
-                                      <Component id="jLabel27" pref="116" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtNombreHerramienta" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
-                                      <Component id="txtMarcaHerramienta" max="32767" attributes="0"/>
-                                      <Component id="txtStockHerramienta" min="-2" pref="130" max="-2" attributes="0"/>
-                                  </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="jLabel29" max="32767" attributes="0"/>
+                                  <Component id="jLabel28" max="32767" attributes="0"/>
+                                  <Component id="jLabel27" pref="116" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jLabel25" min="-2" pref="292" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtNombreHerramienta" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                                  <Component id="txtMarcaHerramienta" max="32767" attributes="0"/>
+                                  <Component id="txtStockHerramienta" min="-2" pref="130" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="jLabel25" min="-2" pref="292" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="144" max="-2" attributes="0"/>
+                              <Component id="btnAgregarHerramienta" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="193" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="286" max="32767" attributes="0"/>
                       <Component id="btnBuscarHerramienta" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnEliminarHerramienta" min="-2" max="-2" attributes="0"/>
@@ -856,32 +859,33 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnAgregarMaterial" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel24" alignment="1" min="-2" pref="95" max="-2" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                              <Component id="jLabel31" alignment="1" min="-2" pref="95" max="-2" attributes="0"/>
-                                              <Component id="jLabel23" min="-2" pref="95" max="-2" attributes="0"/>
-                                          </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel24" alignment="1" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                          <Component id="jLabel31" alignment="1" min="-2" pref="95" max="-2" attributes="0"/>
+                                          <Component id="jLabel23" min="-2" pref="95" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="jLabel21" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtMedida" min="-2" pref="130" max="-2" attributes="0"/>
-                                      <Component id="txtTipoMaterial" min="-2" pref="130" max="-2" attributes="0"/>
-                                      <Component id="txtMateriaPrima" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
-                                      <Component id="txtStock" min="-2" pref="130" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jLabel21" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jLabel19" alignment="0" min="-2" pref="292" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtMedida" min="-2" pref="130" max="-2" attributes="0"/>
+                                  <Component id="txtTipoMaterial" min="-2" pref="130" max="-2" attributes="0"/>
+                                  <Component id="txtMateriaPrima" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                                  <Component id="txtStock" min="-2" pref="130" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="jLabel19" alignment="0" min="-2" pref="292" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
+                              <Component id="btnAgregarMaterial" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="193" max="32767" attributes="0"/>
+                      <EmptySpace pref="313" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>

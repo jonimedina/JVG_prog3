@@ -2,7 +2,15 @@
 package Vista;
 
 import Controlador.DocenteControlador;
+import Controlador.HerramientaControlador;
+import Controlador.MaterialControlador;
+import Controlador.RetiroHerramControlador;
+import Controlador.RetiroMaterialControlador;
 import Modelo.Docente;
+import Modelo.Herramienta;
+import Modelo.Material;
+import Modelo.RetiroHerramienta;
+import Modelo.RetiroMaterial;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JFrame;
@@ -194,25 +202,26 @@ public class vistaPrincipal extends javax.swing.JFrame {
             RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RetiroHerramientaLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnAgregarRetiroHerramienta)
-                    .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(RetiroHerramientaLayout.createSequentialGroup()
-                            .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtResponsable)
-                                .addComponent(txtIdDocenteHerramienta)
-                                .addComponent(txtFechaRetiroHerramienta)
-                                .addComponent(txtIdHerramientaRetiro, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(RetiroHerramientaLayout.createSequentialGroup()
+                        .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtResponsable)
+                            .addComponent(txtIdDocenteHerramienta)
+                            .addComponent(txtFechaRetiroHerramienta)
+                            .addComponent(txtIdHerramientaRetiro, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(RetiroHerramientaLayout.createSequentialGroup()
+                        .addGap(185, 185, 185)
+                        .addComponent(btnAgregarRetiroHerramienta)))
                 .addContainerGap(151, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroHerramientaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(253, Short.MAX_VALUE)
                 .addComponent(btnBuscarRetiroHerramientas)
                 .addGap(18, 18, 18)
                 .addComponent(btnDevolucionHerramienta)
@@ -222,7 +231,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
         );
         RetiroHerramientaLayout.setVerticalGroup(
             RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroHerramientaLayout.createSequentialGroup()
+            .addGroup(RetiroHerramientaLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jLabel18)
                 .addGap(18, 18, 18)
@@ -245,9 +254,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                         .addComponent(txtIdHerramientaRetiro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(btnAgregarRetiroHerramienta)
-                .addGap(14, 103, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroHerramientaLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                 .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnDevolucionHerramienta)
                     .addComponent(btnBuscarRetiroHerramientas)
@@ -308,37 +315,40 @@ public class vistaPrincipal extends javax.swing.JFrame {
         RetiroMaterialLayout.setHorizontalGroup(
             RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RetiroMaterialLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnBuscarRetiroMaterial)
-                .addGap(18, 18, 18)
-                .addComponent(btnListadoRetiroMaterial)
+                .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(RetiroMaterialLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnBuscarRetiroMaterial)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnListadoRetiroMaterial))
+                    .addGroup(RetiroMaterialLayout.createSequentialGroup()
+                        .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(RetiroMaterialLayout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(RetiroMaterialLayout.createSequentialGroup()
+                                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtFechaRetiroMaterial))
+                                        .addGroup(RetiroMaterialLayout.createSequentialGroup()
+                                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtIdDocenteMaterial))
+                                        .addGroup(RetiroMaterialLayout.createSequentialGroup()
+                                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtResponsable2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(RetiroMaterialLayout.createSequentialGroup()
+                                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtIdMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(RetiroMaterialLayout.createSequentialGroup()
+                                .addGap(210, 210, 210)
+                                .addComponent(btnAgregarRetiroMaterial)))
+                        .addGap(0, 307, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(RetiroMaterialLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(RetiroMaterialLayout.createSequentialGroup()
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtFechaRetiroMaterial))
-                        .addGroup(RetiroMaterialLayout.createSequentialGroup()
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtIdDocenteMaterial))
-                        .addGroup(RetiroMaterialLayout.createSequentialGroup()
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtResponsable2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(RetiroMaterialLayout.createSequentialGroup()
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtIdMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(313, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroMaterialLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnAgregarRetiroMaterial)
-                .addGap(233, 233, 233))
         );
         RetiroMaterialLayout.setVerticalGroup(
             RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -442,7 +452,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
             .addGroup(DocentesLayout.createSequentialGroup()
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DocentesLayout.createSequentialGroup()
-                        .addGap(0, 146, Short.MAX_VALUE)
+                        .addGap(0, 266, Short.MAX_VALUE)
                         .addComponent(btnBuscarDocente)
                         .addGap(18, 18, 18)
                         .addComponent(btnEditarDocente)
@@ -451,28 +461,27 @@ public class vistaPrincipal extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnListadoDocente))
                     .addGroup(DocentesLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
                         .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(DocentesLayout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(DocentesLayout.createSequentialGroup()
-                                        .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
-                                            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtApellido)
-                                            .addComponent(txtNombre)
-                                            .addComponent(txtTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
-                                            .addComponent(comboBoxCargoDocente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                            .addGroup(DocentesLayout.createSequentialGroup()
-                                .addGap(246, 246, 246)
-                                .addComponent(btnAgregarDocente)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                                    .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtApellido)
+                                    .addComponent(txtNombre)
+                                    .addComponent(txtTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                                    .addComponent(comboBoxCargoDocente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 355, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(DocentesLayout.createSequentialGroup()
+                .addGap(161, 161, 161)
+                .addComponent(btnAgregarDocente)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         DocentesLayout.setVerticalGroup(
             DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -563,23 +572,24 @@ public class vistaPrincipal extends javax.swing.JFrame {
             HerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HerramientasLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addGroup(HerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnAgregarHerramienta)
-                    .addGroup(HerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(HerramientasLayout.createSequentialGroup()
-                            .addGroup(HerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(HerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtNombreHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtMarcaHerramienta)
-                                .addComponent(txtStockHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(HerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(HerramientasLayout.createSequentialGroup()
+                        .addGroup(HerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(HerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtNombreHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMarcaHerramienta)
+                            .addComponent(txtStockHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(HerramientasLayout.createSequentialGroup()
+                        .addGap(144, 144, 144)
+                        .addComponent(btnAgregarHerramienta)))
                 .addContainerGap(193, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HerramientasLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(286, Short.MAX_VALUE)
                 .addComponent(btnBuscarHerramienta)
                 .addGap(18, 18, 18)
                 .addComponent(btnEliminarHerramienta)
@@ -662,25 +672,26 @@ public class vistaPrincipal extends javax.swing.JFrame {
             MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MaterialesLayout.createSequentialGroup()
                 .addGap(27, 27, 27)
-                .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnAgregarMaterial)
-                    .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(MaterialesLayout.createSequentialGroup()
+                .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MaterialesLayout.createSequentialGroup()
+                        .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtMedida, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtTipoMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtMateriaPrima, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(193, Short.MAX_VALUE))
+                                .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtMedida, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTipoMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMateriaPrima, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(MaterialesLayout.createSequentialGroup()
+                        .addGap(121, 121, 121)
+                        .addComponent(btnAgregarMaterial)))
+                .addContainerGap(313, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MaterialesLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnBuscarMaterial)
@@ -766,9 +777,9 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void btnListadoRetiroHerramientasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoRetiroHerramientasActionPerformed
-        //vistaListado.CBListado.setSelectedIndex(3);
-        JFrame vistaListado = new Vista.vistaListado();
-        vistaListado.setVisible(true);
+        JFrame vistaList = new Vista.vistaListado();
+        vistaList.setVisible(true);
+        vistaListado.CBListado.setSelectedIndex(3);
         
     }//GEN-LAST:event_btnListadoRetiroHerramientasActionPerformed
 
@@ -829,9 +840,9 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarDocenteActionPerformed
 
     private void btnListadoDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoDocenteActionPerformed
-        //vistaListado.CBListado.setSelectedIndex(0);
-        JFrame vistaListado = new Vista.vistaListado();
-        vistaListado.setVisible(true);
+       JFrame vistaList = new Vista.vistaListado();
+        vistaList.setVisible(true);
+        vistaListado.CBListado.setSelectedIndex(0);
     }//GEN-LAST:event_btnListadoDocenteActionPerformed
 
     private void btnEliminarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarDocenteActionPerformed
@@ -874,13 +885,26 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtMateriaPrimaActionPerformed
 
     private void btnAgregarMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarMaterialActionPerformed
-        // TODO add your handling code here:
+        String materiaPrima = txtMateriaPrima.getText();
+        String tipoMaterial = txtTipoMaterial.getText();
+        String medida = txtMedida.getText();
+        String stock = txtStock.getText();
+               
+        int id = 0;
+        int respuesta = JOptionPane.showConfirmDialog(null, "Desea agregar nuevo material?", "Confirmar nuevo ingreso", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (respuesta == 0){
+            System.out.println("NUEVO MATERIAL " + materiaPrima +" " + tipoMaterial +  " "+ medida + " "+ stock);
+            //        Herramienta doc = new Modelo.Herramienta(id, nombre,  marca, stock);
+            //        DocenteControlador.agregarDocente(doc);   
+            } else {
+            System.out.println("NO se agrega nuevo material");
+        }
     }//GEN-LAST:event_btnAgregarMaterialActionPerformed
 
     private void btnListadoMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoMaterialActionPerformed
-        //vistaListado.CBListado.setSelectedIndex(2);
-        JFrame vistaListado = new Vista.vistaListado();
-        vistaListado.setVisible(true);
+        JFrame vistaList = new Vista.vistaListado();
+        vistaList.setVisible(true);
+        vistaListado.CBListado.setSelectedIndex(2);       
     }//GEN-LAST:event_btnListadoMaterialActionPerformed
 
     private void txtNombreHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreHerramientaActionPerformed
@@ -892,18 +916,42 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtMarcaHerramientaActionPerformed
 
     private void btnAgregarHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarHerramientaActionPerformed
-        // TODO add your handling code here:
+        String nombre = txtNombreHerramienta.getText();
+        String marca = txtMarcaHerramienta.getText();
+        String stock = txtStockHerramienta.getText();
+               
+        int id = 0;
+        int respuesta = JOptionPane.showConfirmDialog(null, "Desea agregar nueva herramienta?", "Confirmar nuevo ingreso", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (respuesta == 0){
+            System.out.println("NUEVA HERRAMIENTA " + nombre +" " + marca +  " "+ stock);
+            //        Herramienta doc = new Modelo.Herramienta(id, nombre,  marca, stock);
+            //        DocenteControlador.agregarDocente(doc);   
+            } else {
+            System.out.println("NO se agrega nueva herramienta");
+        }
     }//GEN-LAST:event_btnAgregarHerramientaActionPerformed
 
     private void btnListadoHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoHerramientaActionPerformed
-        
-        //vistaListado.CBListado.setSelectedIndex(1);
-        JFrame vistaListado = new Vista.vistaListado();
-        vistaListado.setVisible(true);
+        JFrame vistaList = new Vista.vistaListado();
+        vistaList.setVisible(true);
+        vistaListado.CBListado.setSelectedIndex(1);
     }//GEN-LAST:event_btnListadoHerramientaActionPerformed
 
     private void btnEliminarHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarHerramientaActionPerformed
-        // TODO add your handling code here:
+        String opcion = JOptionPane.showInputDialog(null, "Ingrese el Id de herramienta a eliminar", "Eliminar Herramienta", JOptionPane.DEFAULT_OPTION);
+        int op = Integer.parseInt(opcion);
+                
+        if(op >= 0) {
+            int respuesta = JOptionPane.showConfirmDialog(null, "Esta seguro que desea eliminar la herramienta con id " + op, "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            if (respuesta == 0){
+            System.out.println("SE ELIMINA HERRAMIENTA CON ID "+ op);
+            // HerramientaControlador.borrarHerramienta(int);
+            } else {
+            System.out.println("NO se elimina herramienta");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "EL ID ingresado no es válido");
+        }
     }//GEN-LAST:event_btnEliminarHerramientaActionPerformed
 
     private void txtFechaRetiroMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaRetiroMaterialActionPerformed
@@ -915,11 +963,9 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtResponsable2ActionPerformed
 
     private void btnListadoRetiroMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoRetiroMaterialActionPerformed
-        
-//vistaListado.CBListado.setSelectedIndex(4);
-        
-        JFrame vistaListado = new Vista.vistaListado();
-        vistaListado.setVisible(true);
+        JFrame vistaList = new Vista.vistaListado();
+        vistaList.setVisible(true);
+        vistaListado.CBListado.setSelectedIndex(4);
     }//GEN-LAST:event_btnListadoRetiroMaterialActionPerformed
 
     private void btnAgregarRetiroMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRetiroMaterialActionPerformed
@@ -938,29 +984,33 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarRetiroMaterialActionPerformed
 
     private void btnBuscarRetiroHerramientasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarRetiroHerramientasActionPerformed
-        
-        JFrame vistaBuscar = new Vista.vistaBuscar();
-        vistaBuscar.setVisible(true);
+        JFrame vistaBusc = new Vista.vistaBuscar();
+        vistaBusc.setVisible(true);
+        vistaBuscar.CBBuscar.setSelectedIndex(4);
     }//GEN-LAST:event_btnBuscarRetiroHerramientasActionPerformed
 
     private void btnBuscarRetiroMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarRetiroMaterialActionPerformed
-        JFrame vistaBuscar = new Vista.vistaBuscar();
-        vistaBuscar.setVisible(true);
+        JFrame vistaBusc = new Vista.vistaBuscar();
+        vistaBusc.setVisible(true);
+        vistaBuscar.CBBuscar.setSelectedIndex(5);
     }//GEN-LAST:event_btnBuscarRetiroMaterialActionPerformed
 
     private void btnBuscarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarDocenteActionPerformed
-        JFrame vistaBuscar = new Vista.vistaBuscar();
-        vistaBuscar.setVisible(true);
+        JFrame vistaBusc = new Vista.vistaBuscar();
+        vistaBusc.setVisible(true);
+        vistaBuscar.CBBuscar.setSelectedIndex(0);
     }//GEN-LAST:event_btnBuscarDocenteActionPerformed
 
     private void btnBuscarHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarHerramientaActionPerformed
-        JFrame vistaBuscar = new Vista.vistaBuscar();
-        vistaBuscar.setVisible(true);
+        JFrame vistaBusc = new Vista.vistaBuscar();
+        vistaBusc.setVisible(true);
+        vistaBuscar.CBBuscar.setSelectedIndex(2);
     }//GEN-LAST:event_btnBuscarHerramientaActionPerformed
 
     private void btnBuscarMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarMaterialActionPerformed
-        JFrame vistaBuscar = new Vista.vistaBuscar();
-        vistaBuscar.setVisible(true);
+        JFrame vistaBusc = new Vista.vistaBuscar();
+        vistaBusc.setVisible(true);
+        vistaBuscar.CBBuscar.setSelectedIndex(3);
     }//GEN-LAST:event_btnBuscarMaterialActionPerformed
 
     private void txtIdHerramientaRetiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdHerramientaRetiroActionPerformed
