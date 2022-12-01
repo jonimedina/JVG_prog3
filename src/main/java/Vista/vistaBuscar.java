@@ -82,7 +82,7 @@ public class vistaBuscar extends javax.swing.JFrame {
             }
         });
 
-        CBBuscar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Docentes", "Herramientas", "Materiales", "Reitro de Herramientas", "Retiro de Materiales" }));
+        CBBuscar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Docentes", "Herramientas", "Materiales", "Retiro de Herramientas", "Retiro de Materiales", " " }));
         CBBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CBBuscarActionPerformed(evt);

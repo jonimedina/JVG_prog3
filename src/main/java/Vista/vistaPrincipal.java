@@ -986,13 +986,13 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private void btnBuscarRetiroHerramientasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarRetiroHerramientasActionPerformed
         JFrame vistaBusc = new Vista.vistaBuscar();
         vistaBusc.setVisible(true);
-        vistaBuscar.CBBuscar.setSelectedIndex(4);
+        vistaBuscar.CBBuscar.setSelectedIndex(3);
     }//GEN-LAST:event_btnBuscarRetiroHerramientasActionPerformed
 
     private void btnBuscarRetiroMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarRetiroMaterialActionPerformed
         JFrame vistaBusc = new Vista.vistaBuscar();
         vistaBusc.setVisible(true);
-        vistaBuscar.CBBuscar.setSelectedIndex(5);
+        vistaBuscar.CBBuscar.setSelectedIndex(4);
     }//GEN-LAST:event_btnBuscarRetiroMaterialActionPerformed
 
     private void btnBuscarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarDocenteActionPerformed
@@ -1004,13 +1004,13 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private void btnBuscarHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarHerramientaActionPerformed
         JFrame vistaBusc = new Vista.vistaBuscar();
         vistaBusc.setVisible(true);
-        vistaBuscar.CBBuscar.setSelectedIndex(2);
+        vistaBuscar.CBBuscar.setSelectedIndex(1);
     }//GEN-LAST:event_btnBuscarHerramientaActionPerformed
 
     private void btnBuscarMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarMaterialActionPerformed
         JFrame vistaBusc = new Vista.vistaBuscar();
         vistaBusc.setVisible(true);
-        vistaBuscar.CBBuscar.setSelectedIndex(3);
+        vistaBuscar.CBBuscar.setSelectedIndex(2);
     }//GEN-LAST:event_btnBuscarMaterialActionPerformed
 
     private void txtIdHerramientaRetiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdHerramientaRetiroActionPerformed
