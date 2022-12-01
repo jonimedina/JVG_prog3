@@ -846,11 +846,11 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnListadoDocenteActionPerformed
 
     private void btnEliminarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarDocenteActionPerformed
-        String opcion = JOptionPane.showInputDialog(null, "Ingrese el Id del docente a eliminar", "Eliminar Docente", JOptionPane.DEFAULT_OPTION);
-        int op = Integer.parseInt(opcion);
-                
+        int op = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el Id del docente a eliminar", "Eliminar Docente", JOptionPane.DEFAULT_OPTION));
+        
+             
         if(op >= 0) {
-            int respuesta = JOptionPane.showConfirmDialog(null, "Esta seguro que desea eliminar el docente con id " + op, "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            int respuesta = JOptionPane.showConfirmDialog(null, "Esta seguro que desea eliminar el docente con id " + op, "Confirmación", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
             if (respuesta == 0){
             System.out.println("SE ELIMINA DOCENTE CON ID "+ op);
             // DocenteControlador.borrarDocente(int);
@@ -864,20 +864,20 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEliminarDocenteActionPerformed
 
     private void btnEditarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarDocenteActionPerformed
-        String opcion = JOptionPane.showInputDialog(null, "Ingrese el Id del docente a editar", "Editar Docente", JOptionPane.DEFAULT_OPTION);
-        int op = Integer.parseInt(opcion);
-                
+        int op = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el Id del docente a editar", "Editar Docente", JOptionPane.DEFAULT_OPTION));
+        
         if(op >= 0) {
             int respuesta = JOptionPane.showConfirmDialog(null, "Esta seguro que desea editar el docente con id " + op, "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-             if (respuesta == 0){
+            if (respuesta == 0){
             System.out.println("SE EDITA DOCENTE CON ID "+ op);
             // DocenteControlador.actualizarDocente(int);
-            } else {
-            System.out.println("NO se Edita docente");
-            }
+                } else {
+                System.out.println("NO se Edita docente");
+                }
         } else {
             JOptionPane.showMessageDialog(null, "EL ID ingresado no es válido");
         }
+        
     }//GEN-LAST:event_btnEditarDocenteActionPerformed
 
     private void txtMateriaPrimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMateriaPrimaActionPerformed
@@ -987,30 +987,37 @@ public class vistaPrincipal extends javax.swing.JFrame {
         JFrame vistaBusc = new Vista.vistaBuscar();
         vistaBusc.setVisible(true);
         vistaBuscar.CBBuscar.setSelectedIndex(3);
+        vistaBuscar.cBBuscarPor.addItem("ID");
     }//GEN-LAST:event_btnBuscarRetiroHerramientasActionPerformed
 
     private void btnBuscarRetiroMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarRetiroMaterialActionPerformed
         JFrame vistaBusc = new Vista.vistaBuscar();
         vistaBusc.setVisible(true);
         vistaBuscar.CBBuscar.setSelectedIndex(4);
+        vistaBuscar.cBBuscarPor.addItem("ID");        
     }//GEN-LAST:event_btnBuscarRetiroMaterialActionPerformed
 
     private void btnBuscarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarDocenteActionPerformed
         JFrame vistaBusc = new Vista.vistaBuscar();
         vistaBusc.setVisible(true);
         vistaBuscar.CBBuscar.setSelectedIndex(0);
+        vistaBuscar.cBBuscarPor.addItem("ID");
+        vistaBuscar.cBBuscarPor.addItem("Apellido");
     }//GEN-LAST:event_btnBuscarDocenteActionPerformed
 
     private void btnBuscarHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarHerramientaActionPerformed
         JFrame vistaBusc = new Vista.vistaBuscar();
         vistaBusc.setVisible(true);
         vistaBuscar.CBBuscar.setSelectedIndex(1);
+        vistaBuscar.cBBuscarPor.addItem("ID");
+        vistaBuscar.cBBuscarPor.addItem("Marca");
     }//GEN-LAST:event_btnBuscarHerramientaActionPerformed
 
     private void btnBuscarMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarMaterialActionPerformed
         JFrame vistaBusc = new Vista.vistaBuscar();
         vistaBusc.setVisible(true);
         vistaBuscar.CBBuscar.setSelectedIndex(2);
+        vistaBuscar.cBBuscarPor.addItem("ID");        
     }//GEN-LAST:event_btnBuscarMaterialActionPerformed
 
     private void txtIdHerramientaRetiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdHerramientaRetiroActionPerformed

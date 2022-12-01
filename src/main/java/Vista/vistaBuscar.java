@@ -28,7 +28,7 @@ public class vistaBuscar extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         btnVolver = new javax.swing.JButton();
-        comboBoxBuscar = new javax.swing.JComboBox<>();
+        cBBuscarPor = new javax.swing.JComboBox<>();
         txtBuscar = new javax.swing.JTextField();
         lblBuscar = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -41,6 +41,7 @@ public class vistaBuscar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Buscar");
+        setAlwaysOnTop(true);
         setBackground(new java.awt.Color(0, 0, 0));
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setUndecorated(true);
@@ -57,19 +58,17 @@ public class vistaBuscar extends javax.swing.JFrame {
             }
         });
 
-        comboBoxBuscar.setForeground(new java.awt.Color(0, 0, 0));
-        comboBoxBuscar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        comboBoxBuscar.addActionListener(new java.awt.event.ActionListener() {
+        cBBuscarPor.setForeground(new java.awt.Color(0, 0, 0));
+        cBBuscarPor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboBoxBuscarActionPerformed(evt);
+                cBBuscarPorActionPerformed(evt);
             }
         });
 
         txtBuscar.setForeground(new java.awt.Color(0, 0, 0));
-        txtBuscar.setText("jTextField2");
 
         lblBuscar.setForeground(new java.awt.Color(0, 0, 0));
-        lblBuscar.setText("Ingrese ");
+        lblBuscar.setText("Dato a buscar:");
 
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Buscar Por");
@@ -83,6 +82,7 @@ public class vistaBuscar extends javax.swing.JFrame {
         });
 
         CBBuscar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Docentes", "Herramientas", "Materiales", "Retiro de Herramientas", "Retiro de Materiales", " " }));
+        CBBuscar.setEnabled(false);
         CBBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CBBuscarActionPerformed(evt);
@@ -103,7 +103,7 @@ public class vistaBuscar extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-                            .addComponent(comboBoxBuscar, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(cBBuscarPor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btnVolver)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -123,7 +123,7 @@ public class vistaBuscar extends javax.swing.JFrame {
                 .addComponent(CBBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(comboBoxBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cBBuscarPor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -181,12 +181,106 @@ public class vistaBuscar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        // TODO add your handling code here:
+        int op = CBBuscar.getSelectedIndex();
+                     
+        switch (op){
+            case 0 -> {
+                
+                
+                int opb = cBBuscarPor.getSelectedIndex();
+                if (opb == 0){
+                    if(txtBuscar.getText().isEmpty()){
+                        System.out.println("CAMPO VACIO");
+                        break;
+                    }
+                    
+                    int idABuscar = Integer.parseInt(txtBuscar.getText());
+                    if (idABuscar >= 0 ){
+                        System.out.println("Buscar Docente por ID: " + idABuscar);
+                    } else {
+                        System.out.println("ID INVALIDO");
+                    }
+                } else {
+                    String apeABuscar = txtBuscar.getText();
+                    if(txtBuscar.getText().isEmpty()){
+                        System.out.println("CAMPO VACIO");
+                        break;
+                    } else {
+                        System.out.println("Buscar Docente por Apellido: " + apeABuscar);
+                    }
+                    
+                 }
+            }
+            case 1 -> {
+                int opb = cBBuscarPor.getSelectedIndex();
+                if (opb == 0){
+                    if(txtBuscar.getText().isEmpty()){
+                        System.out.println("CAMPO VACIO");
+                        break;
+                    }
+                    
+                    int idABuscar = Integer.parseInt(txtBuscar.getText());
+                    if (idABuscar >= 0 ){
+                        System.out.println("Buscar Herramienta por ID: " + idABuscar);
+                    } else {
+                        System.out.println("ID INVALIDO");
+                    }
+                    
+                } else {
+                    String marcaABuscar = txtBuscar.getText();
+                    if(txtBuscar.getText().isEmpty()){
+                        System.out.println("CAMPO VACIO");
+                        break;
+                    } else {
+                        System.out.println("Buscar Herramienta por Marca: " + marcaABuscar);
+                    }
+                }
+            }
+            case 2 -> {
+                if(txtBuscar.getText().isEmpty()){
+                    System.out.println("CAMPO VACIO");
+                    break;
+                    }
+                    
+                int idABuscar = Integer.parseInt(txtBuscar.getText());
+                if (idABuscar >= 0 ){
+                    System.out.println("Buscar Material por ID: " + idABuscar);
+                } else {
+                    System.out.println("ID INVALIDO");
+                }
+            }
+            case 3 -> {
+                if(txtBuscar.getText().isEmpty()){
+                        System.out.println("CAMPO VACIO");
+                        break;
+                    }
+                    
+                    int idABuscar = Integer.parseInt(txtBuscar.getText());
+                    if (idABuscar >= 0 ){
+                        System.out.println("Buscar Retiro Herramienta por ID: " + idABuscar);
+                    } else {
+                        System.out.println("ID INVALIDO");
+                    }
+            }
+            case 4 -> {
+                if(txtBuscar.getText().isEmpty()){
+                        System.out.println("CAMPO VACIO");
+                        break;
+                    }
+                    
+                    int idABuscar = Integer.parseInt(txtBuscar.getText());
+                    if (idABuscar >= 0 ){
+                        System.out.println("Buscar Retiro Material por ID: " + idABuscar);
+                    } else {
+                        System.out.println("ID INVALIDO");
+                    }
+            }
+        }
     }//GEN-LAST:event_btnBuscarActionPerformed
 
-    private void comboBoxBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxBuscarActionPerformed
+    private void cBBuscarPorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBBuscarPorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comboBoxBuscarActionPerformed
+    }//GEN-LAST:event_cBBuscarPorActionPerformed
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         dispose();
@@ -235,13 +329,13 @@ public class vistaBuscar extends javax.swing.JFrame {
     public static javax.swing.JComboBox<String> CBBuscar;
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnVolver;
-    private javax.swing.JComboBox<String> comboBoxBuscar;
+    public static javax.swing.JComboBox<String> cBBuscarPor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JLabel lblBuscar;
+    public static javax.swing.JLabel lblBuscar;
     private javax.swing.JTextField txtBuscar;
     // End of variables declaration//GEN-END:variables
 }
