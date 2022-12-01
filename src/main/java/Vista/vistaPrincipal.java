@@ -6,6 +6,7 @@ import java.awt.Toolkit;
 import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -20,7 +21,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
      */
     public vistaPrincipal() {
         initComponents();
-        this.setLocationRelativeTo(null);
+       setLocationRelativeTo(null);
+       setIconImage(new ImageIcon(getClass().getResource("src/resourse/logoET17.png")).getImage());
     }
 
     /**
