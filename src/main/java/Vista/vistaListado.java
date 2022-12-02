@@ -1,6 +1,9 @@
 
 package Vista;
 
+import java.awt.print.PrinterException;
+import java.util.logging.Level;
+
 /**
  *
  * @author Jonathan Medina 
@@ -57,6 +60,11 @@ public class vistaListado extends javax.swing.JFrame {
 
         btnImprimirListado.setForeground(new java.awt.Color(0, 0, 0));
         btnImprimirListado.setText("Imprimir");
+        btnImprimirListado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnImprimirListadoActionPerformed(evt);
+            }
+        });
 
         btnCerrarListado.setForeground(new java.awt.Color(0, 0, 0));
         btnCerrarListado.setText("Cerrar");
@@ -147,6 +155,10 @@ public class vistaListado extends javax.swing.JFrame {
         
         CBListado.setSelectedItem("Retiro de Herramientas");
     }//GEN-LAST:event_CBListadoActionPerformed
+
+    private void btnImprimirListadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirListadoActionPerformed
+       
+    }//GEN-LAST:event_btnImprimirListadoActionPerformed
 
     /**
      * @param args the command line arguments
