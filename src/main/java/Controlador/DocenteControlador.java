@@ -81,13 +81,19 @@ public class DocenteControlador {
         } 
     }
 
-    public Docente agregarDocente (Docente agregarDoc) {
+    public static Docente agregarDocente (String apellido, String nombre, String cargo, String telefono)  {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
-            session.persist(agregarDoc);
+            Modelo.Docente nuevoDocente = new Modelo.Docente();
+            nuevoDocente.setApellido(apellido);
+            nuevoDocente.setNombre(nombre);
+            nuevoDocente.setCargo(cargo);
+            nuevoDocente.setTelefono(telefono);
+
+            session.persist(nuevoDocente);
             session.getTransaction().commit();
-            return agregarDoc;
+            return nuevoDocente;
         } catch (Exception e) {
             e.printStackTrace();
             return null;

@@ -11,8 +11,10 @@ import Modelo.Herramienta;
 import Modelo.Material;
 import Modelo.RetiroHerramienta;
 import Modelo.RetiroMaterial;
+import java.awt.Color;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -24,9 +26,11 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
     
     public vistaPrincipal() {
-        initComponents();
+       initComponents();
        setLocationRelativeTo(null);
-       //setIconImage(new ImageIcon(getClass().getResource("C:/Users/Usuario/Documents/NetBeansProjects/JVGprog3/src/main/resourses/logoET17.png")).getImage());
+       
+              
+       //setIconImage(new ImageIcon(getClass().getResource("/src/main/resourses/logoET17.png")).getImage());
     }
 
     /**
@@ -38,10 +42,6 @@ public class vistaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar2 = new javax.swing.JMenuBar();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jScrollBar1 = new javax.swing.JScrollBar();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         RetiroHerramienta = new javax.swing.JPanel();
         btnBuscarRetiroHerramientas = new javax.swing.JButton();
@@ -103,7 +103,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
         btnListadoMaterial = new javax.swing.JButton();
         jLabel19 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        txtMateriaPrima = new javax.swing.JTextField();
+        cBMateriaPrima = new javax.swing.JComboBox<>();
         jLabel23 = new javax.swing.JLabel();
         txtTipoMaterial = new javax.swing.JTextField();
         jLabel31 = new javax.swing.JLabel();
@@ -116,24 +116,20 @@ public class vistaPrincipal extends javax.swing.JFrame {
         jMenu5 = new javax.swing.JMenu();
         jMenuItem18 = new javax.swing.JMenuItem();
 
-        jMenu2.setText("File");
-        jMenuBar2.add(jMenu2);
-
-        jMenu3.setText("Edit");
-        jMenuBar2.add(jMenu3);
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Depósito Taller ");
-        setBackground(new java.awt.Color(102, 102, 102));
+        setBackground(new java.awt.Color(0, 0, 0));
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(getLocation());
         setMaximumSize(null);
-        setPreferredSize(new java.awt.Dimension(700, 450));
+        setPreferredSize(new java.awt.Dimension(629, 450));
         setResizable(false);
 
-        jTabbedPane1.setBackground(new java.awt.Color(51, 51, 51));
+        jTabbedPane1.setBackground(new java.awt.Color(0, 0, 0));
+        jTabbedPane1.setPreferredSize(new java.awt.Dimension(629, 319));
 
+        RetiroHerramienta.setBackground(new java.awt.Color(51, 153, 255));
         RetiroHerramienta.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
 
         btnBuscarRetiroHerramientas.setText("Buscar");
@@ -219,9 +215,9 @@ public class vistaPrincipal extends javax.swing.JFrame {
                     .addGroup(RetiroHerramientaLayout.createSequentialGroup()
                         .addGap(185, 185, 185)
                         .addComponent(btnAgregarRetiroHerramienta)))
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addContainerGap(262, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroHerramientaLayout.createSequentialGroup()
-                .addContainerGap(253, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnBuscarRetiroHerramientas)
                 .addGap(18, 18, 18)
                 .addComponent(btnDevolucionHerramienta)
@@ -262,6 +258,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Retiro Herramientas", RetiroHerramienta);
+
+        RetiroMaterial.setBackground(new java.awt.Color(204, 204, 0));
 
         btnAgregarRetiroMaterial.setText("Confirmar");
         btnAgregarRetiroMaterial.addActionListener(new java.awt.event.ActionListener() {
@@ -347,7 +345,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                             .addGroup(RetiroMaterialLayout.createSequentialGroup()
                                 .addGap(210, 210, 210)
                                 .addComponent(btnAgregarRetiroMaterial)))
-                        .addGap(0, 307, Short.MAX_VALUE)))
+                        .addGap(0, 298, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         RetiroMaterialLayout.setVerticalGroup(
@@ -373,16 +371,15 @@ public class vistaPrincipal extends javax.swing.JFrame {
                     .addComponent(txtIdMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnAgregarRetiroMaterial)
-                .addContainerGap(100, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroMaterialLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
                 .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnListadoRetiroMaterial)
-                    .addComponent(btnBuscarRetiroMaterial))
-                .addContainerGap())
+                    .addComponent(btnBuscarRetiroMaterial)))
         );
 
         jTabbedPane1.addTab("Retiro Materiales", RetiroMaterial);
+
+        Docentes.setBackground(new java.awt.Color(51, 153, 0));
 
         btnAgregarDocente.setText("Confirmar");
         btnAgregarDocente.addActionListener(new java.awt.event.ActionListener() {
@@ -452,7 +449,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
             .addGroup(DocentesLayout.createSequentialGroup()
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DocentesLayout.createSequentialGroup()
-                        .addGap(0, 266, Short.MAX_VALUE)
+                        .addGap(0, 257, Short.MAX_VALUE)
                         .addComponent(btnBuscarDocente)
                         .addGap(18, 18, 18)
                         .addComponent(btnEditarDocente)
@@ -476,7 +473,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                                     .addComponent(txtNombre)
                                     .addComponent(txtTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
                                     .addComponent(comboBoxCargoDocente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(0, 355, Short.MAX_VALUE)))
+                        .addGap(0, 346, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(DocentesLayout.createSequentialGroup()
                 .addGap(161, 161, 161)
@@ -515,6 +512,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Docentes", Docentes);
+
+        Herramientas.setBackground(new java.awt.Color(204, 102, 0));
 
         btnAgregarHerramienta.setText("Confirmar");
         btnAgregarHerramienta.addActionListener(new java.awt.event.ActionListener() {
@@ -587,9 +586,9 @@ public class vistaPrincipal extends javax.swing.JFrame {
                     .addGroup(HerramientasLayout.createSequentialGroup()
                         .addGap(144, 144, 144)
                         .addComponent(btnAgregarHerramienta)))
-                .addContainerGap(193, Short.MAX_VALUE))
+                .addContainerGap(304, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HerramientasLayout.createSequentialGroup()
-                .addContainerGap(286, Short.MAX_VALUE)
+                .addContainerGap(277, Short.MAX_VALUE)
                 .addComponent(btnBuscarHerramienta)
                 .addGap(18, 18, 18)
                 .addComponent(btnEliminarHerramienta)
@@ -628,6 +627,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Herramientas", Herramientas);
 
+        Materiales.setBackground(new java.awt.Color(153, 0, 255));
+
         btnAgregarMaterial.setText("Confirmar");
         btnAgregarMaterial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -654,11 +655,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         jLabel21.setText("Materia Prima");
 
-        txtMateriaPrima.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtMateriaPrimaActionPerformed(evt);
-            }
-        });
+        cBMateriaPrima.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acero", "Aluminio", "Madera", "Chapa Galvanizada", "Chapa Negra" }));
 
         jLabel23.setText("Tipo");
 
@@ -671,32 +668,36 @@ public class vistaPrincipal extends javax.swing.JFrame {
         MaterialesLayout.setHorizontalGroup(
             MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MaterialesLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
                 .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MaterialesLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnBuscarMaterial)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnListadoMaterial))
                     .addGroup(MaterialesLayout.createSequentialGroup()
                         .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtMedida, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtTipoMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtMateriaPrima, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(MaterialesLayout.createSequentialGroup()
-                        .addGap(121, 121, 121)
-                        .addComponent(btnAgregarMaterial)))
-                .addContainerGap(313, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MaterialesLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnBuscarMaterial)
-                .addGap(18, 18, 18)
-                .addComponent(btnListadoMaterial)
+                            .addGroup(MaterialesLayout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(MaterialesLayout.createSequentialGroup()
+                                        .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(cBMateriaPrima, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(txtTipoMaterial)
+                                            .addComponent(txtMedida)
+                                            .addComponent(txtStock)))
+                                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(MaterialesLayout.createSequentialGroup()
+                                .addGap(155, 155, 155)
+                                .addComponent(btnAgregarMaterial)))
+                        .addGap(0, 298, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         MaterialesLayout.setVerticalGroup(
@@ -707,7 +708,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMateriaPrima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cBMateriaPrima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -729,6 +730,9 @@ public class vistaPrincipal extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Materiales", Materiales);
+
+        jMenuBar1.setBackground(new java.awt.Color(0, 0, 0));
+        jMenuBar1.setForeground(new java.awt.Color(255, 255, 255));
 
         jMenu1.setText("Archivo");
 
@@ -757,14 +761,14 @@ public class vistaPrincipal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
-                .addGap(62, 62, 62))
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 623, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 9, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         getAccessibleContext().setAccessibleDescription("");
@@ -789,19 +793,23 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
     private void btnAgregarRetiroHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRetiroHerramientaActionPerformed
         
+        if (txtResponsable.getText().isEmpty() || txtIdDocenteHerramienta.getText().isEmpty() || txtIdHerramientaRetiro.getText().isEmpty()){
+             JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
+                
+        } else {
         String responsable = txtResponsable.getText();
         String fecharetiro = txtFechaRetiroHerramienta.getText();
         int iddoc = Integer.parseInt(txtIdDocenteHerramienta.getText());
         int idherr = Integer.parseInt(txtIdHerramientaRetiro.getText());
-               
+        int corr;
         
         int respuesta = JOptionPane.showConfirmDialog(null, "Desea crear nueva orden de retiro?", "Confirmar nuevo retiro", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-        if (respuesta == 0){
-            System.out.println("SE CREA ORDEN DE RETIRO " + responsable +" " + iddoc + " " +idherr + " "+ fecharetiro);
-            } else {
-            System.out.println("NO se crea orden de retiro");
-        }
-      
+            if (respuesta == 0){
+                System.out.println("SE CREA ORDEN DE RETIRO " + responsable +" " + iddoc + " " +idherr + " "+ fecharetiro);
+                } else {
+                System.out.println("NO se crea orden de retiro");
+            }
+        }      
     }//GEN-LAST:event_btnAgregarRetiroHerramientaActionPerformed
 
     private void btnDevolucionHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDevolucionHerramientaActionPerformed
@@ -821,21 +829,23 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNombreActionPerformed
 
     private void btnAgregarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarDocenteActionPerformed
+        if (txtApellido.getText().isEmpty() || txtNombre.getText().isEmpty() || txtTelefono.getText().isEmpty()){
+             JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
+                
+        } else {
         String apellido = txtApellido.getText();
         String nombre = txtNombre.getText();
         String cargo = (String) comboBoxCargoDocente.getSelectedItem();
         String telefono = txtTelefono.getText();
                
-        int id = 0;
         int respuesta = JOptionPane.showConfirmDialog(null, "Desea agregar nuevo docente?", "Confirmar nuevo docente", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (respuesta == 0){
             System.out.println("NUEVO DOCENTE " + apellido +" " + nombre + " " +cargo + " "+ telefono);
-            //        Docente doc = new Modelo.Docente(id, apellido,  nombre,  cargo,  telefono);
-            //        DocenteControlador.agregarDocente(doc);   
+            DocenteControlador.agregarDocente(apellido, nombre, cargo, telefono);   
             } else {
             System.out.println("NO se agrega nuevo docente");
         }
-        
+        }
 
     }//GEN-LAST:event_btnAgregarDocenteActionPerformed
 
@@ -880,15 +890,15 @@ public class vistaPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnEditarDocenteActionPerformed
 
-    private void txtMateriaPrimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMateriaPrimaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMateriaPrimaActionPerformed
-
     private void btnAgregarMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarMaterialActionPerformed
-        String materiaPrima = txtMateriaPrima.getText();
+        if (txtTipoMaterial.getText().isEmpty() || txtMedida.getText().isEmpty() || txtStock.getText().isEmpty()){
+             JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
+                
+        } else {
+        String materiaPrima = (String) cBMateriaPrima.getSelectedItem();
         String tipoMaterial = txtTipoMaterial.getText();
         String medida = txtMedida.getText();
-        String stock = txtStock.getText();
+        int stock = Integer.parseInt(txtStock.getText());
                
         int id = 0;
         int respuesta = JOptionPane.showConfirmDialog(null, "Desea agregar nuevo material?", "Confirmar nuevo ingreso", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -898,6 +908,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
             //        DocenteControlador.agregarDocente(doc);   
             } else {
             System.out.println("NO se agrega nuevo material");
+        }
         }
     }//GEN-LAST:event_btnAgregarMaterialActionPerformed
 
@@ -916,18 +927,22 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtMarcaHerramientaActionPerformed
 
     private void btnAgregarHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarHerramientaActionPerformed
+        if (txtNombreHerramienta.getText().isEmpty() || txtMarcaHerramienta.getText().isEmpty() || txtStockHerramienta.getText().isEmpty()){
+             JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
+                
+        } else {
         String nombre = txtNombreHerramienta.getText();
         String marca = txtMarcaHerramienta.getText();
-        String stock = txtStockHerramienta.getText();
+        int stock = Integer.parseInt(txtStockHerramienta.getText());
                
-        int id = 0;
         int respuesta = JOptionPane.showConfirmDialog(null, "Desea agregar nueva herramienta?", "Confirmar nuevo ingreso", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (respuesta == 0){
             System.out.println("NUEVA HERRAMIENTA " + nombre +" " + marca +  " "+ stock);
-            //        Herramienta doc = new Modelo.Herramienta(id, nombre,  marca, stock);
-            //        DocenteControlador.agregarDocente(doc);   
+            //        Herramienta new = new Modelo.Herramienta(id, nombre,  marca, stock);
+            //        DocenteControlador.agregarDocente(new);   
             } else {
             System.out.println("NO se agrega nueva herramienta");
+        }
         }
     }//GEN-LAST:event_btnAgregarHerramientaActionPerformed
 
@@ -969,6 +984,11 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnListadoRetiroMaterialActionPerformed
 
     private void btnAgregarRetiroMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarRetiroMaterialActionPerformed
+        if (txtResponsable2.getText().isEmpty() || txtIdDocenteMaterial.getText().isEmpty() || txtIdMaterial.getText().isEmpty()){
+             JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
+                
+        } else {
+        
         String responsable = txtResponsable2.getText();
         String fecharetiro = txtFechaRetiroMaterial.getText();
         int iddoc = Integer.parseInt(txtIdDocenteMaterial.getText());
@@ -980,6 +1000,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
             System.out.println("SE CREA ORDEN DE RETIRO " + responsable +" " + iddoc + " " +idmat + " "+ fecharetiro);
             } else {
             System.out.println("NO se crea orden de retiro");
+        }
         }
     }//GEN-LAST:event_btnAgregarRetiroMaterialActionPerformed
 
@@ -1084,6 +1105,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnListadoMaterial;
     private javax.swing.JButton btnListadoRetiroHerramientas;
     private javax.swing.JButton btnListadoRetiroMaterial;
+    private javax.swing.JComboBox<String> cBMateriaPrima;
     private javax.swing.JComboBox<String> comboBoxCargoDocente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1110,14 +1132,10 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem18;
-    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtFechaRetiroHerramienta;
@@ -1127,7 +1145,6 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField txtIdHerramientaRetiro;
     private javax.swing.JTextField txtIdMaterial;
     private javax.swing.JTextField txtMarcaHerramienta;
-    private javax.swing.JTextField txtMateriaPrima;
     private javax.swing.JTextField txtMedida;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtNombreHerramienta;

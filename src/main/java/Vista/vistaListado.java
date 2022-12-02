@@ -152,8 +152,25 @@ public class vistaListado extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCerrarListadoActionPerformed
 
     private void CBListadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBListadoActionPerformed
+        int op = CBListado.getSelectedIndex();
         
-        CBListado.setSelectedItem("Retiro de Herramientas");
+        switch (op){
+            case 0 ->{
+                System.out.println("Docente");
+            }
+            case 1 ->{
+                System.out.println("Herramienta");
+            }
+            case 2 ->{
+                System.out.println("Material");
+            }
+            case 3 ->{
+                System.out.println("Retiro Herramienta");
+            }
+            case 4 ->{
+                System.out.println("Retiro Material");
+            }
+        }
     }//GEN-LAST:event_CBListadoActionPerformed
 
     private void btnImprimirListadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirListadoActionPerformed
