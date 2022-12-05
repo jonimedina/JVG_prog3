@@ -2,6 +2,7 @@
 package Controlador;
 
 import Modelo.RetiroMaterial;
+import java.util.Date;
 import java.util.List;
 import org.hibernate.Session;
 
@@ -62,10 +63,18 @@ public class RetiroMaterialControlador {
         } 
     }
 
-    public RetiroMaterial agregarRetiroMaterial (RetiroMaterial agregarRM) {
+    public static RetiroMaterial agregarRetiroMaterial (String responsable, Date fechaRetiro, int idD, int idM) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
+            
+            Modelo.RetiroMaterial agregarRM = new Modelo.RetiroMaterial();
+            
+            agregarRM.setResponsable(responsable);
+            agregarRM.setFechaRetiro(fechaRetiro);
+            agregarRM.setIdDocente(idD);
+            agregarRM.setIdMaterial(idM);
+            
             session.persist(agregarRM);
             session.getTransaction().commit();
             return agregarRM;

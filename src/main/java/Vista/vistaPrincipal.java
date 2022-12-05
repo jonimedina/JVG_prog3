@@ -29,6 +29,13 @@ public class vistaPrincipal extends javax.swing.JFrame {
        initComponents();
        setLocationRelativeTo(null);
        
+       jTabbedPane1.setBackgroundAt(0, (new Color(51, 153, 255)));
+       jTabbedPane1.setBackgroundAt(1, (new Color(204, 204, 0)));
+       jTabbedPane1.setBackgroundAt(2, (new Color(51, 153, 0)));
+       jTabbedPane1.setBackgroundAt(3, (new Color(204, 102, 0)));
+       jTabbedPane1.setBackgroundAt(4, (new Color(153, 0, 255)));
+       
+       
               
        //setIconImage(new ImageIcon(getClass().getResource("/src/main/resourses/logoET17.png")).getImage());
     }
@@ -126,7 +133,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(629, 450));
         setResizable(false);
 
-        jTabbedPane1.setBackground(new java.awt.Color(0, 0, 0));
+        jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane1.setPreferredSize(new java.awt.Dimension(629, 319));
 
         RetiroHerramienta.setBackground(new java.awt.Color(51, 153, 255));
@@ -731,7 +738,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Materiales", Materiales);
 
-        jMenuBar1.setBackground(new java.awt.Color(0, 0, 0));
+        jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
         jMenuBar1.setForeground(new java.awt.Color(255, 255, 255));
 
         jMenu1.setText("Archivo");
@@ -841,7 +848,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
         int respuesta = JOptionPane.showConfirmDialog(null, "Desea agregar nuevo docente?", "Confirmar nuevo docente", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (respuesta == 0){
             System.out.println("NUEVO DOCENTE " + apellido +" " + nombre + " " +cargo + " "+ telefono);
-            DocenteControlador.agregarDocente(apellido, nombre, cargo, telefono);   
+            //DocenteControlador.agregarDocente(apellido, nombre, cargo, telefono);   
             } else {
             System.out.println("NO se agrega nuevo docente");
         }
@@ -850,7 +857,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarDocenteActionPerformed
 
     private void btnListadoDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoDocenteActionPerformed
-       JFrame vistaList = new Vista.vistaListado();
+        JFrame vistaList = new Vista.vistaListado();
         vistaList.setVisible(true);
         vistaListado.CBListado.setSelectedIndex(0);
     }//GEN-LAST:event_btnListadoDocenteActionPerformed
@@ -874,19 +881,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEliminarDocenteActionPerformed
 
     private void btnEditarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarDocenteActionPerformed
-        int op = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el Id del docente a editar", "Editar Docente", JOptionPane.DEFAULT_OPTION));
-        
-        if(op >= 0) {
-            int respuesta = JOptionPane.showConfirmDialog(null, "Esta seguro que desea editar el docente con id " + op, "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-            if (respuesta == 0){
-            System.out.println("SE EDITA DOCENTE CON ID "+ op);
-            // DocenteControlador.actualizarDocente(int);
-                } else {
-                System.out.println("NO se Edita docente");
-                }
-        } else {
-            JOptionPane.showMessageDialog(null, "EL ID ingresado no es válido");
-        }
+        JFrame vistaEdit = new Vista.vistaEditar();
+        vistaEdit.setVisible(true);
         
     }//GEN-LAST:event_btnEditarDocenteActionPerformed
 

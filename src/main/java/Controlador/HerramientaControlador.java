@@ -81,13 +81,19 @@ public class HerramientaControlador {
         } 
     }
 
-    public Herramienta agregarHerramienta (Herramienta agregarHer) {
+    public static Herramienta agregarHerramienta (String nombre, String marca, int stock) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
-            session.persist(agregarHer);
+            
+            Modelo.Herramienta nuevaHerramienta = new Modelo.Herramienta();
+            nuevaHerramienta.setNombre(nombre);
+            nuevaHerramienta.setMarca(marca);
+            nuevaHerramienta.setStock(stock);
+            
+            session.persist(nuevaHerramienta);
             session.getTransaction().commit();
-            return agregarHer;
+            return nuevaHerramienta;
         } catch (Exception e) {
             e.printStackTrace();
             return null;

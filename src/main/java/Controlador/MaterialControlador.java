@@ -60,13 +60,21 @@ public class MaterialControlador {
         } 
     }
 
-    public Material agregarMaterial (Material agregarMat) {
+    public static Material agregarMaterial (String materiaPrima, String tipo, String medida, int stock) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
-            session.persist(agregarMat);
+            
+            Modelo.Material nuevoMaterial = new Modelo.Material();
+            
+            nuevoMaterial.setMateriaPrima(materiaPrima);
+            nuevoMaterial.setTipo(tipo);
+            nuevoMaterial.setMedida(medida);
+            nuevoMaterial.setStock(stock);
+            
+            session.persist(nuevoMaterial);
             session.getTransaction().commit();
-            return agregarMat;
+            return nuevoMaterial;
         } catch (Exception e) {
             e.printStackTrace();
             return null;
