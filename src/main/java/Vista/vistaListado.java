@@ -30,7 +30,7 @@ public class vistaListado extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablaResultado = new javax.swing.JTable();
         btnImprimirListado = new javax.swing.JButton();
         btnCerrarListado = new javax.swing.JButton();
         CBListado = new javax.swing.JComboBox<>();
@@ -47,8 +47,8 @@ public class vistaListado extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(204, 204, 204));
         jPanel5.setForeground(new java.awt.Color(0, 0, 0));
 
-        jTable1.setForeground(new java.awt.Color(0, 0, 0));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaResultado.setForeground(new java.awt.Color(0, 0, 0));
+        tablaResultado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -56,7 +56,7 @@ public class vistaListado extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tablaResultado);
 
         btnImprimirListado.setForeground(new java.awt.Color(0, 0, 0));
         btnImprimirListado.setText("Imprimir");
@@ -220,6 +220,6 @@ public class vistaListado extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    public static javax.swing.JTable tablaResultado;
     // End of variables declaration//GEN-END:variables
 }

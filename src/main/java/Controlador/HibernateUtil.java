@@ -15,10 +15,7 @@ package Controlador;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.Metadata;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
     private static final SessionFactory sessionFactory;
@@ -26,15 +23,9 @@ public class HibernateUtil {
 
     static {
         try {
-            StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
+            sessionFactory = new Configuration().configure().buildSessionFactory();
 
-            Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();
-
-            sessionFactory = meta.getSessionFactoryBuilder().build();
-
-            session = sessionFactory.openSession();
-
-        } catch (HibernateException ex) {
+        } catch (Throwable ex) {
             System.err.println("Error al crear la conf de hibernate: " + ex.getMessage());
             throw new ExceptionInInitializerError();
         }

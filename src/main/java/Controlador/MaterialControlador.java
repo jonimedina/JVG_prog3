@@ -49,7 +49,7 @@ public class MaterialControlador {
         } 
     }
 
-     public Material chequearStockMaterial(int id) {
+     public static Material chequearStockMaterial(int id) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
@@ -71,7 +71,25 @@ public class MaterialControlador {
         } 
     }
      
-   
+     public Material agregarStockMaterial(int id, int stock) {
+        try ( Session session = HibernateUtil.getCurrentSession()) {
+
+            session.beginTransaction();
+
+            Material MaterialEncontrado = session.createQuery("FROM Herramientas WHERE idHerramienta =:id", Material.class).setParameter("id", id).getSingleResult();
+            
+            MaterialEncontrado.setStock(stock);
+            
+            session.persist(MaterialEncontrado);
+            session.getTransaction().commit();
+            return MaterialEncontrado;
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        } 
+    }
+     
     public static Material agregarMaterial (String materiaPrima, String tipo, String medida, int stock) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 

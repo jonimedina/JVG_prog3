@@ -14,9 +14,9 @@ import org.hibernate.Session;
 public class Testeando {
     public static void main(String[] args) {
      
-        System.out.println("Arrancanding");
+        System.out.println("Arrancando");
         crearDocente("MEDINA","Jonathan","MEP","1132425722");
-        System.out.println("Creado docente nuevo");
+        System.out.println("Nuevo docente agregado");
         
     }
     
