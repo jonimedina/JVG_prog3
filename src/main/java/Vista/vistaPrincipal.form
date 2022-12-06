@@ -154,7 +154,7 @@
                               <Component id="btnAgregarRetiroHerramienta" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="132" max="32767" attributes="0"/>
+                      <EmptySpace pref="268" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -195,10 +195,7 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnAgregarRetiroHerramienta" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="70" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="149" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnListadoRetiroHerramientas" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnDevolucionHerramienta" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -393,10 +390,7 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnAgregarRetiroMaterial" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="67" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="146" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnListadoRetiroMaterial" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnBuscarRetiroMaterial" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -573,10 +567,7 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnAgregarDocente" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="64" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="143" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnListadoDocente" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnEliminarDocente" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -724,25 +715,25 @@
                                   <Component id="jLabel27" pref="116" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
-                                      <Component id="btnBuscarHerramienta" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="btnAgregarStockH" min="-2" pref="111" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="txtNombreHerramienta" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
-                                      <Component id="txtMarcaHerramienta" max="32767" attributes="0"/>
-                                      <Component id="txtStockHerramienta" min="-2" pref="130" max="-2" attributes="0"/>
-                                  </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtNombreHerramienta" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                                  <Component id="txtMarcaHerramienta" max="32767" attributes="0"/>
+                                  <Component id="txtStockHerramienta" min="-2" pref="130" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <EmptySpace pref="310" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="btnBuscarHerramienta" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="btnAgregarStockH" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnEliminarHerramienta" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnListadoHerramienta" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -771,10 +762,7 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnAgregarHerramienta" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="206" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="178" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnListadoHerramienta" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnEliminarHerramienta" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -963,10 +951,7 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnAgregarMaterial" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="178" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="150" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnListadoMaterial" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnBuscarMaterial" alignment="3" min="-2" max="-2" attributes="0"/>
