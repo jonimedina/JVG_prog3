@@ -51,17 +51,7 @@ public class RetiroHerramControlador {
         } 
     }
 
-
-    public void actualizarRetiroHerram(RetiroHerramienta editarRetiroH) {
-        try ( Session session = HibernateUtil.getCurrentSession()) {
-
-            session.beginTransaction();
-            session.merge(editarRetiroH);
-            session.getTransaction().commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } 
-    }
+     
 
     public static RetiroHerramienta agregarRetiroHerramienta (String responsable, Date fechaRetiro, int idD, int idH) {
         try ( Session session = HibernateUtil.getCurrentSession()) {

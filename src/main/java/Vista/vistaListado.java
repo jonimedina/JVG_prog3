@@ -75,7 +75,7 @@ public class vistaListado extends javax.swing.JFrame {
         });
 
         CBListado.setForeground(new java.awt.Color(0, 0, 0));
-        CBListado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Docentes", "Herramientas", "Materiales", "Reitro de Herramientas", "Retiro de Materiales" }));
+        CBListado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Docentes", "Herramientas", "Materiales", "Retiro de Herramientas", "Retiro de Materiales" }));
         CBListado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CBListadoActionPerformed(evt);

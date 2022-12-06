@@ -70,14 +70,25 @@ public class HerramientaControlador {
         } 
     }
 
-    public void actualizarHerramienta (Herramienta editarHerramienta) {
+    public Herramienta chequearStockHerramienta(int id) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
-            session.merge(editarHerramienta);
+
+            Herramienta HerramientaEncontrada = session.createQuery("FROM Herramientas WHERE idHerramienta =:id", Herramienta.class).setParameter("id", id).getSingleResult();
+            
+            int stockDisponible = HerramientaEncontrada.getStock();
+            
             session.getTransaction().commit();
+            if (stockDisponible >= 1) {
+                return HerramientaEncontrada;
+            } else {
+                return null;
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         } 
     }
 

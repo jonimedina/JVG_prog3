@@ -182,7 +182,7 @@
                     <StringItem index="0" value="Docentes"/>
                     <StringItem index="1" value="Herramientas"/>
                     <StringItem index="2" value="Materiales"/>
-                    <StringItem index="3" value="Reitro de Herramientas"/>
+                    <StringItem index="3" value="Retiro de Herramientas"/>
                     <StringItem index="4" value="Retiro de Materiales"/>
                   </StringArray>
                 </Property>

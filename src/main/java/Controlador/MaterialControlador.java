@@ -49,17 +49,29 @@ public class MaterialControlador {
         } 
     }
 
-    public void actualizarMaterial(Material editarMaterial) {
+     public Material chequearStockMaterial(int id) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
-            session.merge(editarMaterial);
+
+            Material MaterialEncontrado = session.createQuery("FROM Herramientas WHERE idHerramienta =:id", Material.class).setParameter("id", id).getSingleResult();
+            
+            int stockDisponible = MaterialEncontrado.getStock();
+            
             session.getTransaction().commit();
+            if (stockDisponible >= 1) {
+                return MaterialEncontrado;
+            } else {
+                return null;
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         } 
     }
-
+     
+   
     public static Material agregarMaterial (String materiaPrima, String tipo, String medida, int stock) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 

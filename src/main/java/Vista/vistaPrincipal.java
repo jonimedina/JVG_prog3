@@ -222,7 +222,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                     .addGroup(RetiroHerramientaLayout.createSequentialGroup()
                         .addGap(185, 185, 185)
                         .addComponent(btnAgregarRetiroHerramienta)))
-                .addContainerGap(262, Short.MAX_VALUE))
+                .addContainerGap(132, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroHerramientaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnBuscarRetiroHerramientas)
@@ -257,11 +257,14 @@ public class vistaPrincipal extends javax.swing.JFrame {
                         .addComponent(txtIdHerramientaRetiro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(btnAgregarRetiroHerramienta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addGap(0, 70, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroHerramientaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnListadoRetiroHerramientas)
                     .addComponent(btnDevolucionHerramienta)
-                    .addComponent(btnBuscarRetiroHerramientas)
-                    .addComponent(btnListadoRetiroHerramientas)))
+                    .addComponent(btnBuscarRetiroHerramientas))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Retiro Herramientas", RetiroHerramienta);
@@ -352,7 +355,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                             .addGroup(RetiroMaterialLayout.createSequentialGroup()
                                 .addGap(210, 210, 210)
                                 .addComponent(btnAgregarRetiroMaterial)))
-                        .addGap(0, 298, Short.MAX_VALUE)))
+                        .addGap(0, 168, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         RetiroMaterialLayout.setVerticalGroup(
@@ -378,10 +381,13 @@ public class vistaPrincipal extends javax.swing.JFrame {
                     .addComponent(txtIdMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnAgregarRetiroMaterial)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+                .addGap(0, 67, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroMaterialLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnListadoRetiroMaterial)
-                    .addComponent(btnBuscarRetiroMaterial)))
+                    .addComponent(btnBuscarRetiroMaterial))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Retiro Materiales", RetiroMaterial);
@@ -456,7 +462,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
             .addGroup(DocentesLayout.createSequentialGroup()
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DocentesLayout.createSequentialGroup()
-                        .addGap(0, 257, Short.MAX_VALUE)
+                        .addGap(0, 127, Short.MAX_VALUE)
                         .addComponent(btnBuscarDocente)
                         .addGap(18, 18, 18)
                         .addComponent(btnEditarDocente)
@@ -480,7 +486,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                                     .addComponent(txtNombre)
                                     .addComponent(txtTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
                                     .addComponent(comboBoxCargoDocente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(0, 346, Short.MAX_VALUE)))
+                        .addGap(0, 216, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(DocentesLayout.createSequentialGroup()
                 .addGap(161, 161, 161)
@@ -510,12 +516,15 @@ public class vistaPrincipal extends javax.swing.JFrame {
                     .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnAgregarDocente)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addGap(0, 64, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DocentesLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnListadoDocente)
                     .addComponent(btnEliminarDocente)
                     .addComponent(btnEditarDocente)
-                    .addComponent(btnBuscarDocente)))
+                    .addComponent(btnBuscarDocente))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Docentes", Docentes);
@@ -593,9 +602,9 @@ public class vistaPrincipal extends javax.swing.JFrame {
                     .addGroup(HerramientasLayout.createSequentialGroup()
                         .addGap(144, 144, 144)
                         .addComponent(btnAgregarHerramienta)))
-                .addContainerGap(304, Short.MAX_VALUE))
+                .addContainerGap(174, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HerramientasLayout.createSequentialGroup()
-                .addContainerGap(277, Short.MAX_VALUE)
+                .addContainerGap(147, Short.MAX_VALUE)
                 .addComponent(btnBuscarHerramienta)
                 .addGap(18, 18, 18)
                 .addComponent(btnEliminarHerramienta)
@@ -625,11 +634,14 @@ public class vistaPrincipal extends javax.swing.JFrame {
                         .addComponent(txtStockHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(btnAgregarHerramienta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
+                .addGap(0, 99, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HerramientasLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(HerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnListadoHerramienta)
                     .addComponent(btnEliminarHerramienta)
-                    .addComponent(btnBuscarHerramienta)))
+                    .addComponent(btnBuscarHerramienta))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Herramientas", Herramientas);
@@ -704,7 +716,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                             .addGroup(MaterialesLayout.createSequentialGroup()
                                 .addGap(155, 155, 155)
                                 .addComponent(btnAgregarMaterial)))
-                        .addGap(0, 298, Short.MAX_VALUE)))
+                        .addGap(0, 168, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         MaterialesLayout.setVerticalGroup(
@@ -730,10 +742,13 @@ public class vistaPrincipal extends javax.swing.JFrame {
                     .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnAgregarMaterial)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addGap(0, 71, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MaterialesLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnListadoMaterial)
-                    .addComponent(btnBuscarMaterial)))
+                    .addComponent(btnBuscarMaterial))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Materiales", Materiales);
@@ -766,16 +781,11 @@ public class vistaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 623, Short.MAX_VALUE)
-                .addGap(0, 0, 0))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 493, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         getAccessibleContext().setAccessibleDescription("");

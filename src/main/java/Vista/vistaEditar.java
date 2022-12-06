@@ -69,13 +69,20 @@ public class vistaEditar extends javax.swing.JFrame {
 
         jLabel2.setText("Apellido");
 
+        jTextField1.setEnabled(false);
+
         jLabel3.setText("Nombre");
 
+        jTextField2.setEnabled(false);
+
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MEP", "Jefe de Sección", "Jefe Gral de Taller", "Profesor/a/x" }));
+        jComboBox2.setEnabled(false);
 
         jLabel4.setText("Cargo");
 
         jLabel5.setText("Telefono");
+
+        jTextField3.setEnabled(false);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
