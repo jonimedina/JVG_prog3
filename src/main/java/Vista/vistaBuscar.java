@@ -2,6 +2,7 @@
 package Vista;
 
 import Controlador.DocenteControlador;
+import Controlador.HerramientaControlador;
 import javax.swing.JOptionPane;
 
 /**
@@ -195,31 +196,41 @@ public class vistaBuscar extends javax.swing.JFrame {
                             }
                     }
                     case 2 ->{
+                        String cargoABuscar = txtBuscar.getText();
+                        if(txtBuscar.getText().isEmpty()){
+                            JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
+                            break;
+                        } else {
+                            DocenteControlador.buscarDocentePorCargo(cargoABuscar);
+                            }
                     }
                 }
             }
             case 1 -> {
                 int opb = cBBuscarPor.getSelectedIndex();
-                if (opb == 0){
-                    if(txtBuscar.getText().isEmpty()){
+                
+                switch (opb){
+                    case 0 ->{
+                        if(txtBuscar.getText().isEmpty()){
                         JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
                         break;
-                    }
-                    
-                    int idABuscar = Integer.parseInt(txtBuscar.getText());
-                    if (idABuscar >= 0 ){
-                        System.out.println("Buscar Herramienta por ID: " + idABuscar);
-                    } else {
-                        JOptionPane.showMessageDialog(null, "ID inválido", "Error", JOptionPane.ERROR_MESSAGE);
-                    }
-                    
-                } else {
-                    String marcaABuscar = txtBuscar.getText();
-                    if(txtBuscar.getText().isEmpty()){
-                        JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
-                        break;
-                    } else {
-                        System.out.println("Buscar Herramienta por Marca: " + marcaABuscar);
+                        }
+
+                        int idABuscar = Integer.parseInt(txtBuscar.getText());
+                        if (idABuscar >= 0 ){
+                            HerramientaControlador.buscarHerramientaPorId(idABuscar);
+                        } else {
+                            JOptionPane.showMessageDialog(null, "ID inválido", "Error", JOptionPane.ERROR_MESSAGE);
+                            }
+                        }
+                    case 1 ->{
+                        String marcaABuscar = txtBuscar.getText();
+                        if(txtBuscar.getText().isEmpty()){
+                            JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
+                            break;
+                        } else {
+                            HerramientaControlador.buscarHerramientaPorMarca(marcaABuscar);
+                            }
                     }
                 }
             }

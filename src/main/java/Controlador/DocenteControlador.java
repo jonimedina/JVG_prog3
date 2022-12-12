@@ -82,7 +82,6 @@ public class DocenteControlador {
             } else {
                 JOptionPane.showMessageDialog(null, "El Id buscado no existe", "Error", JOptionPane.ERROR_MESSAGE);
             }
-
         } catch (Exception e) {
             e.printStackTrace();
             } 
@@ -116,9 +115,41 @@ public class DocenteControlador {
                     modelo.addRow(fila);
                 }
                 tablaResultado.setModel(modelo);
-                
             }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static void buscarDocentePorCargo(String cargo) {
+        try ( Session session = HibernateUtil.getCurrentSession()) {
 
+            session.beginTransaction();
+
+            List<Modelo.Docente> docEncontrado = session.createQuery("FROM Docente WHERE cargo =:cargo", Modelo.Docente.class).setParameter("cargo", cargo).getResultList();
+            
+            if (docEncontrado.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "El cargo ingresado no existe", "Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                JFrame vistaResultadoBusqueda = new Vista.vistaListado();
+                vistaResultadoBusqueda.setVisible(true);
+                
+                DefaultTableModel modelo = new DefaultTableModel();
+                String [] titulos = {"Id Docente", "Apellido", "Nombre", "Cargo" , "Telefono"};  
+                Object[] fila;                
+                modelo.setColumnIdentifiers(titulos);
+                
+                for (Modelo.Docente aux : docEncontrado ){
+                    fila = new Object[5]; 
+                    fila[0] = aux.getIdDocente();
+                    fila[1] = aux.getApellido();
+                    fila[2] = aux.getNombre();
+                    fila[3] = aux.getCargo();
+                    fila[4] = aux.getTelefono();
+                    modelo.addRow(fila);
+                }
+                tablaResultado.setModel(modelo);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

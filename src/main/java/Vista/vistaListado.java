@@ -2,6 +2,7 @@
 package Vista;
 
 import Controlador.DocenteControlador;
+import Controlador.HerramientaControlador;
 import java.awt.print.PrinterException;
 import java.text.MessageFormat;
 import java.util.List;
@@ -164,11 +165,7 @@ public class vistaListado extends javax.swing.JFrame {
                 DocenteControlador.listarDocentes();
             }
             case 1 ->{
-                DefaultTableModel modelo = new DefaultTableModel();
-                String [] titulos = {"Id Herramienta", "Nombre", "Marca", "Stock"};                  
-                modelo.setColumnIdentifiers(titulos);
-                tablaResultado.setModel(modelo);
-                System.out.println("Herramienta");
+                HerramientaControlador.listarHerramientas();
             }
             case 2 ->{
                 System.out.println("Material");
