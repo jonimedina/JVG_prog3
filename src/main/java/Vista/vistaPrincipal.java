@@ -121,6 +121,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
         btnAgregarStockM = new javax.swing.JButton();
         spinnerStockMaterial = new javax.swing.JSpinner();
         btnNuevaMatPrima = new javax.swing.JButton();
+        btnEliminarMaterial = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Depósito Taller ");
@@ -689,7 +690,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         jLabel21.setText("Materia Prima");
 
-        cBMateriaPrima.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acero", "Aluminio", "Madera", "Chapa Galvanizada", "Chapa Negra" }));
+        cBMateriaPrima.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acero", "Aluminio", "Bronce", "Madera", "Chapa Galvanizada", "Chapa Negra" }));
 
         jLabel23.setText("Tipo");
 
@@ -711,45 +712,54 @@ public class vistaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnEliminarMaterial.setText("Eliminar Material");
+        btnEliminarMaterial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarMaterialActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout MaterialesLayout = new javax.swing.GroupLayout(Materiales);
         Materiales.setLayout(MaterialesLayout);
         MaterialesLayout.setHorizontalGroup(
             MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MaterialesLayout.createSequentialGroup()
                 .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MaterialesLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAgregarStockM)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnBuscarMaterial)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnListadoMaterial))
+                    .addGroup(MaterialesLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(MaterialesLayout.createSequentialGroup()
+                                .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cBMateriaPrima, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(txtTipoMaterial)
+                                    .addComponent(txtMedida)
+                                    .addComponent(spinnerStockMaterial))
+                                .addGap(18, 18, 18)
+                                .addComponent(btnNuevaMatPrima, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(MaterialesLayout.createSequentialGroup()
                         .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(MaterialesLayout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(MaterialesLayout.createSequentialGroup()
-                                        .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(cBMateriaPrima, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(txtTipoMaterial)
-                                            .addComponent(txtMedida)
-                                            .addComponent(spinnerStockMaterial))
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btnNuevaMatPrima, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(MaterialesLayout.createSequentialGroup()
                                 .addGap(155, 155, 155)
-                                .addComponent(btnAgregarMaterial)))
-                        .addGap(0, 178, Short.MAX_VALUE)))
+                                .addComponent(btnAgregarMaterial)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MaterialesLayout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnAgregarStockM)
+                                .addGap(18, 18, 18)))
+                        .addComponent(btnBuscarMaterial)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEliminarMaterial)))
+                .addGap(18, 18, 18)
+                .addComponent(btnListadoMaterial)
                 .addContainerGap())
         );
         MaterialesLayout.setVerticalGroup(
@@ -780,7 +790,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
                 .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnListadoMaterial)
                     .addComponent(btnBuscarMaterial)
-                    .addComponent(btnAgregarStockM))
+                    .addComponent(btnAgregarStockM)
+                    .addComponent(btnEliminarMaterial))
                 .addContainerGap())
         );
 
@@ -882,23 +893,10 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEditarDocenteActionPerformed
 
     private void btnAgregarMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarMaterialActionPerformed
-        if (txtTipoMaterial.getText().isEmpty() || txtMedida.getText().isEmpty()){
+        if (txtTipoMaterial.getText().isEmpty() || txtMedida.getText().isEmpty() || (int) spinnerStockMaterial.getValue() == 0){
              JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
-                
         } else {
-        String materiaPrima = (String) cBMateriaPrima.getSelectedItem();
-        String tipoMaterial = txtTipoMaterial.getText();
-        String medida = txtMedida.getText();
-        int stock = (int) spinnerStockMaterial.getValue();
-               
-        
-        int respuesta = JOptionPane.showConfirmDialog(null, "Desea agregar nuevo material?", "Confirmar nuevo ingreso", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-        if (respuesta == 0){
-            System.out.println("NUEVO MATERIAL " + materiaPrima +" " + tipoMaterial +  " "+ medida + " "+ stock);
-//            MaterialControlador.agregarMaterial(materiaPrima, medida, medida, stock);
-            } else {
-            System.out.println("NO se agrega nuevo material");
-        }
+            MaterialControlador.agregarMaterial();
         }
     }//GEN-LAST:event_btnAgregarMaterialActionPerformed
 
@@ -917,7 +915,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtMarcaHerramientaActionPerformed
 
     private void btnAgregarHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarHerramientaActionPerformed
-        if (txtNombreHerramienta.getText().isEmpty() || txtMarcaHerramienta.getText().isEmpty()){
+        if (txtNombreHerramienta.getText().isEmpty() || txtMarcaHerramienta.getText().isEmpty() || (int)spinnerStockHerramienta.getValue() == 0){
              JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
         } else {
             HerramientaControlador.agregarHerramienta();
@@ -931,7 +929,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnListadoHerramientaActionPerformed
 
     private void btnEliminarHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarHerramientaActionPerformed
-        int idABorrar = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el Id del docente a eliminar", "Eliminar Docente", JOptionPane.DEFAULT_OPTION));
+        int idABorrar = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el Id de la herramienta a eliminar", "Eliminar Herramienta", JOptionPane.DEFAULT_OPTION));
         if(idABorrar >= 0) {
             HerramientaControlador.borrarHerramienta(idABorrar);
             } else {
@@ -1011,7 +1009,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
         JFrame vistaBusc = new Vista.vistaBuscar();
         vistaBusc.setVisible(true);
         Vista.vistaBuscar.CBBuscar.setSelectedIndex(2);
-        Vista.vistaBuscar.cBBuscarPor.addItem("ID");        
+        Vista.vistaBuscar.cBBuscarPor.addItem("ID");
+        Vista.vistaBuscar.cBBuscarPor.addItem("Materia Prima");        
     }//GEN-LAST:event_btnBuscarMaterialActionPerformed
 
     private void txtIdHerramientaRetiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdHerramientaRetiroActionPerformed
@@ -1030,18 +1029,11 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarStockHActionPerformed
 
     private void btnAgregarStockMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarStockMActionPerformed
-        String op = JOptionPane.showInputDialog(null, "Ingrese el Id del material para agregar stock", "Actualizar Stock", JOptionPane.DEFAULT_OPTION);
-        int idH = Integer.parseInt(op);
+        int idH = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el Id del material para agregar stock", 
+                                                                "Actualizar Stock", JOptionPane.DEFAULT_OPTION));
                 
         if(idH >= 0) {
-            String op2 = JOptionPane.showInputDialog(null, "Ingrese el nuevo stock", "Actualizar Stock", JOptionPane.DEFAULT_OPTION);
-            int stockNuevo = Integer.parseInt(op2);
-            if (stockNuevo >= 0){
-            System.out.println("Se agrega "+ stockNuevo + " al stock del material " + idH);
-            // HerramientaControlador.agregarStockMaterial(idH, stockNuevo);
-            } else {
-            System.out.println("NO se agrega ningún stock");
-            }
+            MaterialControlador.agregarStockMaterial(idH);
         } else {
             JOptionPane.showMessageDialog(null, "EL ID ingresado no es válido");
         }
@@ -1067,6 +1059,15 @@ public class vistaPrincipal extends javax.swing.JFrame {
         String item = JOptionPane.showInputDialog(null, "Ingrese nueva materia prima", "Nueva Materia Prima", JOptionPane.DEFAULT_OPTION);
         cBMateriaPrima.addItem(item);
     }//GEN-LAST:event_btnNuevaMatPrimaActionPerformed
+
+    private void btnEliminarMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarMaterialActionPerformed
+        int idABorrar = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el Id del material a eliminar", "Eliminar Material", JOptionPane.DEFAULT_OPTION));
+        if(idABorrar >= 0) {
+            MaterialControlador.borrarMaterial(idABorrar);
+            } else {
+            JOptionPane.showMessageDialog(null, "EL ID ingresado no es válido");
+        }
+    }//GEN-LAST:event_btnEliminarMaterialActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1125,6 +1126,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnEditarDocente;
     private javax.swing.JButton btnEliminarDocente;
     private javax.swing.JButton btnEliminarHerramienta;
+    private javax.swing.JButton btnEliminarMaterial;
     private javax.swing.JButton btnListadoDocente;
     private javax.swing.JButton btnListadoHerramienta;
     private javax.swing.JButton btnListadoMaterial;

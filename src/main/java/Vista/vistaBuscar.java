@@ -3,6 +3,7 @@ package Vista;
 
 import Controlador.DocenteControlador;
 import Controlador.HerramientaControlador;
+import Controlador.MaterialControlador;
 import javax.swing.JOptionPane;
 
 /**
@@ -235,16 +236,31 @@ public class vistaBuscar extends javax.swing.JFrame {
                 }
             }
             case 2 -> {
-                if(txtBuscar.getText().isEmpty()){
-                    JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
-                    break;
+                int opb = cBBuscarPor.getSelectedIndex();
+                
+                switch (opb){
+                    case 0 ->{
+                        if(txtBuscar.getText().isEmpty()){
+                        JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
+                        break;
+                        }
+
+                        int idABuscar = Integer.parseInt(txtBuscar.getText());
+                        if (idABuscar >= 0 ){
+                            MaterialControlador.buscarMaterialPorId(idABuscar);
+                        } else {
+                            JOptionPane.showMessageDialog(null, "ID inválido", "Error", JOptionPane.ERROR_MESSAGE);
+                            }
+                        }
+                    case 1 ->{
+                        String matPrimBuscar = txtBuscar.getText();
+                        if(txtBuscar.getText().isEmpty()){
+                            JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
+                            break;
+                        } else {
+                            MaterialControlador.buscarMaterialPorMateriaPrima(matPrimBuscar);
+                            }
                     }
-                    
-                int idABuscar = Integer.parseInt(txtBuscar.getText());
-                if (idABuscar >= 0 ){
-                    System.out.println("Buscar Material por ID: " + idABuscar);
-                } else {
-                    JOptionPane.showMessageDialog(null, "ID inválido", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
             case 3 -> {

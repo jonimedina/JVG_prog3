@@ -3,12 +3,11 @@ package Vista;
 
 import Controlador.DocenteControlador;
 import Controlador.HerramientaControlador;
+import Controlador.MaterialControlador;
 import java.awt.print.PrinterException;
 import java.text.MessageFormat;
-import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -168,7 +167,7 @@ public class vistaListado extends javax.swing.JFrame {
                 HerramientaControlador.listarHerramientas();
             }
             case 2 ->{
-                System.out.println("Material");
+                MaterialControlador.listarMateriales();
             }
             case 3 ->{
                 System.out.println("Retiro Herramienta");

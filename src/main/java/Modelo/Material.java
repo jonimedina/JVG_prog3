@@ -64,7 +64,7 @@ public class Material {
 
     @Override
     public String toString() {
-        return "Material{" + "idMaterial=" + idMaterial + ", materiaPrima=" + materiaPrima + ", tipo=" + tipo + ", medida=" + medida + ", stock=" + stock + '}';
+        return "\n==Material==\n Id del Material: " + idMaterial + "\nMateria Prima: " + materiaPrima + "\nTipo: " + tipo + "\nMedida:" + medida + "\nStock: " + stock;
     }
     
     

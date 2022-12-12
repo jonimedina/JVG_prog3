@@ -28,7 +28,9 @@ public class HerramientaControlador {
             int respuesta = JOptionPane.showConfirmDialog(null, "Desea agregar nueva herramienta?", "Confirmar nueva herramienta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
             if (respuesta == 0){
                 session.persist(nuevaHerramienta);
-
+                session.getTransaction().commit();
+                JOptionPane.showMessageDialog(null, nuevaHerramienta, "Herramienta agregada", JOptionPane.INFORMATION_MESSAGE);
+                
                 Vista.vistaPrincipal.txtNombreHerramienta.setText("");
                 Vista.vistaPrincipal.txtMarcaHerramienta.setText("");
                 Vista.vistaPrincipal.spinnerStockHerramienta.setValue(0);
@@ -36,10 +38,6 @@ public class HerramientaControlador {
             } else {
                 JOptionPane.showMessageDialog(null, "No se agregó nueva herramienta", "Error", JOptionPane.ERROR_MESSAGE);
                 }
-            
-            session.getTransaction().commit();
-            
-            JOptionPane.showMessageDialog(null, nuevaHerramienta, "Herramienta agregada", JOptionPane.INFORMATION_MESSAGE);
         } catch (Exception e) {
             e.printStackTrace();
             }
@@ -120,9 +118,9 @@ public class HerramientaControlador {
 
             session.beginTransaction();
 
-            List<Modelo.Herramienta> docEncontrado = session.createQuery("FROM Herramienta WHERE marca =:mar", Modelo.Herramienta.class).setParameter("mar", mar).getResultList();
+            List<Modelo.Herramienta> herEncontrado = session.createQuery("FROM Herramienta WHERE marca =:mar", Modelo.Herramienta.class).setParameter("mar", mar).getResultList();
             
-            if (docEncontrado.isEmpty()) {
+            if (herEncontrado.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "La marca ingresada no existe", "Error", JOptionPane.ERROR_MESSAGE);
             } else {
                 JFrame vistaResultadoBusqueda = new Vista.vistaListado();
@@ -133,7 +131,7 @@ public class HerramientaControlador {
                 Object[] fila;                
                 modelo.setColumnIdentifiers(titulos);
                 
-                for (Modelo.Herramienta aux : docEncontrado ){
+                for (Modelo.Herramienta aux : herEncontrado ){
                     fila = new Object[4]; 
                     fila[0] = aux.getIdHerramienta();
                     fila[1] = aux.getNombre();
