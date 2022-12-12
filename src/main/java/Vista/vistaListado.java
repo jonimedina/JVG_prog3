@@ -2,7 +2,11 @@
 package Vista;
 
 import Controlador.DocenteControlador;
+import java.awt.print.PrinterException;
+import java.text.MessageFormat;
 import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -195,9 +199,26 @@ public class vistaListado extends javax.swing.JFrame {
     }//GEN-LAST:event_CBListadoActionPerformed
 
     private void btnImprimirListadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirListadoActionPerformed
-       
+       int op = CBListado.getSelectedIndex();
+        
+        switch (op){
+            case 0 ->{
+                imprimirTabla(tablaResultado, "Listado de " + CBListado.getSelectedItem(), "Fin del Listado", true);
+            }
+            case 1 ->{
+                imprimirTabla(tablaResultado, "Listado de " + CBListado.getSelectedItem(), "Fin del Listado", true);
+            }
+            case 2 ->{
+                imprimirTabla(tablaResultado, "Listado de " + CBListado.getSelectedItem(), "Fin del Listado", true);
+            }
+            case 3 ->{
+                imprimirTabla(tablaResultado, "Listado de " + CBListado.getSelectedItem(), "Fin del Listado", true);
+            }
+            case 4 ->{
+                imprimirTabla(tablaResultado, "Listado de " + CBListado.getSelectedItem(), "Fin del Listado", true);
+            }
     }//GEN-LAST:event_btnImprimirListadoActionPerformed
-
+    }
     /**
      * @param args the command line arguments
      */
@@ -232,6 +253,40 @@ public class vistaListado extends javax.swing.JFrame {
                 new vistaListado().setVisible(true);
             }
         });
+    }
+    
+    public void imprimirTabla(JTable jTable, String header, String footer, boolean showPrintDialog){        
+        boolean fitWidth = true;        
+        boolean interactive = true;
+        // We define the print mode (Definimos el modo de impresión)
+        JTable.PrintMode mode = fitWidth ? JTable.PrintMode.FIT_WIDTH : JTable.PrintMode.NORMAL;
+        try {
+            // Print the table (Imprimo la tabla)             
+            boolean complete = jTable.print(mode,
+                    new MessageFormat(header),
+                    new MessageFormat(footer),
+                    showPrintDialog,
+                    null,
+                    interactive);                 
+            if (complete) {
+                // Mostramos el mensaje de impresión existosa
+                JOptionPane.showMessageDialog(jTable,
+                        "Impresión completa",
+                        "Resultado de la impresión",
+                        JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                // Mostramos un mensaje indicando que la impresión fue cancelada                 
+                JOptionPane.showMessageDialog(jTable,
+                        "Impresión cancelada",
+                        "Resultado de la impresión",
+                        JOptionPane.WARNING_MESSAGE);
+            }
+        } catch (PrinterException pe) {
+            JOptionPane.showMessageDialog(jTable, 
+                    "Fallo de impresión: " + pe.getMessage(), 
+                    "Resultado de la impresión", 
+                    JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
