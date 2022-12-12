@@ -10,6 +10,8 @@ public class HerramientaControlador {
         
     }
     
+    
+    
     public List<Herramienta> listarHerramientas() {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 

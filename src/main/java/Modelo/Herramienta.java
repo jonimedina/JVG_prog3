@@ -55,7 +55,7 @@ public class Herramienta {
 
     @Override
     public String toString() {
-        return "Herramienta{" + "idHerramienta=" + idHerramienta + ", nombre=" + nombre + ", marca=" + marca + ", stock=" + stock + '}';
+        return "\n==Herramienta==\nId Herramienta: " + idHerramienta + "\nNombre: " + nombre + "\nMarca: " + marca + "\nStock Disponible: " + stock + "\n";
     }
     
     

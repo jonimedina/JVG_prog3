@@ -63,7 +63,7 @@ public class Docente {
 
     @Override
     public String toString() {
-       return "\n== Docente ==\n" + "Id del Docente: " + idDocente + "\nApellido: " + apellido + "\nNombre: " + nombre + "\nCargo: " + cargo +"\nTelefono:" +telefono +"\n";
+       return "\n== Docente ==\nId del Docente: " + idDocente + "\nApellido: " + apellido + "\nNombre: " + nombre + "\nCargo: " + cargo +"\nTelefono:" +telefono +"\n";
     }
     
     

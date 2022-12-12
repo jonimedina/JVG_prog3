@@ -847,23 +847,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
              JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
                 
         } else {
-        String apellido = txtApellido.getText();
-        String nombre = txtNombre.getText();
-        String cargo = (String) cBCargoDocente.getSelectedItem();
-        String telefono = txtTelefono.getText();
-               
-        int respuesta = JOptionPane.showConfirmDialog(null, "Desea agregar nuevo docente?", "Confirmar nuevo docente", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-        if (respuesta == 0){
-            DocenteControlador.agregarDocente(apellido, nombre, cargo, telefono);  
-            txtApellido.setText("");
-            txtNombre.setText("");
-            cBCargoDocente.setSelectedIndex(0);
-            txtTelefono.setText("");
-            } else {
-            System.out.println("NO se agrega nuevo docente");
-        }
-        }
-
+            DocenteControlador.agregarDocente();
+        }    
     }//GEN-LAST:event_btnAgregarDocenteActionPerformed
 
     private void btnListadoDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoDocenteActionPerformed
@@ -874,16 +859,9 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
     private void btnEliminarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarDocenteActionPerformed
         int idABorrar = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el Id del docente a eliminar", "Eliminar Docente", JOptionPane.DEFAULT_OPTION));
-        
-             
         if(idABorrar >= 0) {
-            int respuesta = JOptionPane.showConfirmDialog(null, "Esta seguro que desea eliminar el docente con id " + idABorrar, "Confirmación", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
-            if (respuesta == 0){
             DocenteControlador.borrarDocente(idABorrar);
             } else {
-            System.out.println("NO se elimina docente");
-            }
-        } else {
             JOptionPane.showMessageDialog(null, "EL ID ingresado no es válido");
         }
        
@@ -1165,7 +1143,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnListadoRetiroHerramientas;
     private javax.swing.JButton btnListadoRetiroMaterial;
     private javax.swing.JButton btnNuevoCargo;
-    private javax.swing.JComboBox<String> cBCargoDocente;
+    public static javax.swing.JComboBox<String> cBCargoDocente;
     private javax.swing.JComboBox<String> cBMateriaPrima;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1192,7 +1170,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField txtApellido;
+    public static javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtFechaRetiroHerramienta;
     private javax.swing.JTextField txtFechaRetiroMaterial;
     private javax.swing.JTextField txtIdDocenteHerramienta;
@@ -1201,13 +1179,13 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField txtIdMaterial;
     private javax.swing.JTextField txtMarcaHerramienta;
     private javax.swing.JTextField txtMedida;
-    private javax.swing.JTextField txtNombre;
+    public static javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtNombreHerramienta;
     private javax.swing.JTextField txtResponsable;
     private javax.swing.JTextField txtResponsable2;
     private javax.swing.JTextField txtStock;
     private javax.swing.JTextField txtStockHerramienta;
-    private javax.swing.JTextField txtTelefono;
+    public static javax.swing.JTextField txtTelefono;
     private javax.swing.JTextField txtTipoMaterial;
     // End of variables declaration//GEN-END:variables
 
