@@ -1,33 +1,14 @@
  
 package Modelo;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import java.util.Date;
 
-@Entity
-@Table(name= "RetiroHerramientas")
 public class RetiroHerramienta {
     
-    @Id
-    @Column(name = "IdRetiroHerramienta")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idRetiroHerramienta;
-    
-    @Column(name = "Responsable", length = 30, nullable = false)
     private String responsable;
-    
-    @Column(name = "IdDocente", length = 5, nullable = false)
     private Integer idDocente;
-    
-    @Column(name = "IdHerramientas", length = 5, nullable = false)
     private Integer idHerramienta;
-    
-    @Column(name = "FechaRetiro", nullable = false)
     private Date fechaRetiro;
     
     public RetiroHerramienta(){

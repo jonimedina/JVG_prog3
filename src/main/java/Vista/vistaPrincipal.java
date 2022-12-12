@@ -29,15 +29,15 @@ public class vistaPrincipal extends javax.swing.JFrame {
        initComponents();
        setLocationRelativeTo(null);
        
-       jTabbedPane1.setBackgroundAt(0, (new Color(51, 153, 255)));
-       jTabbedPane1.setBackgroundAt(1, (new Color(204, 204, 0)));
-       jTabbedPane1.setBackgroundAt(2, (new Color(51, 153, 0)));
-       jTabbedPane1.setBackgroundAt(3, (new Color(204, 102, 0)));
-       jTabbedPane1.setBackgroundAt(4, (new Color(153, 0, 255)));
+       jTabbedPane1.setBackgroundAt(0, (new Color(132, 182, 244)));
+       jTabbedPane1.setBackgroundAt(1, (new Color(253, 253, 150)));
+       jTabbedPane1.setBackgroundAt(2, (new Color(119, 221, 119)));
+       jTabbedPane1.setBackgroundAt(3, (new Color(255, 105, 97)));
+       jTabbedPane1.setBackgroundAt(4, (new Color(253, 202, 225)));
        
        
-              
-       //setIconImage(new ImageIcon(getClass().getResource("/src/main/resourses/logoET17.png")).getImage());
+       ImageIcon img = new ImageIcon("src/main/resources/logoET17.png");       
+       setIconImage(img.getImage());
     }
 
     /**
@@ -89,9 +89,10 @@ public class vistaPrincipal extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        comboBoxCargoDocente = new javax.swing.JComboBox<>();
+        cBCargoDocente = new javax.swing.JComboBox<>();
         jLabel13 = new javax.swing.JLabel();
         txtTelefono = new javax.swing.JTextField();
+        btnNuevoCargo = new javax.swing.JButton();
         Herramientas = new javax.swing.JPanel();
         btnAgregarHerramienta = new javax.swing.JButton();
         btnBuscarHerramienta = new javax.swing.JButton();
@@ -119,15 +120,10 @@ public class vistaPrincipal extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         txtStock = new javax.swing.JTextField();
         btnAgregarStockM = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
-        jMenuItem18 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Depósito Taller ");
-        setBackground(new java.awt.Color(0, 0, 0));
+        setBackground(new java.awt.Color(102, 102, 102));
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(getLocation());
@@ -138,7 +134,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane1.setPreferredSize(new java.awt.Dimension(629, 319));
 
-        RetiroHerramienta.setBackground(new java.awt.Color(51, 153, 255));
+        RetiroHerramienta.setBackground(new java.awt.Color(132, 182, 244));
         RetiroHerramienta.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
 
         btnBuscarRetiroHerramientas.setText("Buscar");
@@ -259,7 +255,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                         .addComponent(txtIdHerramientaRetiro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(btnAgregarRetiroHerramienta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
                 .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnListadoRetiroHerramientas)
                     .addComponent(btnDevolucionHerramienta)
@@ -269,7 +265,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Retiro Herramientas", RetiroHerramienta);
 
-        RetiroMaterial.setBackground(new java.awt.Color(204, 204, 0));
+        RetiroMaterial.setBackground(new java.awt.Color(253, 253, 150));
 
         btnAgregarRetiroMaterial.setText("Confirmar");
         btnAgregarRetiroMaterial.addActionListener(new java.awt.event.ActionListener() {
@@ -381,7 +377,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                     .addComponent(txtIdMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnAgregarRetiroMaterial)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
                 .addGroup(RetiroMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnListadoRetiroMaterial)
                     .addComponent(btnBuscarRetiroMaterial))
@@ -390,7 +386,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Retiro Materiales", RetiroMaterial);
 
-        Docentes.setBackground(new java.awt.Color(51, 153, 0));
+        Docentes.setBackground(new java.awt.Color(119, 221, 119));
 
         btnAgregarDocente.setText("Confirmar");
         btnAgregarDocente.addActionListener(new java.awt.event.ActionListener() {
@@ -449,9 +445,16 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         jLabel14.setText("Cargo");
 
-        comboBoxCargoDocente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MEP", "Jefe Sección ", "Jefe Gral de Taller", "Profesor/a/x" }));
+        cBCargoDocente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MEP", "Jefe Sección ", "Jefe Gral de Taller", "Profesor/a/x" }));
 
         jLabel13.setText("Telefóno");
+
+        btnNuevoCargo.setText("Crear Nuevo Cargo");
+        btnNuevoCargo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevoCargoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout DocentesLayout = new javax.swing.GroupLayout(Docentes);
         Docentes.setLayout(DocentesLayout);
@@ -460,7 +463,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
             .addGroup(DocentesLayout.createSequentialGroup()
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DocentesLayout.createSequentialGroup()
-                        .addGap(0, 127, Short.MAX_VALUE)
+                        .addGap(0, 263, Short.MAX_VALUE)
                         .addComponent(btnBuscarDocente)
                         .addGap(18, 18, 18)
                         .addComponent(btnEditarDocente)
@@ -483,8 +486,10 @@ public class vistaPrincipal extends javax.swing.JFrame {
                                     .addComponent(txtApellido)
                                     .addComponent(txtNombre)
                                     .addComponent(txtTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
-                                    .addComponent(comboBoxCargoDocente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(0, 216, Short.MAX_VALUE)))
+                                    .addComponent(cBCargoDocente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addComponent(btnNuevoCargo)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(DocentesLayout.createSequentialGroup()
                 .addGap(161, 161, 161)
@@ -507,14 +512,15 @@ public class vistaPrincipal extends javax.swing.JFrame {
                 .addGap(9, 9, 9)
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(comboBoxCargoDocente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cBCargoDocente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNuevoCargo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
                     .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnAgregarDocente)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnListadoDocente)
                     .addComponent(btnEliminarDocente)
@@ -525,7 +531,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Docentes", Docentes);
 
-        Herramientas.setBackground(new java.awt.Color(204, 102, 0));
+        Herramientas.setBackground(new java.awt.Color(255, 105, 97));
 
         btnAgregarHerramienta.setText("Confirmar");
         btnAgregarHerramienta.addActionListener(new java.awt.event.ActionListener() {
@@ -639,7 +645,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                         .addComponent(txtStockHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(btnAgregarHerramienta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 178, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 202, Short.MAX_VALUE)
                 .addGroup(HerramientasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnListadoHerramienta)
                     .addComponent(btnEliminarHerramienta)
@@ -650,7 +656,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Herramientas", Herramientas);
 
-        Materiales.setBackground(new java.awt.Color(153, 0, 255));
+        Materiales.setBackground(new java.awt.Color(253, 202, 225));
 
         btnAgregarMaterial.setText("Confirmar");
         btnAgregarMaterial.addActionListener(new java.awt.event.ActionListener() {
@@ -755,7 +761,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                     .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnAgregarMaterial)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 174, Short.MAX_VALUE)
                 .addGroup(MaterialesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnListadoMaterial)
                     .addComponent(btnBuscarMaterial)
@@ -764,30 +770,6 @@ public class vistaPrincipal extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Materiales", Materiales);
-
-        jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
-        jMenuBar1.setForeground(new java.awt.Color(255, 255, 255));
-
-        jMenu1.setText("Archivo");
-
-        jMenuItem1.setText("Cerrar");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem1);
-
-        jMenuBar1.add(jMenu1);
-
-        jMenu5.setText("Acerca de");
-
-        jMenuItem18.setText("Acerca de");
-        jMenu5.add(jMenuItem18);
-
-        jMenuBar1.add(jMenu5);
-
-        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -804,10 +786,6 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        dispose();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void btnListadoRetiroHerramientasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListadoRetiroHerramientasActionPerformed
         JFrame vistaList = new Vista.vistaListado();
@@ -866,13 +844,16 @@ public class vistaPrincipal extends javax.swing.JFrame {
         } else {
         String apellido = txtApellido.getText();
         String nombre = txtNombre.getText();
-        String cargo = (String) comboBoxCargoDocente.getSelectedItem();
+        String cargo = (String) cBCargoDocente.getSelectedItem();
         String telefono = txtTelefono.getText();
                
         int respuesta = JOptionPane.showConfirmDialog(null, "Desea agregar nuevo docente?", "Confirmar nuevo docente", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (respuesta == 0){
-            System.out.println("NUEVO DOCENTE " + apellido +" " + nombre + " " +cargo + " "+ telefono);
-            //DocenteControlador.agregarDocente(apellido, nombre, cargo, telefono);   
+            DocenteControlador.agregarDocente(apellido, nombre, cargo, telefono);  
+            txtApellido.setText("");
+            txtNombre.setText("");
+            cBCargoDocente.setSelectedIndex(0);
+            txtTelefono.setText("");
             } else {
             System.out.println("NO se agrega nuevo docente");
         }
@@ -887,14 +868,13 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnListadoDocenteActionPerformed
 
     private void btnEliminarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarDocenteActionPerformed
-        int op = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el Id del docente a eliminar", "Eliminar Docente", JOptionPane.DEFAULT_OPTION));
+        int idABorrar = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el Id del docente a eliminar", "Eliminar Docente", JOptionPane.DEFAULT_OPTION));
         
              
-        if(op >= 0) {
-            int respuesta = JOptionPane.showConfirmDialog(null, "Esta seguro que desea eliminar el docente con id " + op, "Confirmación", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if(idABorrar >= 0) {
+            int respuesta = JOptionPane.showConfirmDialog(null, "Esta seguro que desea eliminar el docente con id " + idABorrar, "Confirmación", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
             if (respuesta == 0){
-            System.out.println("SE ELIMINA DOCENTE CON ID "+ op);
-            // DocenteControlador.borrarDocente(int);
+            DocenteControlador.borrarDocente(idABorrar);
             } else {
             System.out.println("NO se elimina docente");
             }
@@ -1101,6 +1081,18 @@ public class vistaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnAgregarStockMActionPerformed
 
+    private void btnNuevoCargoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoCargoActionPerformed
+        String nuevoCargo = JOptionPane.showInputDialog(null, "Ingrese el nuevo cargo", "Crear nuevo cargo", JOptionPane.DEFAULT_OPTION);
+        
+        if (nuevoCargo.isEmpty()){
+            JOptionPane.showMessageDialog(null, "No se ingresó ningún texto" ,"Campo vacío", JOptionPane.ERROR_MESSAGE);
+        } else {
+            cBCargoDocente.addItem(nuevoCargo);
+            JOptionPane.showMessageDialog(null, "Nuevo cargo creado: " + nuevoCargo ,"Cargo creado", JOptionPane.INFORMATION_MESSAGE);
+        }
+        
+    }//GEN-LAST:event_btnNuevoCargoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1163,8 +1155,9 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnListadoMaterial;
     private javax.swing.JButton btnListadoRetiroHerramientas;
     private javax.swing.JButton btnListadoRetiroMaterial;
+    private javax.swing.JButton btnNuevoCargo;
+    private javax.swing.JComboBox<String> cBCargoDocente;
     private javax.swing.JComboBox<String> cBMateriaPrima;
-    private javax.swing.JComboBox<String> comboBoxCargoDocente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
@@ -1189,11 +1182,6 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtFechaRetiroHerramienta;

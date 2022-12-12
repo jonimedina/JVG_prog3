@@ -1,6 +1,9 @@
 
 package Vista;
 
+import Controlador.DocenteControlador;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Jonathan Medina
@@ -40,7 +43,6 @@ public class vistaBuscar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Buscar");
-        setAlwaysOnTop(true);
         setBackground(new java.awt.Color(0, 0, 0));
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setUndecorated(true);
@@ -172,23 +174,23 @@ public class vistaBuscar extends javax.swing.JFrame {
                 int opb = cBBuscarPor.getSelectedIndex();
                 if (opb == 0){
                     if(txtBuscar.getText().isEmpty()){
-                        System.out.println("CAMPO VACIO");
+                        JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
                         break;
                     }
                     
                     int idABuscar = Integer.parseInt(txtBuscar.getText());
                     if (idABuscar >= 0 ){
-                        System.out.println("Buscar Docente por ID: " + idABuscar);
+                        DocenteControlador.buscarDocentePorId(idABuscar);
                     } else {
-                        System.out.println("ID INVALIDO");
+                        JOptionPane.showMessageDialog(null, "ID inválido", "Error", JOptionPane.ERROR_MESSAGE);
                     }
                 } else {
                     String apeABuscar = txtBuscar.getText();
                     if(txtBuscar.getText().isEmpty()){
-                        System.out.println("CAMPO VACIO");
+                        JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
                         break;
                     } else {
-                        System.out.println("Buscar Docente por Apellido: " + apeABuscar);
+                        DocenteControlador.buscarDocentePorApellido(apeABuscar);
                     }
                     
                  }
@@ -197,7 +199,7 @@ public class vistaBuscar extends javax.swing.JFrame {
                 int opb = cBBuscarPor.getSelectedIndex();
                 if (opb == 0){
                     if(txtBuscar.getText().isEmpty()){
-                        System.out.println("CAMPO VACIO");
+                        JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
                         break;
                     }
                     
@@ -205,13 +207,13 @@ public class vistaBuscar extends javax.swing.JFrame {
                     if (idABuscar >= 0 ){
                         System.out.println("Buscar Herramienta por ID: " + idABuscar);
                     } else {
-                        System.out.println("ID INVALIDO");
+                        JOptionPane.showMessageDialog(null, "ID inválido", "Error", JOptionPane.ERROR_MESSAGE);
                     }
                     
                 } else {
                     String marcaABuscar = txtBuscar.getText();
                     if(txtBuscar.getText().isEmpty()){
-                        System.out.println("CAMPO VACIO");
+                        JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
                         break;
                     } else {
                         System.out.println("Buscar Herramienta por Marca: " + marcaABuscar);
@@ -220,7 +222,7 @@ public class vistaBuscar extends javax.swing.JFrame {
             }
             case 2 -> {
                 if(txtBuscar.getText().isEmpty()){
-                    System.out.println("CAMPO VACIO");
+                    JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
                     break;
                     }
                     
@@ -228,12 +230,12 @@ public class vistaBuscar extends javax.swing.JFrame {
                 if (idABuscar >= 0 ){
                     System.out.println("Buscar Material por ID: " + idABuscar);
                 } else {
-                    System.out.println("ID INVALIDO");
+                    JOptionPane.showMessageDialog(null, "ID inválido", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
             case 3 -> {
                 if(txtBuscar.getText().isEmpty()){
-                        System.out.println("CAMPO VACIO");
+                        JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
                         break;
                     }
                     
@@ -241,12 +243,12 @@ public class vistaBuscar extends javax.swing.JFrame {
                     if (idABuscar >= 0 ){
                         System.out.println("Buscar Retiro Herramienta por ID: " + idABuscar);
                     } else {
-                        System.out.println("ID INVALIDO");
+                        JOptionPane.showMessageDialog(null, "ID inválido", "Error", JOptionPane.ERROR_MESSAGE);
                     }
             }
             case 4 -> {
                 if(txtBuscar.getText().isEmpty()){
-                        System.out.println("CAMPO VACIO");
+                        JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
                         break;
                     }
                     
@@ -254,7 +256,7 @@ public class vistaBuscar extends javax.swing.JFrame {
                     if (idABuscar >= 0 ){
                         System.out.println("Buscar Retiro Material por ID: " + idABuscar);
                     } else {
-                        System.out.println("ID INVALIDO");
+                        JOptionPane.showMessageDialog(null, "ID inválido", "Error", JOptionPane.ERROR_MESSAGE);
                     }
             }
         }

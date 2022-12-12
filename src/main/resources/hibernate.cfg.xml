@@ -18,25 +18,25 @@
 <!--        <property name="connection.pool_size">3</property>
         <property name="current_session_context_class">thread</property>-->
 		
-        <property name="hibernate.show_sql">true</property>
-        <property name="format_sql">true</property>
+<!--        <property name="hibernate.show_sql">true</property>
+        <property name="format_sql">true</property>-->
 
-        <property name="hibernate.hbm2ddl.auto">create</property> 
-        <!--<property name="hibernate.hbm2ddl.auto">update</property>-->
+<!--        <property name="hibernate.hbm2ddl.auto">create</property> -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
         <!--<property name="hibernate.hbm2ddl.auto">validate</property> -->
 
         <!-- mapping de las clases -->
-<!--        <mapping resource="Docente.hbm.xml" />
+        <mapping resource="Docente.hbm.xml" />
         <mapping resource="Herramienta.hbm.xml" />
         <mapping resource="Material.hbm.xml" />
         <mapping resource="RetiroHerramienta.hbm.xml" />
-        <mapping resource="RetiroMaterial.hbm.xml" />-->
+        <mapping resource="RetiroMaterial.hbm.xml" />
         
-        <mapping class="Modelo.Docente" />
+<!--        <mapping class="Modelo.Docente" />
         <mapping class="Modelo.Herramienta" />
         <mapping class="Modelo.Material" />
         <mapping class="Modelo.RetiroHerramienta" />
-        <mapping class="Modelo.RetiroMaterial" />
+        <mapping class="Modelo.RetiroMaterial" />-->
 
     </session-factory>
 </hibernate-configuration>

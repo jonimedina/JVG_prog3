@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class catalog="deposito" name="Modelo.Docente" optimistic-lock="version" table="docentes">
+        <id name="idDocente" type="java.lang.Integer">
+            <column name="IdDocente"/>
+            <generator class="identity"/>
+        </id>
+        
+        <property name="apellido" type="string">
+            <column length="30" name="Apellido" not-null="true"/>
+        </property>
+        
+        <property name="nombre" type="string">
+            <column length="30" name="Nombre" not-null="true"/>
+        </property>
+
+        <property name="cargo" type="string">
+            <column length="10" name="Cargo" not-null="true"/>
+        </property>
+        
+        <property name="telefono" type="string">
+            <column length="15" name="Telefono" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

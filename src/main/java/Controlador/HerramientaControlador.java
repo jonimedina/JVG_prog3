@@ -39,6 +39,7 @@ public class HerramientaControlador {
 
             session.getTransaction().commit();
             if (HerramientaEncontrada != null) {
+                System.out.println(HerramientaEncontrada);
                 return HerramientaEncontrada;
             } else {
                 return null;
