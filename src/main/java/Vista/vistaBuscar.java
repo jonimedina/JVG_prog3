@@ -169,31 +169,34 @@ public class vistaBuscar extends javax.swing.JFrame {
                      
         switch (op){
             case 0 -> {
-                
-                
                 int opb = cBBuscarPor.getSelectedIndex();
-                if (opb == 0){
-                    if(txtBuscar.getText().isEmpty()){
+                
+                switch (opb){
+                    case 0 ->{
+                        if(txtBuscar.getText().isEmpty()){
                         JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
                         break;
+                        }
+
+                        int idABuscar = Integer.parseInt(txtBuscar.getText());
+                        if (idABuscar >= 0 ){
+                            DocenteControlador.buscarDocentePorId(idABuscar);
+                        } else {
+                            JOptionPane.showMessageDialog(null, "ID inválido", "Error", JOptionPane.ERROR_MESSAGE);
+                            }
+                        }
+                    case 1 ->{
+                        String apeABuscar = txtBuscar.getText();
+                        if(txtBuscar.getText().isEmpty()){
+                            JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
+                            break;
+                        } else {
+                            DocenteControlador.buscarDocentePorApellido(apeABuscar);
+                            }
                     }
-                    
-                    int idABuscar = Integer.parseInt(txtBuscar.getText());
-                    if (idABuscar >= 0 ){
-                        DocenteControlador.buscarDocentePorId(idABuscar);
-                    } else {
-                        JOptionPane.showMessageDialog(null, "ID inválido", "Error", JOptionPane.ERROR_MESSAGE);
+                    case 2 ->{
                     }
-                } else {
-                    String apeABuscar = txtBuscar.getText();
-                    if(txtBuscar.getText().isEmpty()){
-                        JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
-                        break;
-                    } else {
-                        DocenteControlador.buscarDocentePorApellido(apeABuscar);
-                    }
-                    
-                 }
+                }
             }
             case 1 -> {
                 int opb = cBBuscarPor.getSelectedIndex();

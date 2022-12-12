@@ -2,13 +2,16 @@
 package Controlador;
 
 import Modelo.Docente;
+import static Vista.vistaListado.tablaResultado;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Root;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Query;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import org.hibernate.Session;
 
 public class DocenteControlador {
@@ -85,13 +88,86 @@ public class DocenteControlador {
             if (docEncontrado.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "El apellido ingresado no existe", "Error", JOptionPane.ERROR_MESSAGE);
             } else {
-                JOptionPane.showMessageDialog(null, docEncontrado,"Resultado", JOptionPane.INFORMATION_MESSAGE);
-        
+                JFrame vistaResultadoBusqueda = new Vista.vistaListado();
+                vistaResultadoBusqueda.setVisible(true);
+                
+                DefaultTableModel modelo = new DefaultTableModel();
+                String [] titulos = {"Id Docente", "Apellido", "Nombre", "Cargo" , "Telefono"};  
+                Object[] fila;                
+                modelo.setColumnIdentifiers(titulos);
+                
+                for (Modelo.Docente aux : docEncontrado ){
+                    fila = new Object[5]; 
+                    fila[0] = aux.getIdDocente();
+                    fila[1] = aux.getApellido();
+                    fila[2] = aux.getNombre();
+                    fila[3] = aux.getCargo();
+                    fila[4] = aux.getTelefono();
+                    modelo.addRow(fila);
+                }
+                tablaResultado.setModel(modelo);
+                
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    
+    public static void buscarDocentePorIdEditar(int id) {
+        try ( Session session = HibernateUtil.getCurrentSession()) {
+
+            Modelo.Docente buscarDoc = new Modelo.Docente();
+            buscarDoc = session.find(Docente.class, id);
+            
+            if(buscarDoc != null){
+                
+                Vista.vistaEditar.txtEditarApellido.setEnabled(true);
+                Vista.vistaEditar.txtEditarNombre.setEnabled(true);
+                Vista.vistaEditar.cBCargoEditar.setEnabled(true);
+                Vista.vistaEditar.txtEditarTelefono.setEnabled(true);
+                
+                Vista.vistaEditar.txtEditarApellido.setText(buscarDoc.getApellido());
+                Vista.vistaEditar.txtEditarNombre.setText(buscarDoc.getNombre());
+                Vista.vistaEditar.cBCargoEditar.setSelectedItem(buscarDoc.getCargo());
+                Vista.vistaEditar.txtEditarTelefono.setText(buscarDoc.getTelefono());
+                                
+            } else {
+                JOptionPane.showMessageDialog(null, "El Id buscado no existe", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            } 
+    }
+    
+    public static void actualizarDocente(int id) {
+        try ( Session session = HibernateUtil.getCurrentSession()) {
+            session.beginTransaction();
+            
+            Modelo.Docente buscarDoc = new Modelo.Docente();
+            buscarDoc = session.find(Docente.class, id);
+            
+            if(buscarDoc != null){
+                
+                buscarDoc.setApellido(Vista.vistaEditar.txtEditarApellido.getText());
+                buscarDoc.setNombre(Vista.vistaEditar.txtEditarNombre.getText());
+                buscarDoc.setCargo(Vista.vistaEditar.cBCargoEditar.getSelectedItem().toString());
+                buscarDoc.setTelefono(Vista.vistaEditar.txtEditarTelefono.getText());
+                
+                session.getTransaction().commit();
+                JOptionPane.showMessageDialog(null, "Se ha editado correctamente", "Confirmación", JOptionPane.INFORMATION_MESSAGE);  
+                Vista.vistaEditar.txtEditarApellido.setText("");
+                Vista.vistaEditar.txtEditarNombre.setText("");
+                Vista.vistaEditar.cBCargoEditar.setSelectedItem(0);
+                Vista.vistaEditar.txtEditarTelefono.setText("");
+                Vista.vistaEditar.txtBuscarEditar.setText("");                
+            } else {
+                JOptionPane.showMessageDialog(null, "El Id buscado no existe", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
     }
     
     public static List listarDocentes() {
@@ -106,6 +182,21 @@ public class DocenteControlador {
             if (listado != null && listado.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "La lista está vacia", "Error", JOptionPane.ERROR_MESSAGE);
             } else {
+                DefaultTableModel modelo = new DefaultTableModel();
+                String [] titulos = {"Id Docente", "Apellido", "Nombre", "Cargo" , "Telefono"};  
+                Object[] fila;                
+                modelo.setColumnIdentifiers(titulos);
+                
+                for (Modelo.Docente aux : listado ){
+                    fila = new Object[5]; 
+                    fila[0] = aux.getIdDocente();
+                    fila[1] = aux.getApellido();
+                    fila[2] = aux.getNombre();
+                    fila[3] = aux.getCargo();
+                    fila[4] = aux.getTelefono();
+                    modelo.addRow(fila);
+                }
+                tablaResultado.setModel(modelo);
                 return listado;
             }
         } catch (Exception e) {
@@ -113,25 +204,4 @@ public class DocenteControlador {
         } 
         return null;
     }
-     
-     
-
-    
-
-    public void actualizarDocente(Docente editarDocente) {
-        try ( Session session = HibernateUtil.getCurrentSession()) {
-
-            session.beginTransaction();
-            session.merge(editarDocente);
-            session.getTransaction().commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } 
-    }
-
-    
-
-    
-
-        
 }

@@ -161,23 +161,7 @@ public class vistaListado extends javax.swing.JFrame {
         
         switch (op){
             case 0 ->{
-                DefaultTableModel modelo = new DefaultTableModel();
-                String [] titulos = {"Id Docente", "Apellido", "Nombre", "Cargo" , "Telefono"};  
-                Object[] fila;                
-                modelo.setColumnIdentifiers(titulos);
-                
-                List<Modelo.Docente> listado = DocenteControlador.listarDocentes();
-                
-                for (Modelo.Docente aux : listado ){
-                    fila = new Object[5]; 
-                    fila[0] = aux.getIdDocente();
-                    fila[1] = aux.getApellido();
-                    fila[2] = aux.getNombre();
-                    fila[3] = aux.getCargo();
-                    fila[4] = aux.getTelefono();
-                    modelo.addRow(fila);
-                }
-                tablaResultado.setModel(modelo);
+                DocenteControlador.listarDocentes();
             }
             case 1 ->{
                 DefaultTableModel modelo = new DefaultTableModel();

@@ -15,7 +15,7 @@ public class HerramientaControlador {
 
             session.beginTransaction();
 
-            List<Herramienta> listado = session.createQuery("FROM Herramientas", Herramienta.class).getResultList();
+            List<Herramienta> listado = session.createQuery("FROM Herramienta", Herramienta.class).getResultList();
 
             session.getTransaction().commit();
 
@@ -35,7 +35,7 @@ public class HerramientaControlador {
 
             session.beginTransaction();
 
-            Herramienta HerramientaEncontrada = session.createQuery("FROM Herramientas WHERE idHerramienta =:id", Herramienta.class).setParameter("id", id).getSingleResult();
+            Herramienta HerramientaEncontrada = session.createQuery("FROM Herramienta WHERE idHerramienta =:id", Herramienta.class).setParameter("id", id).getSingleResult();
 
             session.getTransaction().commit();
             if (HerramientaEncontrada != null) {
@@ -56,7 +56,7 @@ public class HerramientaControlador {
 
             session.beginTransaction();
 
-            Herramienta herramientaEncontrada = session.createQuery("FROM Herramientas WHERE marca =:mar", Herramienta.class).setParameter("mar", mar).getSingleResult();
+            Herramienta herramientaEncontrada = session.createQuery("FROM Herramienta WHERE marca =:mar", Herramienta.class).setParameter("mar", mar).getSingleResult();
 
             session.getTransaction().commit();
             if (herramientaEncontrada != null) {
@@ -76,7 +76,7 @@ public class HerramientaControlador {
 
             session.beginTransaction();
 
-            Herramienta HerramientaEncontrada = session.createQuery("FROM Herramientas WHERE idHerramienta =:id", Herramienta.class).setParameter("id", id).getSingleResult();
+            Herramienta HerramientaEncontrada = session.createQuery("FROM Herramienta WHERE idHerramienta =:id", Herramienta.class).setParameter("id", id).getSingleResult();
             
             int stockDisponible = HerramientaEncontrada.getStock();
             
@@ -98,7 +98,7 @@ public class HerramientaControlador {
 
             session.beginTransaction();
 
-            Herramienta HerramientaEncontrada = session.createQuery("FROM Herramientas WHERE idHerramienta =:id", Herramienta.class).setParameter("id", id).getSingleResult();
+            Herramienta HerramientaEncontrada = session.createQuery("FROM Herramienta WHERE idHerramienta =:id", Herramienta.class).setParameter("id", id).getSingleResult();
             
             HerramientaEncontrada.setStock(stock);
             

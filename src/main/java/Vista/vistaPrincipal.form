@@ -625,12 +625,15 @@
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
                     <StringItem index="0" value="MEP"/>
-                    <StringItem index="1" value="Jefe Secci&#xf3;n "/>
+                    <StringItem index="1" value="Jefe de Secci&#xf3;n "/>
                     <StringItem index="2" value="Jefe Gral de Taller"/>
                     <StringItem index="3" value="Profesor/a/x"/>
                   </StringArray>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cBCargoDocenteActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>

@@ -445,7 +445,12 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         jLabel14.setText("Cargo");
 
-        cBCargoDocente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MEP", "Jefe Sección ", "Jefe Gral de Taller", "Profesor/a/x" }));
+        cBCargoDocente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MEP", "Jefe de Sección ", "Jefe Gral de Taller", "Profesor/a/x" }));
+        cBCargoDocente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cBCargoDocenteActionPerformed(evt);
+            }
+        });
 
         jLabel13.setText("Telefóno");
 
@@ -1007,38 +1012,38 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private void btnBuscarRetiroHerramientasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarRetiroHerramientasActionPerformed
         JFrame vistaBusc = new Vista.vistaBuscar();
         vistaBusc.setVisible(true);
-        vistaBuscar.CBBuscar.setSelectedIndex(3);
-        vistaBuscar.cBBuscarPor.addItem("ID");
+        Vista.vistaBuscar.CBBuscar.setSelectedIndex(3);
+        Vista.vistaBuscar.cBBuscarPor.addItem("ID");
     }//GEN-LAST:event_btnBuscarRetiroHerramientasActionPerformed
 
     private void btnBuscarRetiroMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarRetiroMaterialActionPerformed
         JFrame vistaBusc = new Vista.vistaBuscar();
         vistaBusc.setVisible(true);
-        vistaBuscar.CBBuscar.setSelectedIndex(4);
-        vistaBuscar.cBBuscarPor.addItem("ID");        
+        Vista.vistaBuscar.CBBuscar.setSelectedIndex(4);
+        Vista.vistaBuscar.cBBuscarPor.addItem("ID");        
     }//GEN-LAST:event_btnBuscarRetiroMaterialActionPerformed
 
     private void btnBuscarDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarDocenteActionPerformed
         JFrame vistaBusc = new Vista.vistaBuscar();
         vistaBusc.setVisible(true);
-        vistaBuscar.CBBuscar.setSelectedIndex(0);
-        vistaBuscar.cBBuscarPor.addItem("ID");
-        vistaBuscar.cBBuscarPor.addItem("Apellido");
+        Vista.vistaBuscar.CBBuscar.setSelectedIndex(0);
+        Vista.vistaBuscar.cBBuscarPor.addItem("ID");
+        Vista.vistaBuscar.cBBuscarPor.addItem("Apellido");
     }//GEN-LAST:event_btnBuscarDocenteActionPerformed
 
     private void btnBuscarHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarHerramientaActionPerformed
         JFrame vistaBusc = new Vista.vistaBuscar();
         vistaBusc.setVisible(true);
-        vistaBuscar.CBBuscar.setSelectedIndex(1);
-        vistaBuscar.cBBuscarPor.addItem("ID");
-        vistaBuscar.cBBuscarPor.addItem("Marca");
+        Vista.vistaBuscar.CBBuscar.setSelectedIndex(1);
+        Vista.vistaBuscar.cBBuscarPor.addItem("ID");
+        Vista.vistaBuscar.cBBuscarPor.addItem("Marca");
     }//GEN-LAST:event_btnBuscarHerramientaActionPerformed
 
     private void btnBuscarMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarMaterialActionPerformed
         JFrame vistaBusc = new Vista.vistaBuscar();
         vistaBusc.setVisible(true);
-        vistaBuscar.CBBuscar.setSelectedIndex(2);
-        vistaBuscar.cBBuscarPor.addItem("ID");        
+        Vista.vistaBuscar.CBBuscar.setSelectedIndex(2);
+        Vista.vistaBuscar.cBBuscarPor.addItem("ID");        
     }//GEN-LAST:event_btnBuscarMaterialActionPerformed
 
     private void txtIdHerramientaRetiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdHerramientaRetiroActionPerformed
@@ -1092,6 +1097,10 @@ public class vistaPrincipal extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_btnNuevoCargoActionPerformed
+
+    private void cBCargoDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBCargoDocenteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cBCargoDocenteActionPerformed
 
     /**
      * @param args the command line arguments

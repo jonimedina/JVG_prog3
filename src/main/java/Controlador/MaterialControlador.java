@@ -54,7 +54,7 @@ public class MaterialControlador {
 
             session.beginTransaction();
 
-            Material MaterialEncontrado = session.createQuery("FROM Herramientas WHERE idHerramienta =:id", Material.class).setParameter("id", id).getSingleResult();
+            Material MaterialEncontrado = session.createQuery("FROM Material WHERE idMaterial =:id", Material.class).setParameter("id", id).getSingleResult();
             
             int stockDisponible = MaterialEncontrado.getStock();
             
@@ -76,7 +76,7 @@ public class MaterialControlador {
 
             session.beginTransaction();
 
-            Material MaterialEncontrado = session.createQuery("FROM Herramientas WHERE idHerramienta =:id", Material.class).setParameter("id", id).getSingleResult();
+            Material MaterialEncontrado = session.createQuery("FROM Material WHERE idMaterial =:id", Material.class).setParameter("id", id).getSingleResult();
             
             MaterialEncontrado.setStock(stock);
             
