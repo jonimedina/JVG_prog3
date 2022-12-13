@@ -4,6 +4,8 @@ package Vista;
 import Controlador.DocenteControlador;
 import Controlador.HerramientaControlador;
 import Controlador.MaterialControlador;
+import Controlador.RetiroHerramControlador;
+import Controlador.RetiroMaterialControlador;
 import java.awt.print.PrinterException;
 import java.text.MessageFormat;
 import javax.swing.JOptionPane;
@@ -170,10 +172,10 @@ public class vistaListado extends javax.swing.JFrame {
                 MaterialControlador.listarMateriales();
             }
             case 3 ->{
-                System.out.println("Retiro Herramienta");
+                RetiroHerramControlador.listarRetirosHerramientas();
             }
             case 4 ->{
-                System.out.println("Retiro Material");
+                RetiroMaterialControlador.listarRetirosMateriales();
             }
         }
     }//GEN-LAST:event_CBListadoActionPerformed

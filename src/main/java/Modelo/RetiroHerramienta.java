@@ -27,11 +27,11 @@ public class RetiroHerramienta {
     @Column(name = "responsable", length = 30, nullable = false)
     private String responsable;
     
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "idDocente")
     private Modelo.Docente docente;
     
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "idHerramienta")
     private Modelo.Herramienta herramienta;
     

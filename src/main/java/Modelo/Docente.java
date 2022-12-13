@@ -35,7 +35,7 @@ public class Docente {
     @Column(name = "telefono", length = 15, nullable = false)
     private String telefono;
     
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idRetiroHerramienta", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "idRetiroHerramienta", cascade = CascadeType.ALL)
     List<RetiroHerramienta> retiroHerramienta;
     
     public Docente(){       

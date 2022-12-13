@@ -33,7 +33,7 @@ public class Material {
     @Column(name = "stock", length = 5, nullable = false)
     private Integer stock;
     
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idRetiroMaterial", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "idRetiroMaterial", cascade = CascadeType.ALL)
     List<RetiroMaterial> retiroMaterial;
     
     public Material(){
