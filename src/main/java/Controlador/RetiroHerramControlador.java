@@ -62,8 +62,8 @@ public class RetiroHerramControlador {
             
             agregarRH.setResponsable(responsable);
             agregarRH.setFechaRetiro(fechaRetiro);
-            agregarRH.setIdDocente(idD);
-            agregarRH.setIdHerramienta(idH);
+//            agregarRH.setIdDocente(idD);
+//            agregarRH.setIdHerramienta(idH);
             
             session.persist(agregarRH);
             session.getTransaction().commit();

@@ -72,8 +72,8 @@ public class RetiroMaterialControlador {
             
             agregarRM.setResponsable(responsable);
             agregarRM.setFechaRetiro(fechaRetiro);
-            agregarRM.setIdDocente(idD);
-            agregarRM.setIdMaterial(idM);
+//            agregarRM.setIdDocente(idD);
+//            agregarRM.setIdMaterial(idM);
             
             session.persist(agregarRM);
             session.getTransaction().commit();

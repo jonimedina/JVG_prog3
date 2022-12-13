@@ -1,12 +1,32 @@
 
 package Modelo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name ="materiales")
 public class Material {
     
+    @Id
+    @Column(name = "idMaterial")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idMaterial;
+    
+    @Column(name = "materiaPrima", length = 30, nullable = false)
     private String materiaPrima;
+    
+    @Column(name = "tipo", length = 30, nullable = false)
     private String tipo;
+    
+    @Column(name = "medida", length = 30, nullable = false)
     private String medida;
+    
+    @Column(name = "stock", length = 5, nullable = false)
     private Integer stock;
     
     public Material(){

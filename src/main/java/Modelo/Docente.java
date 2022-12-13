@@ -3,21 +3,37 @@ package Modelo;
 
 import java.util.HashSet;
 import java.util.Set;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name ="docentes")
 public class Docente {
-        
+     
+    @Id
+    @Column(name = "idDocente")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idDocente;
-    private String  apellido;
-    private String nombre;
-    private String cargo;
-    private String telefono;
-    //private Set<RetiroHerramienta> retiroDeHerramientas = new HashSet();
     
-    public Docente(){
-        
+    @Column(name = "apellido", length = 30, nullable = false)
+    private String  apellido;
+    
+    @Column(name = "nombre", length = 30, nullable = false)
+    private String nombre;
+    
+    @Column(name = "cargo", length = 25, nullable = false)
+    private String cargo;
+    
+    @Column(name = "telefono", length = 15, nullable = false)
+    private String telefono;
+    
+    public Docente(){       
     }
     
-       
     public Docente(String apellido, String nombre, String cargo, String telefono){
         this.apellido = apellido;
         this.nombre = nombre;
@@ -65,13 +81,7 @@ public class Docente {
         this.telefono = telefono;
     }
 
-//    public Set<RetiroHerramienta> getRetiroDeHerramientas() {
-//        return retiroDeHerramientas;
-//    }
-//
-//    public void setRetiroDeHerramientas(Set<RetiroHerramienta> retiroDeHerramientas) {
-//        this.retiroDeHerramientas = retiroDeHerramientas;
-//    }
+
 
     @Override
     public String toString() {
