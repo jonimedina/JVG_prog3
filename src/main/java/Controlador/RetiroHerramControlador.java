@@ -57,23 +57,21 @@ public class RetiroHerramControlador {
         return null;
     }
      
-     public RetiroHerramienta buscarRetiroHerramientaPorId(int id) {
+     public static void buscarRetiroHerramientaPorId(int id) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
 
-            RetiroHerramienta retiroHEncontrado = session.createQuery("FROM RetiroHerramientas WHERE idRetiroHerramienta =:id", RetiroHerramienta.class).setParameter("id", id).getSingleResult();
+            RetiroHerramienta retiroHEncontrado = session.createQuery("FROM RetiroHerramienta WHERE idRetiroHerramienta =:id", RetiroHerramienta.class).setParameter("id", id).getSingleResult();
 
             session.getTransaction().commit();
-            if (retiroHEncontrado != null) {
-                return retiroHEncontrado;
+            if(retiroHEncontrado != null){
+                JOptionPane.showMessageDialog(null, retiroHEncontrado, "Resultado", JOptionPane.INFORMATION_MESSAGE);
             } else {
-                return null;
+                JOptionPane.showMessageDialog(null, "El Id buscado no existe", "Error", JOptionPane.ERROR_MESSAGE);
             }
-
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
         } 
     }
 

@@ -9,7 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -83,7 +82,7 @@ public class RetiroMaterial {
 
     @Override
     public String toString() {
-        return "RetiroMaterial{" + "idRetiroMaterial=" + idRetiroMaterial + ", responsable=" + responsable + ", fechaRetiro=" + fechaRetiro + '}';
+        return "\n==Retiro Material==\nId Retiro Material: " + idRetiroMaterial + "\nResponsable: " + responsable + "\n"+ docente + material;
     }
     
     

@@ -4,6 +4,8 @@ package Vista;
 import Controlador.DocenteControlador;
 import Controlador.HerramientaControlador;
 import Controlador.MaterialControlador;
+import Controlador.RetiroHerramControlador;
+import Controlador.RetiroMaterialControlador;
 import javax.swing.JOptionPane;
 
 /**
@@ -265,29 +267,30 @@ public class vistaBuscar extends javax.swing.JFrame {
             }
             case 3 -> {
                 if(txtBuscar.getText().isEmpty()){
-                        JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
-                        break;
-                    }
-                    
-                    int idABuscar = Integer.parseInt(txtBuscar.getText());
-                    if (idABuscar >= 0 ){
-                        System.out.println("Buscar Retiro Herramienta por ID: " + idABuscar);
+                JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
+                break;
+                }
+
+                int idABuscar = Integer.parseInt(txtBuscar.getText());
+                if (idABuscar >= 0 ){
+                    RetiroHerramControlador.buscarRetiroHerramientaPorId(idABuscar);
                     } else {
                         JOptionPane.showMessageDialog(null, "ID inválido", "Error", JOptionPane.ERROR_MESSAGE);
                     }
-            }
+                }
+            
             case 4 -> {
                 if(txtBuscar.getText().isEmpty()){
-                        JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
-                        break;
-                    }
-                    
-                    int idABuscar = Integer.parseInt(txtBuscar.getText());
-                    if (idABuscar >= 0 ){
-                        System.out.println("Buscar Retiro Material por ID: " + idABuscar);
+                JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
+                break;
+                }
+
+                int idABuscar = Integer.parseInt(txtBuscar.getText());
+                if (idABuscar >= 0 ){
+                    RetiroMaterialControlador.buscarRetiroMaterialPorId(idABuscar);
                     } else {
                         JOptionPane.showMessageDialog(null, "ID inválido", "Error", JOptionPane.ERROR_MESSAGE);
-                    }
+                }
             }
         }
     }//GEN-LAST:event_btnBuscarActionPerformed

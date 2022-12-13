@@ -56,23 +56,21 @@ public class RetiroMaterialControlador {
         return null;
     }
      
-     public RetiroMaterial buscarRetiroMaterialPorId(int id) {
+     public static void buscarRetiroMaterialPorId(int id) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
 
-            RetiroMaterial retiroMEncontrado = session.createQuery("FROM RetiroMateriales WHERE idRetiroMaterial =:id", RetiroMaterial.class).setParameter("id", id).getSingleResult();
+            RetiroMaterial retiroMEncontrado = session.createQuery("FROM RetiroMaterial WHERE idRetiroMaterial =:id", RetiroMaterial.class).setParameter("id", id).getSingleResult();
 
             session.getTransaction().commit();
-            if (retiroMEncontrado != null) {
-                return retiroMEncontrado;
+            if(retiroMEncontrado != null){
+                JOptionPane.showMessageDialog(null, retiroMEncontrado, "Resultado", JOptionPane.INFORMATION_MESSAGE);
             } else {
-                return null;
+                JOptionPane.showMessageDialog(null, "El Id buscado no existe", "Error", JOptionPane.ERROR_MESSAGE);
             }
-
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
         } 
     }
 

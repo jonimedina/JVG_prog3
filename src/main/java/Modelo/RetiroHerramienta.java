@@ -2,16 +2,12 @@
 package Modelo;
 
 import java.util.Date;
-import java.util.List;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -42,15 +38,6 @@ public class RetiroHerramienta {
         
     }
     
-//    public RetiroHerramienta(Integer idRetiroHerramienta, String responsable, Integer idDocente, Integer idHerramienta, Date fechaRetiro){
-//        this.idRetiroHerramienta = idRetiroHerramienta;
-//        this.responsable = responsable;
-//        this.docente = idDocente;
-//        this.idHerramienta = idHerramienta;
-//        this.fechaRetiro = fechaRetiro;
-//        
-//    }
-
     public Integer getIdRetiroHerramienta() {
         return idRetiroHerramienta;
     }
@@ -66,22 +53,6 @@ public class RetiroHerramienta {
     public void setResponsable(String responsable) {
         this.responsable = responsable;
     }
-
-//    public Integer getIdDocente() {
-//        return idDocente;
-//    }
-//
-//    public void setIdDocente(Integer idDocente) {
-//        this.idDocente = idDocente;
-//    }
-//
-//    public Integer getIdHerramienta() {
-//        return idHerramienta;
-//    }
-//
-//    public void setIdHerramienta(Integer idHerramienta) {
-//        this.idHerramienta = idHerramienta;
-//    }
 
     public Date getFechaRetiro() {
         return fechaRetiro;
@@ -109,7 +80,7 @@ public class RetiroHerramienta {
 
     @Override
     public String toString() {
-        return "RetiroHerramienta{" + "idRetiroHerramienta=" + idRetiroHerramienta + ", responsable=" + responsable + ", fechaRetiro=" + fechaRetiro + '}';
+        return "\n==RetiroHerramienta==\nId de Retiro Herramienta: " + idRetiroHerramienta + "\nResponsable: " + responsable + "\n"+ docente + herramienta;
     }
     
     
