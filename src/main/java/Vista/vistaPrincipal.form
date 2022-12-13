@@ -132,29 +132,29 @@
                                   </Group>
                                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="180" max="-2" attributes="0"/>
-                                                  <Component id="btnAgregarRetiroHerramienta" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel11" min="-2" pref="56" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="txtIDNombreHerramienta" min="-2" pref="174" max="-2" attributes="0"/>
-                                                  <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jLabel20" min="-2" pref="56" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <Component id="txtIDMarcaHerramienta" min="-2" pref="100" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
                                           <Component id="jLabel3" min="-2" pref="156" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="cBIDHerramienta" min="-2" pref="138" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                           <Component id="btnCargarHerramienta" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jLabel34" min="-2" pref="92" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="spinnerStockRH" min="-2" pref="87" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="jLabel11" min="-2" pref="56" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtIDNombreHerramienta" min="-2" pref="174" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                                          <Component id="jLabel20" min="-2" pref="56" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txtIDMarcaHerramienta" min="-2" pref="100" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -170,6 +170,11 @@
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="207" max="-2" attributes="0"/>
+                      <Component id="btnAgregarRetiroHerramienta" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -217,9 +222,14 @@
                           <Component id="txtIDNombreHerramienta" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel20" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="spinnerStockRH" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Component id="btnAgregarRetiroHerramienta" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="205" max="32767" attributes="0"/>
+                      <EmptySpace pref="177" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnListadoRetiroHerramientas" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnDevolucionHerramienta" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -272,6 +282,9 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtResponsableActionPerformed"/>
               </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
@@ -291,6 +304,7 @@
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="vistaPrincipal_jTextField3"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
               </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
@@ -411,6 +425,13 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
               </AuxValues>
             </Component>
+            <Component class="javax.swing.JLabel" name="jLabel34">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Stock a Retirar:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="spinnerStockRH">
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="RetiroMaterial">
@@ -478,9 +499,15 @@
                                       <Component id="btnCargarDocente1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel30" min="-2" pref="88" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="jLabel35" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jLabel30" alignment="0" pref="88" max="32767" attributes="0"/>
+                                      </Group>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txtIDMateriaPrima" min="-2" pref="94" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="txtIDMateriaPrima" pref="94" max="32767" attributes="0"/>
+                                          <Component id="spinnerStockRM" max="32767" attributes="0"/>
+                                      </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="jLabel32" min="-2" pref="56" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -503,7 +530,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="262" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="263" max="-2" attributes="0"/>
                       <Component id="btnAgregarRetiroMaterial" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -552,9 +579,14 @@
                           <Component id="jLabel33" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                           <Component id="txtIDMedidaMaterial" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
+                          <Component id="spinnerStockRM" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       <Component id="btnAgregarRetiroMaterial" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="168" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnListadoRetiroMaterial" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnBuscarRetiroMaterial" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -625,6 +657,7 @@
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="vistaPrincipal_jTextField3"/>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
               </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
@@ -749,6 +782,13 @@
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
               </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel35">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Stock a Retirar: "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="spinnerStockRM">
             </Component>
           </SubComponents>
         </Container>
@@ -1020,7 +1060,7 @@
                       <EmptySpace pref="411" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="261" max="32767" attributes="0"/>
+                      <EmptySpace pref="271" max="32767" attributes="0"/>
                       <Component id="btnBuscarHerramienta" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnAgregarStockH" min="-2" max="-2" attributes="0"/>
@@ -1147,7 +1187,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnAgregarStockH">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Agregar Stock"/>
+                <Property name="text" type="java.lang.String" value="Actualizar Stock"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarStockHActionPerformed"/>
@@ -1211,16 +1251,16 @@
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
                                       <Component id="btnAgregarMaterial" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="169" max="32767" attributes="0"/>
+                                      <EmptySpace pref="279" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="btnBuscarMaterial" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="btnAgregarStockM" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Component id="btnBuscarMaterial" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="btnEliminarMaterial" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1258,12 +1298,12 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnAgregarMaterial" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="184" max="32767" attributes="0"/>
+                      <EmptySpace pref="274" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnListadoMaterial" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnBuscarMaterial" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnAgregarStockM" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnEliminarMaterial" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnBuscarMaterial" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -1353,7 +1393,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnAgregarStockM">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Agregar Stock"/>
+                <Property name="text" type="java.lang.String" value="Actualizar Stock"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarStockMActionPerformed"/>

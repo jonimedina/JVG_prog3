@@ -2,12 +2,16 @@
 package Modelo;
 
 import java.util.Date;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -23,13 +27,13 @@ public class RetiroHerramienta {
     @Column(name = "responsable", length = 30, nullable = false)
     private String responsable;
     
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idDocente")
-    Modelo.Docente docente;
+    private Modelo.Docente docente;
     
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idHerramienta")
-    Modelo.Herramienta herramienta;
+    private Modelo.Herramienta herramienta;
     
     @Column(name = "fechaRetiro", length = 12, nullable = false)
     private Date fechaRetiro;

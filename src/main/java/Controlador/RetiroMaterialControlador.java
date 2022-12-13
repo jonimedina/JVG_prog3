@@ -1,7 +1,10 @@
 
 package Controlador;
 
+import Modelo.Docente;
+import Modelo.Material;
 import Modelo.RetiroMaterial;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import org.hibernate.Session;
@@ -63,24 +66,31 @@ public class RetiroMaterialControlador {
         } 
     }
 
-    public static RetiroMaterial agregarRetiroMaterial (String responsable, Date fechaRetiro, int idD, int idM) {
+    public static void agregarRetiroMaterial () {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
             
+            int idD = Integer.parseInt(Vista.vistaPrincipal.cBIDDocenteM.getSelectedItem().toString());
+            int idM = Integer.parseInt(Vista.vistaPrincipal.cBIDMaterial.getSelectedItem().toString());
             Modelo.RetiroMaterial agregarRM = new Modelo.RetiroMaterial();
+            Modelo.Docente auxD = (Docente) session.load(Docente.class, idD);
+            Modelo.Material auxM = (Material) session.load(Material.class, idM);
             
-            agregarRM.setResponsable(responsable);
+            System.out.println(auxD);
+            System.out.println(auxM);
+                        
+            agregarRM.setResponsable(Vista.vistaPrincipal.txtResponsable.getText());
+            Date fechaRetiro = formatter.parse(Vista.vistaPrincipal.txtFechaRetiroMaterial.getText());
             agregarRM.setFechaRetiro(fechaRetiro);
-//            agregarRM.setIdDocente(idD);
-//            agregarRM.setIdMaterial(idM);
+            agregarRM.setDocente(auxD);
+            agregarRM.setMaterial(auxM);
             
             session.persist(agregarRM);
             session.getTransaction().commit();
-            return agregarRM;
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
         }
     }
 

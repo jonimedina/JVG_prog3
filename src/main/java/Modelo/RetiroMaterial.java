@@ -4,10 +4,12 @@ package Modelo;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -23,11 +25,11 @@ public class RetiroMaterial {
     @Column(name = "responsable", length = 30, nullable = false)
     private String responsable;
     
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idDocente")
     Modelo.Docente docente;
         
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idMaterial")
     Modelo.Material material;
     
@@ -39,14 +41,6 @@ public class RetiroMaterial {
         
     }
     
-//    public RetiroMaterial(Integer idRetiroMaterial, String responsable, Integer idDocente, Integer idMaterial, Date fechaRetiro){
-//        this.idRetiroMaterial = idRetiroMaterial;
-//        this.responsable = responsable;
-//        this.idDocente = idDocente;
-//        this.idMaterial = idMaterial;
-//        this.fechaRetiro = fechaRetiro;
-//    }
-
     public Integer getIdRetiroMaterial() {
         return idRetiroMaterial;
     }
@@ -62,22 +56,6 @@ public class RetiroMaterial {
     public void setResponsable(String responsable) {
         this.responsable = responsable;
     }
-
-//    public Integer getIdDocente() {
-//        return idDocente;
-//    }
-//
-//    public void setIdDocente(Integer idDocente) {
-//        this.idDocente = idDocente;
-//    }
-//
-//    public Integer getIdMaterial() {
-//        return idMaterial;
-//    }
-//
-//    public void setIdMaterial(Integer idMaterial) {
-//        this.idMaterial = idMaterial;
-//    }
 
     public Date getFechaRetiro() {
         return fechaRetiro;

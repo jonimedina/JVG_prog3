@@ -2,12 +2,16 @@
 package Modelo;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -30,6 +34,9 @@ public class Docente {
     
     @Column(name = "telefono", length = 15, nullable = false)
     private String telefono;
+    
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idRetiroHerramienta", cascade = CascadeType.ALL)
+    List<RetiroHerramienta> retiroHerramienta;
     
     public Docente(){       
     }

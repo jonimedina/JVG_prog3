@@ -171,7 +171,7 @@ public class HerramientaControlador {
         } 
     }
     
-    public static Herramienta chequearStockHerramienta(int id) {
+    public static Herramienta chequearStockHerramienta(int id, int cantidad) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
@@ -181,9 +181,10 @@ public class HerramientaControlador {
             int stockDisponible = HerramientaEncontrada.getStock();
             
             session.getTransaction().commit();
-            if (stockDisponible >= 1) {
+            if (stockDisponible >= cantidad) {
                 return HerramientaEncontrada;
             } else {
+                JOptionPane.showMessageDialog(null, "No hay stock suficiente", "Stock", JOptionPane.ERROR_MESSAGE);
                 return null;
             }
 

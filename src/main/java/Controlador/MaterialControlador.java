@@ -173,19 +173,20 @@ public class MaterialControlador {
         } 
     }
     
-    public static Material chequearStockHerramienta(int id) {
+    public static Material chequearStockMaterial(int id, int cantidad) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
 
-            Material HerramientaEncontrada = session.createQuery("FROM Material WHERE idMaterial =:id", Material.class).setParameter("id", id).getSingleResult();
+            Material MaterialEncontrado = session.createQuery("FROM Material WHERE idMaterial =:id", Material.class).setParameter("id", id).getSingleResult();
             
-            int stockDisponible = HerramientaEncontrada.getStock();
+            int stockDisponible = MaterialEncontrado.getStock();
             
             session.getTransaction().commit();
-            if (stockDisponible >= 1) {
-                return HerramientaEncontrada;
+            if (stockDisponible >= cantidad) {
+                return MaterialEncontrado;
             } else {
+                JOptionPane.showMessageDialog(null, "No hay stock suficiente", "Stock", JOptionPane.ERROR_MESSAGE);
                 return null;
             }
 
