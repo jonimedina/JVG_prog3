@@ -6,11 +6,6 @@ import Controlador.HerramientaControlador;
 import Controlador.MaterialControlador;
 import Controlador.RetiroHerramControlador;
 import Controlador.RetiroMaterialControlador;
-import Modelo.Docente;
-import Modelo.Herramienta;
-import Modelo.Material;
-import Modelo.RetiroHerramienta;
-import Modelo.RetiroMaterial;
 import java.awt.Color;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -29,8 +24,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
        initComponents();
        setLocationRelativeTo(null);
        
-       jTabbedPane1.setBackgroundAt(0, (new Color(132, 182, 244)));
-       jTabbedPane1.setBackgroundAt(1, (new Color(253, 253, 150)));
+       jTabbedPane1.setBackgroundAt(0, (new Color(253, 253, 150)));
+       jTabbedPane1.setBackgroundAt(1, (new Color(132, 182, 244)));
        jTabbedPane1.setBackgroundAt(2, (new Color(119, 221, 119)));
        jTabbedPane1.setBackgroundAt(3, (new Color(255, 105, 97)));
        jTabbedPane1.setBackgroundAt(4, (new Color(253, 202, 225)));
@@ -53,32 +48,6 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        RetiroHerramienta = new javax.swing.JPanel();
-        btnBuscarRetiroHerramientas = new javax.swing.JButton();
-        btnAgregarRetiroHerramienta = new javax.swing.JButton();
-        btnDevolucionHerramienta = new javax.swing.JButton();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        txtResponsable = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        txtFechaRetiroHerramienta = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        txtIDApellidoDocente = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        btnListadoRetiroHerramientas = new javax.swing.JButton();
-        btnCargarDocente = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        txtIDNombreDocente = new javax.swing.JTextField();
-        cBIDHerramienta = new javax.swing.JComboBox<>();
-        jLabel11 = new javax.swing.JLabel();
-        txtIDNombreHerramienta = new javax.swing.JTextField();
-        jLabel20 = new javax.swing.JLabel();
-        txtIDMarcaHerramienta = new javax.swing.JTextField();
-        btnCargarHerramienta = new javax.swing.JButton();
-        cBIDDocenteH = new javax.swing.JComboBox<>();
-        jLabel34 = new javax.swing.JLabel();
-        spinnerStockRH = new javax.swing.JSpinner();
         RetiroMaterial = new javax.swing.JPanel();
         btnAgregarRetiroMaterial = new javax.swing.JButton();
         btnBuscarRetiroMaterial = new javax.swing.JButton();
@@ -106,6 +75,32 @@ public class vistaPrincipal extends javax.swing.JFrame {
         txtIDMedidaMaterial = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
         spinnerStockRM = new javax.swing.JSpinner();
+        RetiroHerramienta = new javax.swing.JPanel();
+        btnBuscarRetiroHerramientas = new javax.swing.JButton();
+        btnAgregarRetiroHerramienta = new javax.swing.JButton();
+        btnDevolucionHerramienta = new javax.swing.JButton();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        txtResponsable = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtFechaRetiroHerramienta = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtIDApellidoDocente = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        btnListadoRetiroHerramientas = new javax.swing.JButton();
+        btnCargarDocente = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        txtIDNombreDocente = new javax.swing.JTextField();
+        cBIDHerramienta = new javax.swing.JComboBox<>();
+        jLabel11 = new javax.swing.JLabel();
+        txtIDNombreHerramienta = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        txtIDMarcaHerramienta = new javax.swing.JTextField();
+        btnCargarHerramienta = new javax.swing.JButton();
+        cBIDDocenteH = new javax.swing.JComboBox<>();
+        jLabel34 = new javax.swing.JLabel();
+        spinnerStockRH = new javax.swing.JSpinner();
         Docentes = new javax.swing.JPanel();
         btnAgregarDocente = new javax.swing.JButton();
         btnBuscarDocente = new javax.swing.JButton();
@@ -167,229 +162,6 @@ public class vistaPrincipal extends javax.swing.JFrame {
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane1.setPreferredSize(new java.awt.Dimension(730, 460));
-
-        RetiroHerramienta.setBackground(new java.awt.Color(132, 182, 244));
-        RetiroHerramienta.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-
-        btnBuscarRetiroHerramientas.setText("Buscar");
-        btnBuscarRetiroHerramientas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarRetiroHerramientasActionPerformed(evt);
-            }
-        });
-
-        btnAgregarRetiroHerramienta.setText("Confirmar");
-        btnAgregarRetiroHerramienta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarRetiroHerramientaActionPerformed(evt);
-            }
-        });
-
-        btnDevolucionHerramienta.setText("Devolución de Herramienta");
-        btnDevolucionHerramienta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDevolucionHerramientaActionPerformed(evt);
-            }
-        });
-
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel18.setText("CREAR NUEVO RETIRO DE HERRAMIENTA");
-
-        jLabel1.setText("Responsable del Depósito:");
-
-        txtResponsable.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtResponsableActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setText("Fecha de Retiro");
-
-        txtFechaRetiroHerramienta.setEditable(false);
-        txtFechaRetiroHerramienta.setText(FechaParaM());
-        txtFechaRetiroHerramienta.setName(""); // NOI18N
-        txtFechaRetiroHerramienta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFechaRetiroHerramientaActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setText("ID del Docente");
-
-        txtIDApellidoDocente.setEditable(false);
-        txtIDApellidoDocente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIDApellidoDocenteActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setText("ID de Herramienta");
-
-        btnListadoRetiroHerramientas.setText("Ver Listado");
-        btnListadoRetiroHerramientas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnListadoRetiroHerramientasActionPerformed(evt);
-            }
-        });
-
-        btnCargarDocente.setText("Cargar Docente");
-        btnCargarDocente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCargarDocenteActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setText("Nombre:");
-
-        jLabel6.setText("Apellido:");
-
-        txtIDNombreDocente.setEditable(false);
-
-        cBIDHerramienta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "----" }));
-
-        jLabel11.setText("Nombre:");
-
-        txtIDNombreHerramienta.setEditable(false);
-        txtIDNombreHerramienta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIDNombreHerramientaActionPerformed(evt);
-            }
-        });
-
-        jLabel20.setText("Marca:");
-
-        txtIDMarcaHerramienta.setEditable(false);
-
-        btnCargarHerramienta.setText("Cargar Herramienta");
-        btnCargarHerramienta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCargarHerramientaActionPerformed(evt);
-            }
-        });
-
-        cBIDDocenteH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "----" }));
-
-        jLabel34.setText("Stock a Retirar:");
-
-        javax.swing.GroupLayout RetiroHerramientaLayout = new javax.swing.GroupLayout(RetiroHerramienta);
-        RetiroHerramienta.setLayout(RetiroHerramientaLayout);
-        RetiroHerramientaLayout.setHorizontalGroup(
-            RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RetiroHerramientaLayout.createSequentialGroup()
-                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(RetiroHerramientaLayout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(RetiroHerramientaLayout.createSequentialGroup()
-                                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtResponsable)
-                                        .addComponent(txtFechaRetiroHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(RetiroHerramientaLayout.createSequentialGroup()
-                                        .addComponent(cBIDDocenteH, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btnCargarDocente, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(RetiroHerramientaLayout.createSequentialGroup()
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtIDApellidoDocente, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtIDNombreDocente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(RetiroHerramientaLayout.createSequentialGroup()
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(cBIDHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(btnCargarHerramienta))
-                                .addGroup(RetiroHerramientaLayout.createSequentialGroup()
-                                    .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RetiroHerramientaLayout.createSequentialGroup()
-                                            .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(spinnerStockRH, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(RetiroHerramientaLayout.createSequentialGroup()
-                                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(txtIDNombreHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGap(55, 55, 55)
-                                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(txtIDMarcaHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 264, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroHerramientaLayout.createSequentialGroup()
-                        .addContainerGap(351, Short.MAX_VALUE)
-                        .addComponent(btnBuscarRetiroHerramientas)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnDevolucionHerramienta)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnListadoRetiroHerramientas)))
-                .addContainerGap())
-            .addGroup(RetiroHerramientaLayout.createSequentialGroup()
-                .addGap(207, 207, 207)
-                .addComponent(btnAgregarRetiroHerramienta)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        RetiroHerramientaLayout.setVerticalGroup(
-            RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(RetiroHerramientaLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel18)
-                .addGap(18, 18, 18)
-                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(RetiroHerramientaLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4)
-                        .addGap(12, 12, 12)
-                        .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cBIDDocenteH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnCargarDocente)))
-                    .addGroup(RetiroHerramientaLayout.createSequentialGroup()
-                        .addComponent(txtResponsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtFechaRetiroHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtIDNombreDocente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtIDApellidoDocente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(btnCargarHerramienta)
-                    .addComponent(cBIDHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtIDMarcaHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtIDNombreHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel34)
-                    .addComponent(spinnerStockRH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addComponent(btnAgregarRetiroHerramienta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 177, Short.MAX_VALUE)
-                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnListadoRetiroHerramientas)
-                    .addComponent(btnDevolucionHerramienta)
-                    .addComponent(btnBuscarRetiroHerramientas))
-                .addContainerGap())
-        );
-
-        jTabbedPane1.addTab("Retiro Herramientas", RetiroHerramienta);
 
         RetiroMaterial.setBackground(new java.awt.Color(253, 253, 150));
 
@@ -548,7 +320,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtIDMedidaMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroMaterialLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnBuscarRetiroMaterial)
@@ -611,6 +383,229 @@ public class vistaPrincipal extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Retiro Materiales", RetiroMaterial);
+
+        RetiroHerramienta.setBackground(new java.awt.Color(132, 182, 244));
+        RetiroHerramienta.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+
+        btnBuscarRetiroHerramientas.setText("Buscar");
+        btnBuscarRetiroHerramientas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarRetiroHerramientasActionPerformed(evt);
+            }
+        });
+
+        btnAgregarRetiroHerramienta.setText("Confirmar");
+        btnAgregarRetiroHerramienta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarRetiroHerramientaActionPerformed(evt);
+            }
+        });
+
+        btnDevolucionHerramienta.setText("Devolución de Herramienta");
+        btnDevolucionHerramienta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDevolucionHerramientaActionPerformed(evt);
+            }
+        });
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel18.setText("CREAR NUEVO RETIRO DE HERRAMIENTA");
+
+        jLabel1.setText("Responsable del Depósito:");
+
+        txtResponsable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtResponsableActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("Fecha de Retiro");
+
+        txtFechaRetiroHerramienta.setEditable(false);
+        txtFechaRetiroHerramienta.setText(FechaParaM());
+        txtFechaRetiroHerramienta.setName(""); // NOI18N
+        txtFechaRetiroHerramienta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFechaRetiroHerramientaActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("ID del Docente");
+
+        txtIDApellidoDocente.setEditable(false);
+        txtIDApellidoDocente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIDApellidoDocenteActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("ID de Herramienta");
+
+        btnListadoRetiroHerramientas.setText("Ver Listado");
+        btnListadoRetiroHerramientas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnListadoRetiroHerramientasActionPerformed(evt);
+            }
+        });
+
+        btnCargarDocente.setText("Cargar Docente");
+        btnCargarDocente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCargarDocenteActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setText("Nombre:");
+
+        jLabel6.setText("Apellido:");
+
+        txtIDNombreDocente.setEditable(false);
+
+        cBIDHerramienta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "----" }));
+
+        jLabel11.setText("Nombre:");
+
+        txtIDNombreHerramienta.setEditable(false);
+        txtIDNombreHerramienta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIDNombreHerramientaActionPerformed(evt);
+            }
+        });
+
+        jLabel20.setText("Marca:");
+
+        txtIDMarcaHerramienta.setEditable(false);
+
+        btnCargarHerramienta.setText("Cargar Herramienta");
+        btnCargarHerramienta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCargarHerramientaActionPerformed(evt);
+            }
+        });
+
+        cBIDDocenteH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "----" }));
+
+        jLabel34.setText("Stock a Retirar:");
+
+        javax.swing.GroupLayout RetiroHerramientaLayout = new javax.swing.GroupLayout(RetiroHerramienta);
+        RetiroHerramienta.setLayout(RetiroHerramientaLayout);
+        RetiroHerramientaLayout.setHorizontalGroup(
+            RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RetiroHerramientaLayout.createSequentialGroup()
+                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(RetiroHerramientaLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(RetiroHerramientaLayout.createSequentialGroup()
+                                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtResponsable)
+                                        .addComponent(txtFechaRetiroHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(RetiroHerramientaLayout.createSequentialGroup()
+                                        .addComponent(cBIDDocenteH, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnCargarDocente, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(RetiroHerramientaLayout.createSequentialGroup()
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtIDApellidoDocente, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtIDNombreDocente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(RetiroHerramientaLayout.createSequentialGroup()
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(cBIDHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(btnCargarHerramienta))
+                                .addGroup(RetiroHerramientaLayout.createSequentialGroup()
+                                    .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, RetiroHerramientaLayout.createSequentialGroup()
+                                            .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(spinnerStockRH, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(RetiroHerramientaLayout.createSequentialGroup()
+                                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtIDNombreHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGap(55, 55, 55)
+                                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(txtIDMarcaHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 289, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RetiroHerramientaLayout.createSequentialGroup()
+                        .addContainerGap(396, Short.MAX_VALUE)
+                        .addComponent(btnBuscarRetiroHerramientas)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnDevolucionHerramienta)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnListadoRetiroHerramientas)))
+                .addContainerGap())
+            .addGroup(RetiroHerramientaLayout.createSequentialGroup()
+                .addGap(207, 207, 207)
+                .addComponent(btnAgregarRetiroHerramienta)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        RetiroHerramientaLayout.setVerticalGroup(
+            RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RetiroHerramientaLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel18)
+                .addGap(18, 18, 18)
+                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(RetiroHerramientaLayout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4)
+                        .addGap(12, 12, 12)
+                        .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cBIDDocenteH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnCargarDocente)))
+                    .addGroup(RetiroHerramientaLayout.createSequentialGroup()
+                        .addComponent(txtResponsable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtFechaRetiroHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIDNombreDocente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIDApellidoDocente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(btnCargarHerramienta)
+                    .addComponent(cBIDHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIDMarcaHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIDNombreHerramienta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel34)
+                    .addComponent(spinnerStockRH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addComponent(btnAgregarRetiroHerramienta)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 177, Short.MAX_VALUE)
+                .addGroup(RetiroHerramientaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnListadoRetiroHerramientas)
+                    .addComponent(btnDevolucionHerramienta)
+                    .addComponent(btnBuscarRetiroHerramientas))
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Retiro Herramientas", RetiroHerramienta);
 
         Docentes.setBackground(new java.awt.Color(119, 221, 119));
 
@@ -694,7 +689,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
             .addGroup(DocentesLayout.createSequentialGroup()
                 .addGroup(DocentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DocentesLayout.createSequentialGroup()
-                        .addGap(0, 364, Short.MAX_VALUE)
+                        .addGap(0, 409, Short.MAX_VALUE)
                         .addComponent(btnBuscarDocente)
                         .addGap(18, 18, 18)
                         .addComponent(btnEditarDocente)
@@ -842,9 +837,9 @@ public class vistaPrincipal extends javax.swing.JFrame {
                             .addComponent(txtNombreHerramienta, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
                             .addComponent(txtMarcaHerramienta)
                             .addComponent(spinnerStockHerramienta))))
-                .addContainerGap(411, Short.MAX_VALUE))
+                .addContainerGap(456, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HerramientasLayout.createSequentialGroup()
-                .addContainerGap(271, Short.MAX_VALUE)
+                .addContainerGap(296, Short.MAX_VALUE)
                 .addComponent(btnBuscarHerramienta)
                 .addGap(18, 18, 18)
                 .addComponent(btnAgregarStockH)
@@ -974,7 +969,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
                             .addGroup(MaterialesLayout.createSequentialGroup()
                                 .addGap(155, 155, 155)
                                 .addComponent(btnAgregarMaterial)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 279, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 304, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MaterialesLayout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnBuscarMaterial)
@@ -1062,7 +1057,13 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarRetiroHerramientaActionPerformed
 
     private void btnDevolucionHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDevolucionHerramientaActionPerformed
-        System.out.println("Devolver Herramienta");
+        int idABorrar = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el Id del Herramienta a restockear", "Actualizar Stock", JOptionPane.DEFAULT_OPTION));
+        if(idABorrar >= 0) {
+            RetiroHerramControlador.eliminarRetiroHerramienta(idABorrar);
+            JOptionPane.showMessageDialog(null, "Stock actualizado");
+            } else {
+            JOptionPane.showMessageDialog(null, "EL ID ingresado no es válido");
+        } 
     }//GEN-LAST:event_btnDevolucionHerramientaActionPerformed
 
     private void txtFechaRetiroHerramientaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaRetiroHerramientaActionPerformed

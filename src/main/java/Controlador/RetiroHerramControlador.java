@@ -110,12 +110,15 @@ public class RetiroHerramControlador {
         }
     }
 
-    public void eliminarRetiroHerramienta(int id) {
+    public static void eliminarRetiroHerramienta(int id) {
         try ( Session session = HibernateUtil.getCurrentSession()) {
 
             session.beginTransaction();
-            RetiroHerramienta eliminarRH = session.createQuery("FROM RetiroHerramientas WHERE idRetiroHerramienta =:id", RetiroHerramienta.class).setParameter("id", id).getSingleResult();
+            RetiroHerramienta eliminarRH = session.createQuery("FROM RetiroHerramienta WHERE idRetiroHerramienta =:id", RetiroHerramienta.class).setParameter("id", id).getSingleResult();
             session.remove(eliminarRH);
+            Integer stock = eliminarRH.getHerramienta().getStock();
+            stock = stock++;
+            eliminarRH.getHerramienta().setStock(stock);
             session.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
