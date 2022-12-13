@@ -192,4 +192,51 @@ public class HerramientaControlador {
             return null;
         } 
     }
+    
+    
+    public static List obtenerIdHerramienta() {
+        try ( Session session = HibernateUtil.getCurrentSession()) {
+
+            session.beginTransaction();
+
+            List<Herramienta> listado = session.createQuery("FROM Herramienta", Herramienta.class).getResultList();
+
+            session.getTransaction().commit();
+
+            if (listado != null && listado.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "La lista está vacia", "Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                               
+                for (Modelo.Herramienta aux : listado ){                    
+                    String item = aux.getIdHerramienta().toString();
+                    Vista.vistaPrincipal.cBIDHerramienta.addItem(item);
+                }
+                
+                return listado;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
+        return null;
+    }
+    
+    public static void cargarHerramienta() {
+        try ( Session session = HibernateUtil.getCurrentSession()) {
+            session.beginTransaction();
+            
+            int id = Vista.vistaPrincipal.cBIDHerramienta.getSelectedIndex();
+            
+            Modelo.Herramienta tool = new Modelo.Herramienta();
+            tool = session.find(Herramienta.class, id);
+            
+            if(tool != null){
+                Vista.vistaPrincipal.txtIDNombreHerramienta.setText(tool.getNombre());
+                Vista.vistaPrincipal.txtIDMarcaHerramienta.setText(tool.getMarca());
+            } else {
+                JOptionPane.showMessageDialog(null, "El Id buscado no existe", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
+    }
 }

@@ -9,6 +9,10 @@
             <generator class="identity"/>
         </id>
         
+<!--        <set name="retiroDeHerramientas" inverse ="true" lazy="false">
+                <key>column="idDocente"</>
+                <one-to-many class="package.RetiroHerramienta"/>
+        </set>-->
         <property name="apellido" type="string">
             <column length="30" name="Apellido" not-null="true"/>
         </property>

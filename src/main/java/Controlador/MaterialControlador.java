@@ -193,5 +193,52 @@ public class MaterialControlador {
             e.printStackTrace();
             return null;
         } 
-    }    
+    }
+
+    public static List obtenerIdMaterial() {
+        try ( Session session = HibernateUtil.getCurrentSession()) {
+
+            session.beginTransaction();
+
+            List<Material> listado = session.createQuery("FROM Material", Material.class).getResultList();
+
+            session.getTransaction().commit();
+
+            if (listado != null && listado.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "La lista está vacia", "Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                               
+                for (Modelo.Material aux : listado ){                    
+                    String item = aux.getIdMaterial().toString();
+                    Vista.vistaPrincipal.cBIDMaterial.addItem(item);
+                }
+                
+                return listado;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
+        return null;
+    }
+    
+    public static void cargarMaterial() {
+        try ( Session session = HibernateUtil.getCurrentSession()) {
+            session.beginTransaction();
+            
+            int id = Vista.vistaPrincipal.cBIDMaterial.getSelectedIndex();
+            
+            Modelo.Material mat = new Modelo.Material();
+            mat = session.find(Material.class, id);
+            
+            if(mat != null){
+                Vista.vistaPrincipal.txtIDMateriaPrima.setText(mat.getMateriaPrima());
+                Vista.vistaPrincipal.txtIDTipoMaterial.setText(mat.getTipo());
+                Vista.vistaPrincipal.txtIDMedidaMaterial.setText(mat.getMedida());
+            } else {
+                JOptionPane.showMessageDialog(null, "El Id buscado no existe", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
+    }
 }

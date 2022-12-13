@@ -3,10 +3,6 @@ package Controlador;
 
 import Modelo.Docente;
 import static Vista.vistaListado.tablaResultado;
-import static Vista.vistaPrincipal.cBCargoDocente;
-import static Vista.vistaPrincipal.txtApellido;
-import static Vista.vistaPrincipal.txtNombre;
-import static Vista.vistaPrincipal.txtTelefono;
 import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -244,5 +240,69 @@ public class DocenteControlador {
             e.printStackTrace();
         } 
         return null;
+    }
+    
+    public static List obtenerIdDocentes() {
+        try ( Session session = HibernateUtil.getCurrentSession()) {
+
+            session.beginTransaction();
+
+            List<Docente> listado = session.createQuery("FROM Docente", Docente.class).getResultList();
+
+            session.getTransaction().commit();
+
+            if (listado != null && listado.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "La lista está vacia", "Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                               
+                for (Modelo.Docente aux : listado ){                    
+                    String item = aux.getIdDocente().toString();
+                    Vista.vistaPrincipal.cBIDDocenteH.addItem(item);
+                    Vista.vistaPrincipal.cBIDDocenteM.addItem(item);
+                }
+                
+                return listado;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
+        return null;
+    }
+    
+    public static void cargarDocenteH() {
+        try ( Session session = HibernateUtil.getCurrentSession()) {
+            session.beginTransaction();
+            int id = Integer.parseInt(Vista.vistaPrincipal.cBIDDocenteH.getSelectedItem().toString());
+            Modelo.Docente docente = new Modelo.Docente();
+            docente = session.createQuery("FROM Docente where idDocente = :id", Modelo.Docente.class).setParameter("id", id).getSingleResult();
+            
+            if(docente != null){
+                Vista.vistaPrincipal.txtIDApellidoDocente.setText(docente.getApellido());
+                Vista.vistaPrincipal.txtIDNombreDocente.setText(docente.getNombre());
+            } else {
+                JOptionPane.showMessageDialog(null, "El Id buscado no existe", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
+    }
+    
+    public static void cargarDocenteM() {
+        try ( Session session = HibernateUtil.getCurrentSession()) {
+            session.beginTransaction();
+            int id = Integer.parseInt(Vista.vistaPrincipal.cBIDDocenteM.getSelectedItem().toString());
+            
+            Modelo.Docente docente = new Modelo.Docente();
+            docente = session.find(Docente.class, id);
+            
+            if(docente != null){
+                Vista.vistaPrincipal.txtIDApellidoDocenteM.setText(docente.getApellido());
+                Vista.vistaPrincipal.txtIDNombreDocenteM.setText(docente.getNombre());
+            } else {
+                JOptionPane.showMessageDialog(null, "El Id buscado no existe", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
     }
 }

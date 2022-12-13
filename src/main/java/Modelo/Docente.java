@@ -1,6 +1,9 @@
 
 package Modelo;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Docente {
         
     private Integer idDocente;
@@ -8,6 +11,7 @@ public class Docente {
     private String nombre;
     private String cargo;
     private String telefono;
+    //private Set<RetiroHerramienta> retiroDeHerramientas = new HashSet();
     
     public Docente(){
         
@@ -60,6 +64,14 @@ public class Docente {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+
+//    public Set<RetiroHerramienta> getRetiroDeHerramientas() {
+//        return retiroDeHerramientas;
+//    }
+//
+//    public void setRetiroDeHerramientas(Set<RetiroHerramienta> retiroDeHerramientas) {
+//        this.retiroDeHerramientas = retiroDeHerramientas;
+//    }
 
     @Override
     public String toString() {
