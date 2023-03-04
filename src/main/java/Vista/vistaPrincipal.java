@@ -1171,9 +1171,9 @@ public class vistaPrincipal extends javax.swing.JFrame {
              JOptionPane.showMessageDialog(null, "Hay campos vacíos", "Error", JOptionPane.ERROR_MESSAGE);
         } else {
             int idHerr = Integer.parseInt(cBIDHerramienta.getSelectedItem().toString());
-            int cantidad = (int)spinnerStockRH.getValue();
+            int cantidad = (Integer)spinnerStockRH.getValue();
             if (MaterialControlador.chequearStockMaterial(idHerr, cantidad) != null){
-            RetiroMaterialControlador.agregarRetiroMaterial();
+                RetiroMaterialControlador.agregarRetiroMaterial();
             }
         }
     }//GEN-LAST:event_btnAgregarRetiroMaterialActionPerformed
@@ -1415,8 +1415,8 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     public static javax.swing.JSpinner spinnerStockHerramienta;
     public static javax.swing.JSpinner spinnerStockMaterial;
-    private javax.swing.JSpinner spinnerStockRH;
-    private javax.swing.JSpinner spinnerStockRM;
+    public static javax.swing.JSpinner spinnerStockRH;
+    public static javax.swing.JSpinner spinnerStockRM;
     public static javax.swing.JTextField txtApellido;
     public static javax.swing.JTextField txtFechaRetiroHerramienta;
     public static javax.swing.JTextField txtFechaRetiroMaterial;

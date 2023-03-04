@@ -35,6 +35,9 @@ public class RetiroMaterial {
     @Column(name = "fechaRetiro", length = 12, nullable = false)
     private Date fechaRetiro;
     
+    @Column(name = "stockRetiro", length = 5, nullable = false)
+    private Integer stockRetiro;
+    
     
     public RetiroMaterial(){
         
@@ -80,9 +83,18 @@ public class RetiroMaterial {
         this.material = material;
     }
 
+    public Integer getStockRetiro() {
+        return stockRetiro;
+    }
+
+    public void setStockRetiro(Integer stockRetiro) {
+        this.stockRetiro = stockRetiro;
+    }
+    
+    
     @Override
     public String toString() {
-        return "\n==Retiro Material==\nId Retiro Material: " + idRetiroMaterial + "\nResponsable: " + responsable + "\n"+ docente + material;
+        return "\n==Retiro Material==\nId Retiro Material: " + idRetiroMaterial + "\nResponsable: " + responsable + "\nStock Retirado: " + stockRetiro + "\n" + docente + material;
     }
     
     

@@ -31,12 +31,12 @@ public class RetiroMaterialControlador {
             } else {
                 DefaultTableModel modelo = new DefaultTableModel();
                 String [] titulos = {"Id Retiro Material", "Fecha de Retiro", "Responsable", "Id del Docente" ,"Apellido Docente",
-                                        "Nombre Docente ",  "Id de Material" , "Tipo Material"};  
+                                        "Nombre Docente ",  "Id de Material" , "Tipo Material" , "Stock Retirado"};  
                 Object[] fila;                
                 modelo.setColumnIdentifiers(titulos);
                 
                 for (Modelo.RetiroMaterial aux : listado ){
-                    fila = new Object[8]; 
+                    fila = new Object[9]; 
                     fila[0] = aux.getIdRetiroMaterial();
                     fila[1] = aux.getFechaRetiro();
                     fila[2] = aux.getResponsable();
@@ -45,6 +45,8 @@ public class RetiroMaterialControlador {
                     fila[5] = aux.getDocente().getNombre();
                     fila[6] = aux.getMaterial().getIdMaterial();
                     fila[7] = aux.getMaterial().getTipo();
+                    fila[8] = aux.getMaterial().getStock();
+                    
                     modelo.addRow(fila);
                 }
                 tablaResultado.setModel(modelo);
@@ -101,8 +103,13 @@ public class RetiroMaterialControlador {
             agregarRM.setResponsable(Vista.vistaPrincipal.txtResponsable.getText());
             Date fechaRetiro = formatter.parse(Vista.vistaPrincipal.txtFechaRetiroMaterial.getText());
             agregarRM.setFechaRetiro(fechaRetiro);
+            int stockRetirado = (Integer) Vista.vistaPrincipal.spinnerStockMaterial.getValue();
+            agregarRM.setStockRetiro(stockRetirado);
             agregarRM.setDocente(auxD);
             agregarRM.setMaterial(auxM);
+            
+            int stockActual = auxM.getStock() - stockRetirado;
+            auxM.setStock(stockActual);
             
             session.persist(agregarRM);
             session.getTransaction().commit();
@@ -115,6 +122,7 @@ public class RetiroMaterialControlador {
             Vista.vistaPrincipal.txtIDMateriaPrima.setText("");           
             Vista.vistaPrincipal.txtIDTipoMaterial.setText("");
             Vista.vistaPrincipal.txtIDMedidaMaterial.setText("");
+            Vista.vistaPrincipal.spinnerStockMaterial.setValue(0);
         } catch (Exception e) {
             e.printStackTrace();
         }

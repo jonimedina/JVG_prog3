@@ -431,6 +431,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="spinnerStockRM">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
@@ -789,6 +792,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JSpinner" name="spinnerStockRH">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>

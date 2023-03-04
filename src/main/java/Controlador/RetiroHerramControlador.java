@@ -92,10 +92,16 @@ public class RetiroHerramControlador {
             agregarRH.setResponsable(Vista.vistaPrincipal.txtResponsable.getText());
             Date fechaRetiro = formatter.parse(Vista.vistaPrincipal.txtFechaRetiroHerramienta.getText());
             agregarRH.setFechaRetiro(fechaRetiro);
+            int stockRetirado = (Integer) Vista.vistaPrincipal.spinnerStockHerramienta.getValue();
+            agregarRH.setStockRetiro(stockRetirado);
             agregarRH.setDocente(auxD);
             agregarRH.setHerramienta(auxH);
             
+            int stockActual = auxH.getStock() - stockRetirado;
+            auxH.setStock(stockActual);
+            
             session.persist(agregarRH);
+            session.persist(auxH);
             session.getTransaction().commit();
             JOptionPane.showMessageDialog(null, "Se ha creado la orden correctamente", "Confirmación", JOptionPane.INFORMATION_MESSAGE); 
             Vista.vistaPrincipal.txtResponsable.setText("");
@@ -105,6 +111,7 @@ public class RetiroHerramControlador {
             Vista.vistaPrincipal.txtIDNombreDocente.setText("");
             Vista.vistaPrincipal.txtIDNombreHerramienta.setText("");           
             Vista.vistaPrincipal.txtIDMarcaHerramienta.setText("");
+            Vista.vistaPrincipal.spinnerStockHerramienta.setValue(0);
         } catch (Exception e) {
             e.printStackTrace();
         }
